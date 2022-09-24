@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.atguigu.dao.PermissionDao">
+
+    <!-- 用于select查询公用抽取的列 -->
+    <sql id="columns">
+        select id,parent_id,name,url,code,type,sort,create_time,update_time,is_deleted
+        from acl_permission
+    </sql>
+
+    <!--查询所有的权限-->
+    <select id="findAll" resultType="permission">
+        <include refid="columns"></include>
+        where is_deleted = 0
+        order  by sort
+    </select>
+
+    <!--根据用户id查询对应的权限菜单,这个对应的是acl_permission的权限数据-->
+    <select id="getMenuPermissionByAdminId" resultType="permission">
+        select ap.*
+        from acl_admin_role aar
+                 LEFT JOIN acl_role_permission arp
+                           on aar.role_id=arp.role_id
+                 LEFT JOIN acl_permission ap
+                           ON arp.permission_id=ap.id
+        WHERE aar.admin_id= #{adminId}
+          and aar.is_deleted=0
+          and arp.is_deleted=0
+          and ap.is_deleted=0
+          and ap.type=1
+        ORDER BY ap.sort
+    </select>
+    
+    <!--通过id查询权限-->
+    <select id="getById" resultType="permission">
+        <include refid="columns"></include>
+        where id=#{id}
+    </select>
+
+    <!--保存权限数据-->
+    <insert id="insert">
+        insert into acl_permission
+        (name,url,sort)
+        values
+        (#{name},#{url},#{sort})
+    </insert>
+
+    <!--更新-->
+    <update id="update">
+        update acl_permission
+        <set>
+            <if test="name != null and name != ''">
+                name = #{name},
+            </if>
+            <if test="url != null and url != ''">
+                url = #{url},
+            </if>
+            <if test="sort != null and sort != ''">
+                sort = #{sort},
+            </if>
+        </set>
+            where id = #{id}
+    </update>
+
+    <!--删除-->
+    <update id="delete">
+        update acl_permission
+        set is_deleted = 1
+        where id=#{id}
+    </update>
+
+    <!--查询所有权限码-->
+    <select id="getAllPermissionCodes" resultType="string">
+        select code
+        from acl_permission
+        where type=2 and is_deleted=0
+    </select>
+
+    <!--通过用户id查询权限码-->
+    <select id="getPermissionCodesByAdminId" resultType="string">
+        select ap.code
+        from acl_admin_role aar
+                 LEFT JOIN acl_role_permission arp
+                           on aar.role_id=arp.role_id
+                 LEFT JOIN acl_permission ap
+                           ON arp.permission_id=ap.id
+        WHERE aar.admin_id= #{adminId}
+          and aar.is_deleted=0
+          and arp.is_deleted=0
+          and ap.is_deleted=0
+          and ap.type=2
+        ORDER BY ap.sort
+    </select>
+
+</mapper>
