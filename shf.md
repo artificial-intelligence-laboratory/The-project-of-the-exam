@@ -46,3 +46,12 @@ shf-parent：根目录，管理子模块：
 
 ![image-20220215092734848](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/6837/image-20220215092734848.png)
 
+项目运行环境：
+
+1.idea开发环境,例如jdk环境,maven环境等
+
+2.数据库，mysql环境
+
+3.redis环境，这里我使用的是linux系统的redis
+
+4.使用dubbo，zk作为分布式开发，我这里使用的zk是在本地运行的zk。
