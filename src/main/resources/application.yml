@@ -1,0 +1,18 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: gcc-fns  # \u5E94\u7528\u540D
+
+server:
+  tomcat:
+    max-swallow-size: 2MB
+
+
+#--------------------------------------------
+# mybatis\u914D\u7F6E
+#--------------------------------------------
+mybatis-plus:
+  type-aliases-package: com.gcc.fns.pojo        # \u6240\u6709POJO\u7C7B\u6240\u5728\u5305\u8DEF\u5F84
+  mapper-locations: classpath:mapper/*.xml      # mapper\u6620\u5C04\u6587\u4EF6
+
