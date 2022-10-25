@@ -9,11 +9,29 @@ public enum ResponseStatusEnum {
     SUCCESS(200, true, "操作成功！"),
     FAILED(500, false, "操作失败！"),
 
-    // 50x
+    /* 用户相关 */
     UN_LOGIN(501,false,"请登录后再继续操作！"),
-    TICKET_INVALID(502,false,"会话失效，请重新登录！");
+    TICKET_INVALID(502,false,"会话失效，请重新登录！"),
+    USER_INACTIVE_ERROR(509,false,"请前往[账号设置]修改信息激活后再进行后续操作！"),
+    USER_FROZEN_ERROR(522,false,"用户被冻结，请联系管理员解冻"),
+    USER_NOT_PASSWORD(510,false,"当前账号还未设置密码，请使用验证码登录"),
+    USER_NOT_NULL(511, false, "账号和密码不能为空"),
+    USER_LOGIN_PWD_ERROR(512, false, "账号或密码错误，请重新输入"),
+    USER_LOGIN_CODE_ERROR(513, false, "账号或验证码错误，请重新输入"),
+    MAIL_CODE_NOT_EMPTY(514, false,"邮箱和验证码不能为空"),
+    USER_NOT_EXIST(515, false, "不存在当前用户，请使用邮箱登录"),
+    USER_UPLOAD_NULL_ERROR(516, false, "字段不能为空"),
 
-    // 自定义需要的信息
+
+    /* 邮箱相关 */
+    MAIL_SEND_FAILED(554, false,"验证码发送失败，请重新发送"),
+    MAIL_NEED_WAIT_ERROR(505,false,"验证码发送太快啦~请稍后再试！"),
+    MAIL_CODE_EXPIRE(511,false,"邮箱验证码已过期，请重新发送"),
+    MAIL_CODE_ERROR(510,false,"验证码不正确，请重新输入"),
+
+    /* 文件相关 */
+    FILE_MAX_SIZE_ERROR(513,false,"仅支持2MB大小以下的图片上传！");
+
 
     // 响应业务状态
     private Integer status;

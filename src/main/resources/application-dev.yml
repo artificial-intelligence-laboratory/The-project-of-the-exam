@@ -4,9 +4,9 @@ server:
 spring:
   datasource:
     username: root
-    password: root
-    url: jdbc:mysql://localhost:3306/db4?studyserverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
-    driver-class-name: com.mysql.jdbc.Driver
+    password: abc123
+    url: jdbc:mysql://gcc.fns.com:3306/gcc-fns?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8&useSsl=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
     druid:
       initial-size: 5               # 初始数
@@ -34,6 +34,14 @@ spring:
           config:
             drop-table-allow: false
 
+
+  redis:
+    database: 3
+    host: 120.24.226.87
+    port: 6379
+    password: redis888***
+
+# dev环境下开启日志
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl   # 开启日志

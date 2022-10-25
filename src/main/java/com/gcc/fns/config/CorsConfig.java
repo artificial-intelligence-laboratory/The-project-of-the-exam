@@ -22,7 +22,6 @@ public class CorsConfig implements WebMvcConfigurer {
                 // 允许的方法
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 // 允许的请求头
-                .allowedHeaders("*")
-                .exposedHeaders("*");
+                .allowedHeaders("*");
     }
 }

@@ -2,7 +2,25 @@ spring:
   profiles:
     active: dev
   application:
-    name: gcc-fns  # \u5E94\u7528\u540D
+    name: gcc-fns  # 应用名
+
+
+#--------------------------------------------
+# 邮箱相关配置
+#--------------------------------------------
+  mail:
+    host: smtp.sina.cn
+    port: 465                     # 端口号
+    username: zhi_oss@sina.cn     # 用户名
+    password: cf0e9b95e4e43023    # 秘钥
+    protocol: smtps               # 发送的协议
+    properties:
+      mail.smtp.ssl.enable: true  # 使用ssl安全连接
+
+  servlet:
+    multipart:
+      max-file-size: 2MB          # 最大上传文件大小
+      max-request-size: 2MB       # 最大请求大小
 
 server:
   tomcat:
@@ -10,9 +28,20 @@ server:
 
 
 #--------------------------------------------
-# mybatis\u914D\u7F6E
+# mybatis相关配置
 #--------------------------------------------
 mybatis-plus:
-  type-aliases-package: com.gcc.fns.pojo        # \u6240\u6709POJO\u7C7B\u6240\u5728\u5305\u8DEF\u5F84
-  mapper-locations: classpath:mapper/*.xml      # mapper\u6620\u5C04\u6587\u4EF6
+  type-aliases-package: com.gcc.fns.pojo        # 别名
+  mapper-locations: classpath:mapper/*.xml      # mapper存放位置
+
+
+#--------------------------------------------
+# 自定义配置
+#--------------------------------------------
+custom:
+  jwt:
+    subject: GCC-FNS          # 主体名
+    secret: 2d#g24            # 秘钥
+    expiration: 10080         # 过期时间（分钟）
+
 
