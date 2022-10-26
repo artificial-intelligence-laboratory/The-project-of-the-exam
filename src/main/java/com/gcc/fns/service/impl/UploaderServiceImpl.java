@@ -13,12 +13,12 @@ import com.gcc.fns.pojo.vo.AppUserInfoVo;
 import com.gcc.fns.service.UploaderService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
 import java.io.IOException;
-import java.io.InputStream;
 
 /**
  * @author xiaozhi
@@ -34,6 +34,9 @@ public class UploaderServiceImpl implements UploaderService {
 
     @Resource
     private RedisOperator redis;
+
+    @Value("${custom.upload.count}")
+    private Integer uploadCount;
 
     @Override
     public String uploadFace(MultipartFile file){
@@ -67,9 +70,8 @@ public class UploaderServiceImpl implements UploaderService {
         // 生成全局唯一文件名
         String filePath = "";
         try {
-            InputStream inputStream = file.getInputStream();
-            String uploadFilename = MD5Util.filenameByMD5(inputStream) + "." + extName;
-            filePath = aliyunOSSUtil.uploadFile(inputStream, uploadFilename);
+            String uploadFilename = MD5Util.filenameByMD5(file.getInputStream()) + "." + extName;
+            filePath = aliyunOSSUtil.uploadFile(file.getInputStream(), uploadFilename);
         } catch (IOException e) {
             log.error("文件上传异常：{}", e.getMessage());
             ThrowException.custom(ResponseStatusEnum.FILE_UPLOAD_ERROR);

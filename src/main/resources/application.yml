@@ -41,6 +41,8 @@ custom:
     secret: 2d#g24            # 秘钥
     expiration: 10080         # 过期时间（分钟）
 
+  upload:
+    count: 3                  # 用户文件上传最大次数
 
 server:
   tomcat:

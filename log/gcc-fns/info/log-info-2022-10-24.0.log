@@ -1,0 +1,337 @@
+2022-10-24 18:41:59,238 INFO [restartedMain] c.g.f.GccFnsApplication [StartupInfoLogger.java:55] Starting GccFnsApplication on XIAOZHI with PID 18232 (E:\Work\projects\gcc-fns-demo\target\classes started by 猛男 in E:\Work\projects\gcc-fns-demo)
+2022-10-24 18:41:59,240 INFO [restartedMain] c.g.f.GccFnsApplication [SpringApplication.java:655] The following profiles are active: dev
+2022-10-24 18:41:59,326 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-24 18:41:59,327 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-24 18:42:00,115 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-24 18:42:00,547 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:92] Tomcat initialized with port(s): 9999 (http)
+2022-10-24 18:42:00,555 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-9999"]
+2022-10-24 18:42:00,555 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2022-10-24 18:42:00,556 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-10-24 18:42:00,651 INFO [restartedMain] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2022-10-24 18:42:00,651 INFO [restartedMain] o.s.w.c.ContextLoader [ServletWebServerApplicationContext.java:284] Root WebApplicationContext: initialization completed in 1324 ms
+2022-10-24 18:42:00,993 INFO [restartedMain] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-24 18:42:01,039 INFO [restartedMain] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-24 18:42:01,041 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Stopping service [Tomcat]
+2022-10-24 18:42:01,057 INFO [restartedMain] o.s.b.a.l.ConditionEvaluationReportLoggingListener [ConditionEvaluationReportLoggingListener.java:136] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-10-24 18:42:20,405 INFO [restartedMain] c.g.f.GccFnsApplication [StartupInfoLogger.java:55] Starting GccFnsApplication on XIAOZHI with PID 21060 (E:\Work\projects\gcc-fns-demo\target\classes started by 猛男 in E:\Work\projects\gcc-fns-demo)
+2022-10-24 18:42:20,405 INFO [restartedMain] c.g.f.GccFnsApplication [SpringApplication.java:655] The following profiles are active: dev
+2022-10-24 18:42:20,443 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-24 18:42:20,443 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-24 18:42:21,080 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-24 18:42:21,480 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:92] Tomcat initialized with port(s): 9999 (http)
+2022-10-24 18:42:21,487 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-9999"]
+2022-10-24 18:42:21,487 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2022-10-24 18:42:21,488 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-10-24 18:42:21,589 INFO [restartedMain] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2022-10-24 18:42:21,589 INFO [restartedMain] o.s.w.c.ContextLoader [ServletWebServerApplicationContext.java:284] Root WebApplicationContext: initialization completed in 1146 ms
+2022-10-24 18:42:21,917 INFO [restartedMain] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-24 18:42:22,143 INFO [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-10-24 18:42:22,959 INFO [restartedMain] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-10-24 18:42:22,961 INFO [restartedMain] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-24 18:42:22,963 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Stopping service [Tomcat]
+2022-10-24 18:42:22,972 INFO [restartedMain] o.s.b.a.l.ConditionEvaluationReportLoggingListener [ConditionEvaluationReportLoggingListener.java:136] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-10-24 18:42:51,089 INFO [restartedMain] c.g.f.GccFnsApplication [StartupInfoLogger.java:55] Starting GccFnsApplication on XIAOZHI with PID 22132 (E:\Work\projects\gcc-fns-demo\target\classes started by 猛男 in E:\Work\projects\gcc-fns-demo)
+2022-10-24 18:42:51,090 INFO [restartedMain] c.g.f.GccFnsApplication [SpringApplication.java:655] The following profiles are active: dev
+2022-10-24 18:42:51,125 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-24 18:42:51,126 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-24 18:42:51,815 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-24 18:42:52,279 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:92] Tomcat initialized with port(s): 9999 (http)
+2022-10-24 18:42:52,290 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-9999"]
+2022-10-24 18:42:52,291 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2022-10-24 18:42:52,292 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-10-24 18:42:52,401 INFO [restartedMain] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2022-10-24 18:42:52,401 INFO [restartedMain] o.s.w.c.ContextLoader [ServletWebServerApplicationContext.java:284] Root WebApplicationContext: initialization completed in 1275 ms
+2022-10-24 18:42:52,760 INFO [restartedMain] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-24 18:42:52,969 INFO [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-10-24 18:42:53,747 INFO [restartedMain] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-10-24 18:42:53,749 INFO [restartedMain] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-24 18:42:53,751 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Stopping service [Tomcat]
+2022-10-24 18:42:53,762 INFO [restartedMain] o.s.b.a.l.ConditionEvaluationReportLoggingListener [ConditionEvaluationReportLoggingListener.java:136] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-10-24 18:43:33,454 INFO [restartedMain] c.g.f.GccFnsApplication [StartupInfoLogger.java:55] Starting GccFnsApplication on XIAOZHI with PID 21936 (E:\Work\projects\gcc-fns-demo\target\classes started by 猛男 in E:\Work\projects\gcc-fns-demo)
+2022-10-24 18:43:33,456 INFO [restartedMain] c.g.f.GccFnsApplication [SpringApplication.java:655] The following profiles are active: dev
+2022-10-24 18:43:33,492 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-10-24 18:43:33,492 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-10-24 18:43:34,159 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-24 18:43:34,556 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:92] Tomcat initialized with port(s): 9999 (http)
+2022-10-24 18:43:34,564 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-9999"]
+2022-10-24 18:43:34,564 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2022-10-24 18:43:34,564 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-10-24 18:43:34,663 INFO [restartedMain] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2022-10-24 18:43:34,663 INFO [restartedMain] o.s.w.c.ContextLoader [ServletWebServerApplicationContext.java:284] Root WebApplicationContext: initialization completed in 1171 ms
+2022-10-24 18:43:34,989 INFO [restartedMain] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-24 18:43:35,194 INFO [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-10-24 18:43:36,078 INFO [restartedMain] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-10-24 18:43:37,641 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
+2022-10-24 18:43:37,679 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-9999"]
+2022-10-24 18:43:37,695 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:204] Tomcat started on port(s): 9999 (http) with context path ''
+2022-10-24 18:43:37,698 INFO [restartedMain] c.g.f.GccFnsApplication [StartupInfoLogger.java:61] Started GccFnsApplication in 4.82 seconds (JVM running for 6.11)
+2022-10-24 18:44:02,169 INFO [http-nio-9999-exec-1] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-10-24 18:44:02,170 INFO [http-nio-9999-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2022-10-24 18:44:02,176 INFO [http-nio-9999-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 6 ms
+2022-10-24 18:44:02,203 INFO [http-nio-9999-exec-1] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:45] request start，id: 44330ab7-320f-48b8-a6a7-cc3deacc896e, path: /hello, ip: 0:0:0:0:0:0:0:1, params: []
+2022-10-24 18:44:02,206 INFO [http-nio-9999-exec-1] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:52] request end, id: 44330ab7-320f-48b8-a6a7-cc3deacc896e, cost: 6ms
+2022-10-24 19:32:19,869 INFO [Thread-13] c.a.d.p.DruidDataSource [DruidDataSource.java:1948] {dataSource-1} closing ...
+2022-10-24 19:32:19,875 INFO [Thread-13] c.a.d.p.DruidDataSource [DruidDataSource.java:2020] {dataSource-1} closed
+2022-10-24 19:32:19,876 INFO [Thread-13] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-24 19:32:20,773 INFO [restartedMain] c.g.f.GccFnsApplication [StartupInfoLogger.java:55] Starting GccFnsApplication on XIAOZHI with PID 21936 (E:\Work\projects\gcc-fns-demo\target\classes started by 猛男 in E:\Work\projects\gcc-fns-demo)
+2022-10-24 19:32:20,774 INFO [restartedMain] c.g.f.GccFnsApplication [SpringApplication.java:655] The following profiles are active: dev
+2022-10-24 19:32:21,134 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-24 19:32:21,345 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:92] Tomcat initialized with port(s): 9999 (http)
+2022-10-24 19:32:21,346 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-9999"]
+2022-10-24 19:32:21,347 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2022-10-24 19:32:21,347 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-10-24 19:32:21,380 INFO [restartedMain] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2022-10-24 19:32:21,380 INFO [restartedMain] o.s.w.c.ContextLoader [ServletWebServerApplicationContext.java:284] Root WebApplicationContext: initialization completed in 600 ms
+2022-10-24 19:32:21,640 INFO [restartedMain] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-24 19:32:21,867 INFO [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-10-24 19:32:22,014 INFO [restartedMain] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-2} inited
+2022-10-24 19:32:22,764 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
+2022-10-24 19:32:22,806 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-9999"]
+2022-10-24 19:32:22,812 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:204] Tomcat started on port(s): 9999 (http) with context path ''
+2022-10-24 19:32:22,813 INFO [restartedMain] c.g.f.GccFnsApplication [StartupInfoLogger.java:61] Started GccFnsApplication in 2.113 seconds (JVM running for 2931.225)
+2022-10-24 19:32:22,817 INFO [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [ConditionEvaluationDeltaLoggingListener.java:63] Condition evaluation unchanged
+2022-10-24 19:33:24,624 INFO [main] c.g.f.u.SendMailUtilTest [StartupInfoLogger.java:55] Starting SendMailUtilTest on XIAOZHI with PID 15948 (started by 猛男 in E:\Work\projects\gcc-fns-demo)
+2022-10-24 19:33:24,627 INFO [main] c.g.f.u.SendMailUtilTest [SpringApplication.java:655] The following profiles are active: dev
+2022-10-24 19:33:25,734 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-24 19:33:26,929 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-24 19:33:27,549 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-10-24 19:33:29,366 INFO [main] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-10-24 19:33:30,954 INFO [main] c.g.f.u.SendMailUtilTest [StartupInfoLogger.java:61] Started SendMailUtilTest in 6.907 seconds (JVM running for 8.348)
+2022-10-24 19:33:33,002 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:1948] {dataSource-1} closing ...
+2022-10-24 19:33:33,015 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:2020] {dataSource-1} closed
+2022-10-24 19:33:33,019 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-24 19:35:38,295 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:1948] {dataSource-2} closing ...
+2022-10-24 19:35:38,301 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:2020] {dataSource-2} closed
+2022-10-24 19:35:38,302 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-24 19:35:45,274 INFO [main] c.g.f.u.SendMailUtilTest [StartupInfoLogger.java:55] Starting SendMailUtilTest on XIAOZHI with PID 21080 (started by 猛男 in E:\Work\projects\gcc-fns-demo)
+2022-10-24 19:35:45,276 INFO [main] c.g.f.u.SendMailUtilTest [SpringApplication.java:655] The following profiles are active: dev
+2022-10-24 19:35:46,354 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-24 19:35:47,502 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-24 19:35:48,077 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-10-24 19:35:49,801 INFO [main] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-10-24 19:35:51,703 INFO [main] c.g.f.u.SendMailUtilTest [StartupInfoLogger.java:61] Started SendMailUtilTest in 7.071 seconds (JVM running for 8.443)
+2022-10-24 19:35:53,455 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:1948] {dataSource-1} closing ...
+2022-10-24 19:35:53,464 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:2020] {dataSource-1} closed
+2022-10-24 19:35:53,467 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-24 19:37:16,796 INFO [main] c.g.f.u.SendMailUtilTest [StartupInfoLogger.java:55] Starting SendMailUtilTest on XIAOZHI with PID 17556 (started by 猛男 in E:\Work\projects\gcc-fns-demo)
+2022-10-24 19:37:16,798 INFO [main] c.g.f.u.SendMailUtilTest [SpringApplication.java:655] The following profiles are active: dev
+2022-10-24 19:37:17,962 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-24 19:37:19,185 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-24 19:37:19,778 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-10-24 19:37:21,649 INFO [main] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-10-24 19:37:23,200 INFO [main] c.g.f.u.SendMailUtilTest [StartupInfoLogger.java:61] Started SendMailUtilTest in 7.023 seconds (JVM running for 8.377)
+2022-10-24 19:37:25,086 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:1948] {dataSource-1} closing ...
+2022-10-24 19:37:25,099 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:2020] {dataSource-1} closed
+2022-10-24 19:37:25,101 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-24 19:38:13,330 INFO [main] c.g.f.u.SendMailUtilTest [StartupInfoLogger.java:55] Starting SendMailUtilTest on XIAOZHI with PID 20352 (started by 猛男 in E:\Work\projects\gcc-fns-demo)
+2022-10-24 19:38:13,332 INFO [main] c.g.f.u.SendMailUtilTest [SpringApplication.java:655] The following profiles are active: dev
+2022-10-24 19:38:14,432 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-24 19:38:15,582 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-24 19:38:16,160 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-10-24 19:38:17,965 INFO [main] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-10-24 19:38:19,531 INFO [main] c.g.f.u.SendMailUtilTest [StartupInfoLogger.java:61] Started SendMailUtilTest in 6.835 seconds (JVM running for 8.239)
+2022-10-24 19:38:21,400 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:1948] {dataSource-1} closing ...
+2022-10-24 19:38:21,410 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:2020] {dataSource-1} closed
+2022-10-24 19:38:21,412 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-24 19:40:00,743 INFO [main] c.g.f.u.SendMailUtilTest [StartupInfoLogger.java:55] Starting SendMailUtilTest on XIAOZHI with PID 22184 (started by 猛男 in E:\Work\projects\gcc-fns-demo)
+2022-10-24 19:40:00,745 INFO [main] c.g.f.u.SendMailUtilTest [SpringApplication.java:655] The following profiles are active: dev
+2022-10-24 19:40:02,139 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-24 19:40:03,639 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-24 19:40:04,310 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-10-24 19:40:06,386 INFO [main] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-10-24 19:40:08,919 INFO [main] c.g.f.u.SendMailUtilTest [StartupInfoLogger.java:61] Started SendMailUtilTest in 8.888 seconds (JVM running for 10.372)
+2022-10-24 19:40:11,639 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:1948] {dataSource-1} closing ...
+2022-10-24 19:40:11,653 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:2020] {dataSource-1} closed
+2022-10-24 19:40:11,655 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-24 19:41:41,836 INFO [main] c.g.f.u.SendMailUtilTest [StartupInfoLogger.java:55] Starting SendMailUtilTest on XIAOZHI with PID 6768 (started by 猛男 in E:\Work\projects\gcc-fns-demo)
+2022-10-24 19:41:41,838 INFO [main] c.g.f.u.SendMailUtilTest [SpringApplication.java:655] The following profiles are active: dev
+2022-10-24 19:41:42,935 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-24 19:41:44,086 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-24 19:41:44,693 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-10-24 19:41:46,580 INFO [main] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-10-24 19:41:48,221 INFO [main] c.g.f.u.SendMailUtilTest [StartupInfoLogger.java:61] Started SendMailUtilTest in 7.028 seconds (JVM running for 8.412)
+2022-10-24 19:41:49,932 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:1948] {dataSource-1} closing ...
+2022-10-24 19:41:49,944 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:2020] {dataSource-1} closed
+2022-10-24 19:41:49,946 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-24 19:42:52,999 INFO [main] c.g.f.u.SendMailUtilTest [StartupInfoLogger.java:55] Starting SendMailUtilTest on XIAOZHI with PID 22116 (started by 猛男 in E:\Work\projects\gcc-fns-demo)
+2022-10-24 19:42:53,002 INFO [main] c.g.f.u.SendMailUtilTest [SpringApplication.java:655] The following profiles are active: dev
+2022-10-24 19:42:54,599 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-24 19:42:56,135 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-24 19:42:56,862 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-10-24 19:42:59,248 INFO [main] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-10-24 19:43:01,409 INFO [main] c.g.f.u.SendMailUtilTest [StartupInfoLogger.java:61] Started SendMailUtilTest in 9.109 seconds (JVM running for 11.576)
+2022-10-24 19:43:04,374 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:1948] {dataSource-1} closing ...
+2022-10-24 19:43:04,384 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:2020] {dataSource-1} closed
+2022-10-24 19:43:04,386 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-24 19:43:29,156 INFO [main] c.g.f.u.SendMailUtilTest [StartupInfoLogger.java:55] Starting SendMailUtilTest on XIAOZHI with PID 11412 (started by 猛男 in E:\Work\projects\gcc-fns-demo)
+2022-10-24 19:43:29,158 INFO [main] c.g.f.u.SendMailUtilTest [SpringApplication.java:655] The following profiles are active: dev
+2022-10-24 19:43:30,238 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-24 19:43:31,358 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-24 19:43:31,937 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-10-24 19:43:33,701 INFO [main] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-10-24 19:43:35,312 INFO [main] c.g.f.u.SendMailUtilTest [StartupInfoLogger.java:61] Started SendMailUtilTest in 6.768 seconds (JVM running for 8.181)
+2022-10-24 19:43:37,130 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:1948] {dataSource-1} closing ...
+2022-10-24 19:43:37,141 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:2020] {dataSource-1} closed
+2022-10-24 19:43:37,144 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-24 19:44:29,315 INFO [main] c.g.f.u.SendMailUtilTest [StartupInfoLogger.java:55] Starting SendMailUtilTest on XIAOZHI with PID 19516 (started by 猛男 in E:\Work\projects\gcc-fns-demo)
+2022-10-24 19:44:29,317 INFO [main] c.g.f.u.SendMailUtilTest [SpringApplication.java:655] The following profiles are active: dev
+2022-10-24 19:44:30,448 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-24 19:44:31,920 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-24 19:44:32,659 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-10-24 19:44:34,550 INFO [main] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-10-24 19:44:36,295 INFO [main] c.g.f.u.SendMailUtilTest [StartupInfoLogger.java:61] Started SendMailUtilTest in 7.618 seconds (JVM running for 9.05)
+2022-10-24 19:44:38,183 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:1948] {dataSource-1} closing ...
+2022-10-24 19:44:38,196 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:2020] {dataSource-1} closed
+2022-10-24 19:44:38,198 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-24 19:46:13,574 INFO [main] c.g.f.u.SendMailUtilTest [StartupInfoLogger.java:55] Starting SendMailUtilTest on XIAOZHI with PID 15628 (started by 猛男 in E:\Work\projects\gcc-fns-demo)
+2022-10-24 19:46:13,575 INFO [main] c.g.f.u.SendMailUtilTest [SpringApplication.java:655] The following profiles are active: dev
+2022-10-24 19:46:14,733 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-24 19:46:16,247 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-24 19:46:16,909 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-10-24 19:46:18,841 INFO [main] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-10-24 19:46:20,800 INFO [main] c.g.f.u.SendMailUtilTest [StartupInfoLogger.java:61] Started SendMailUtilTest in 7.86 seconds (JVM running for 9.23)
+2022-10-24 19:46:22,463 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:1948] {dataSource-1} closing ...
+2022-10-24 19:46:22,475 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:2020] {dataSource-1} closed
+2022-10-24 19:46:22,477 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-24 19:47:37,747 INFO [main] c.g.f.u.SendMailUtilTest [StartupInfoLogger.java:55] Starting SendMailUtilTest on XIAOZHI with PID 8128 (started by 猛男 in E:\Work\projects\gcc-fns-demo)
+2022-10-24 19:47:37,749 INFO [main] c.g.f.u.SendMailUtilTest [SpringApplication.java:655] The following profiles are active: dev
+2022-10-24 19:47:38,813 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-24 19:47:39,943 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-24 19:47:40,529 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-10-24 19:47:42,274 INFO [main] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-10-24 19:47:44,142 INFO [main] c.g.f.u.SendMailUtilTest [StartupInfoLogger.java:61] Started SendMailUtilTest in 7.033 seconds (JVM running for 8.468)
+2022-10-24 19:47:46,411 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:1948] {dataSource-1} closing ...
+2022-10-24 19:47:46,423 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:2020] {dataSource-1} closed
+2022-10-24 19:47:46,425 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-24 19:52:34,819 INFO [main] c.g.f.u.SendMailUtilTest [StartupInfoLogger.java:55] Starting SendMailUtilTest on XIAOZHI with PID 5368 (started by 猛男 in E:\Work\projects\gcc-fns-demo)
+2022-10-24 19:52:34,822 INFO [main] c.g.f.u.SendMailUtilTest [SpringApplication.java:655] The following profiles are active: dev
+2022-10-24 19:52:36,000 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-24 19:52:37,203 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-24 19:52:37,792 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-10-24 19:52:39,683 INFO [main] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-10-24 19:52:41,679 INFO [main] c.g.f.u.SendMailUtilTest [StartupInfoLogger.java:61] Started SendMailUtilTest in 7.56 seconds (JVM running for 8.939)
+2022-10-24 19:52:43,615 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:1948] {dataSource-1} closing ...
+2022-10-24 19:52:43,635 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:2020] {dataSource-1} closed
+2022-10-24 19:52:43,639 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-24 19:53:31,930 INFO [main] c.g.f.u.SendMailUtilTest [StartupInfoLogger.java:55] Starting SendMailUtilTest on XIAOZHI with PID 21056 (started by 猛男 in E:\Work\projects\gcc-fns-demo)
+2022-10-24 19:53:31,932 INFO [main] c.g.f.u.SendMailUtilTest [SpringApplication.java:655] The following profiles are active: dev
+2022-10-24 19:53:33,056 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-24 19:53:34,238 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-24 19:53:34,834 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-10-24 19:53:36,671 INFO [main] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-10-24 19:53:38,301 INFO [main] c.g.f.u.SendMailUtilTest [StartupInfoLogger.java:61] Started SendMailUtilTest in 7.052 seconds (JVM running for 8.653)
+2022-10-24 19:53:40,286 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:1948] {dataSource-1} closing ...
+2022-10-24 19:53:40,298 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:2020] {dataSource-1} closed
+2022-10-24 19:53:40,301 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-24 19:54:37,943 INFO [main] c.g.f.u.SendMailUtilTest [StartupInfoLogger.java:55] Starting SendMailUtilTest on XIAOZHI with PID 21012 (started by 猛男 in E:\Work\projects\gcc-fns-demo)
+2022-10-24 19:54:37,945 INFO [main] c.g.f.u.SendMailUtilTest [SpringApplication.java:655] The following profiles are active: dev
+2022-10-24 19:54:39,046 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-24 19:54:40,239 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-24 19:54:40,833 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-10-24 19:54:42,670 INFO [main] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-10-24 19:54:44,234 INFO [main] c.g.f.u.SendMailUtilTest [StartupInfoLogger.java:61] Started SendMailUtilTest in 6.952 seconds (JVM running for 8.402)
+2022-10-24 19:54:46,189 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:1948] {dataSource-1} closing ...
+2022-10-24 19:54:46,205 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:2020] {dataSource-1} closed
+2022-10-24 19:54:46,216 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-24 21:40:05,759 INFO [main] c.g.f.u.JWTUtilTest [StartupInfoLogger.java:55] Starting JWTUtilTest on XIAOZHI with PID 1328 (started by 猛男 in E:\Work\projects\gcc-fns-demo)
+2022-10-24 21:40:05,762 INFO [main] c.g.f.u.JWTUtilTest [SpringApplication.java:655] The following profiles are active: dev
+2022-10-24 21:40:07,002 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-24 21:40:08,812 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-24 21:40:09,812 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-10-24 21:40:12,490 INFO [main] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-10-24 21:40:14,644 INFO [main] c.g.f.u.JWTUtilTest [StartupInfoLogger.java:61] Started JWTUtilTest in 9.55 seconds (JVM running for 11.172)
+2022-10-24 21:40:15,044 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:1948] {dataSource-1} closing ...
+2022-10-24 21:40:15,053 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:2020] {dataSource-1} closed
+2022-10-24 21:40:15,055 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-24 21:41:34,542 INFO [main] c.g.f.u.JWTUtilTest [StartupInfoLogger.java:55] Starting JWTUtilTest on XIAOZHI with PID 13684 (started by 猛男 in E:\Work\projects\gcc-fns-demo)
+2022-10-24 21:41:34,544 INFO [main] c.g.f.u.JWTUtilTest [SpringApplication.java:655] The following profiles are active: dev
+2022-10-24 21:41:35,743 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-24 21:41:37,001 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-24 21:41:37,614 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-10-24 21:41:39,523 INFO [main] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-10-24 21:41:41,308 INFO [main] c.g.f.u.JWTUtilTest [StartupInfoLogger.java:61] Started JWTUtilTest in 7.434 seconds (JVM running for 8.825)
+2022-10-24 21:41:41,680 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:1948] {dataSource-1} closing ...
+2022-10-24 21:41:41,692 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:2020] {dataSource-1} closed
+2022-10-24 21:41:41,694 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-24 21:42:37,487 INFO [main] c.g.f.u.JWTUtilTest [StartupInfoLogger.java:55] Starting JWTUtilTest on XIAOZHI with PID 20476 (started by 猛男 in E:\Work\projects\gcc-fns-demo)
+2022-10-24 21:42:37,491 INFO [main] c.g.f.u.JWTUtilTest [SpringApplication.java:655] The following profiles are active: dev
+2022-10-24 21:42:39,201 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-24 21:42:40,834 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-24 21:42:41,804 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-10-24 21:42:43,884 INFO [main] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-10-24 21:42:47,664 INFO [main] c.g.f.u.JWTUtilTest [StartupInfoLogger.java:61] Started JWTUtilTest in 11.071 seconds (JVM running for 13.044)
+2022-10-24 21:42:48,144 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:1948] {dataSource-1} closing ...
+2022-10-24 21:42:48,158 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:2020] {dataSource-1} closed
+2022-10-24 21:42:48,160 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-24 21:43:23,957 INFO [main] c.g.f.u.JWTUtilTest [StartupInfoLogger.java:55] Starting JWTUtilTest on XIAOZHI with PID 17648 (started by 猛男 in E:\Work\projects\gcc-fns-demo)
+2022-10-24 21:43:23,959 INFO [main] c.g.f.u.JWTUtilTest [SpringApplication.java:655] The following profiles are active: dev
+2022-10-24 21:43:25,375 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-24 21:43:26,790 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-24 21:43:27,440 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-10-24 21:43:29,359 INFO [main] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-10-24 21:43:31,165 INFO [main] c.g.f.u.JWTUtilTest [StartupInfoLogger.java:61] Started JWTUtilTest in 7.949 seconds (JVM running for 9.867)
+2022-10-24 21:43:31,540 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:1948] {dataSource-1} closing ...
+2022-10-24 21:43:31,553 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:2020] {dataSource-1} closed
+2022-10-24 21:43:31,555 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-24 21:43:59,436 INFO [main] c.g.f.u.JWTUtilTest [StartupInfoLogger.java:55] Starting JWTUtilTest on XIAOZHI with PID 10052 (started by 猛男 in E:\Work\projects\gcc-fns-demo)
+2022-10-24 21:43:59,440 INFO [main] c.g.f.u.JWTUtilTest [SpringApplication.java:655] The following profiles are active: dev
+2022-10-24 21:44:00,883 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-24 21:44:01,313 INFO [main] o.s.b.a.l.ConditionEvaluationReportLoggingListener [ConditionEvaluationReportLoggingListener.java:136] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-10-24 21:45:47,095 INFO [main] c.g.f.u.JWTUtilTest [StartupInfoLogger.java:55] Starting JWTUtilTest on XIAOZHI with PID 21684 (started by 猛男 in E:\Work\projects\gcc-fns-demo)
+2022-10-24 21:45:47,097 INFO [main] c.g.f.u.JWTUtilTest [SpringApplication.java:655] The following profiles are active: dev
+2022-10-24 21:45:48,249 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-24 21:45:49,501 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-24 21:45:50,104 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-10-24 21:45:51,921 INFO [main] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-10-24 21:45:53,784 INFO [main] c.g.f.u.JWTUtilTest [StartupInfoLogger.java:61] Started JWTUtilTest in 7.339 seconds (JVM running for 8.788)
+2022-10-24 21:45:54,259 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:1948] {dataSource-1} closing ...
+2022-10-24 21:45:54,269 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:2020] {dataSource-1} closed
+2022-10-24 21:45:54,271 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-24 23:43:25,567 INFO [main] c.g.f.m.AppUserMapperTest [StartupInfoLogger.java:55] Starting AppUserMapperTest on XIAOZHI with PID 25300 (started by 猛男 in E:\Work\projects\gcc-fns-demo)
+2022-10-24 23:43:25,568 INFO [main] c.g.f.m.AppUserMapperTest [SpringApplication.java:655] The following profiles are active: dev
+2022-10-24 23:43:26,605 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-24 23:43:27,244 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-10-24 23:43:29,135 INFO [main] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-10-24 23:43:30,983 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-24 23:43:31,495 INFO [main] c.g.f.m.AppUserMapperTest [StartupInfoLogger.java:61] Started AppUserMapperTest in 6.485 seconds (JVM running for 7.867)
+2022-10-24 23:43:32,060 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-24 23:43:32,062 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:1948] {dataSource-1} closing ...
+2022-10-24 23:43:32,070 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:2020] {dataSource-1} closed
+2022-10-24 23:44:14,824 INFO [main] c.g.f.m.AppUserMapperTest [StartupInfoLogger.java:55] Starting AppUserMapperTest on XIAOZHI with PID 7308 (started by 猛男 in E:\Work\projects\gcc-fns-demo)
+2022-10-24 23:44:14,826 INFO [main] c.g.f.m.AppUserMapperTest [SpringApplication.java:655] The following profiles are active: dev
+2022-10-24 23:44:15,938 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-24 23:44:16,627 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-10-24 23:44:19,225 INFO [main] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-10-24 23:44:21,341 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-24 23:44:21,842 INFO [main] c.g.f.m.AppUserMapperTest [StartupInfoLogger.java:61] Started AppUserMapperTest in 7.622 seconds (JVM running for 9.048)
+2022-10-24 23:44:22,387 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-24 23:44:22,388 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:1948] {dataSource-1} closing ...
+2022-10-24 23:44:22,398 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:2020] {dataSource-1} closed
+2022-10-24 23:44:59,250 INFO [main] c.g.f.m.AppUserMapperTest [StartupInfoLogger.java:55] Starting AppUserMapperTest on XIAOZHI with PID 24992 (started by 猛男 in E:\Work\projects\gcc-fns-demo)
+2022-10-24 23:44:59,252 INFO [main] c.g.f.m.AppUserMapperTest [SpringApplication.java:655] The following profiles are active: dev
+2022-10-24 23:45:00,244 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-24 23:45:00,874 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-10-24 23:45:02,796 INFO [main] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-10-24 23:45:04,671 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-24 23:45:05,140 INFO [main] c.g.f.m.AppUserMapperTest [StartupInfoLogger.java:61] Started AppUserMapperTest in 6.436 seconds (JVM running for 7.76)
+2022-10-24 23:45:05,678 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-24 23:45:05,679 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:1948] {dataSource-1} closing ...
+2022-10-24 23:45:05,687 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:2020] {dataSource-1} closed
+2022-10-24 23:45:38,944 INFO [main] c.g.f.m.AppUserMapperTest [StartupInfoLogger.java:55] Starting AppUserMapperTest on XIAOZHI with PID 25432 (started by 猛男 in E:\Work\projects\gcc-fns-demo)
+2022-10-24 23:45:38,945 INFO [main] c.g.f.m.AppUserMapperTest [SpringApplication.java:655] The following profiles are active: dev
+2022-10-24 23:45:40,019 INFO [main] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-24 23:45:40,747 INFO [main] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-10-24 23:45:44,524 INFO [main] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-10-24 23:45:46,674 INFO [main] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-10-24 23:45:47,632 INFO [main] c.g.f.m.AppUserMapperTest [StartupInfoLogger.java:61] Started AppUserMapperTest in 9.276 seconds (JVM running for 10.814)
+2022-10-24 23:45:48,541 INFO [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:218] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-10-24 23:45:48,542 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:1948] {dataSource-1} closing ...
+2022-10-24 23:45:48,553 INFO [SpringContextShutdownHook] c.a.d.p.DruidDataSource [DruidDataSource.java:2020] {dataSource-1} closed
