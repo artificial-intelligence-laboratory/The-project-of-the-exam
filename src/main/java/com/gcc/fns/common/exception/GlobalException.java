@@ -7,8 +7,8 @@ import org.springframework.validation.BindException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-
-import javax.naming.SizeLimitExceededException;
+import org.springframework.web.multipart.MaxUploadSizeExceededException;
+import org.springframework.web.multipart.MultipartException;
 
 
 /**
@@ -51,8 +51,8 @@ public class GlobalException {
     /**
      * 文件超过指定大小异常
      */
-    @ExceptionHandler({SizeLimitExceededException.class})
-    public GraceJSONResult getSizeOverError(SizeLimitExceededException e) {
+    @ExceptionHandler({MultipartException.class})
+    public GraceJSONResult getSizeOverError(MaxUploadSizeExceededException e) {
         log.error(e.getMessage(), e);
         return GraceJSONResult.errorCustom(ResponseStatusEnum.FILE_MAX_SIZE_ERROR);
     }
@@ -60,8 +60,8 @@ public class GlobalException {
     /**
      * 服务器异常
      */
-    @ExceptionHandler({RuntimeException.class})
-    public GraceJSONResult getSizeOverError(RuntimeException e) {
+    @ExceptionHandler(RuntimeException.class)
+    public GraceJSONResult runtimeException(RuntimeException e) {
         log.error("服务器异常：{}", e.getMessage());
         return GraceJSONResult.errorMsg("服务器异常，请稍后重试~~~");
     }

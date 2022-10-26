@@ -113,18 +113,19 @@ public class AppUserServiceImpl extends ServiceImpl<AppUserMapper, AppUser> impl
     }
 
     @Override
-    public AppUser updateUserInfo(AppUserInfoDto appUserInfoDto) {
+    public AppUserInfoVo updateUserInfo(AppUserInfoDto appUserInfoDto, String token) {
         if (appUserInfoDto == null) {
             ThrowException.custom(ResponseStatusEnum.USER_UPLOAD_NULL_ERROR);
         }
         AppUser appUser = BeanUtil.copyProperties(appUserInfoDto, AppUser.class);
         appUser.setStatus(UserStatus.ACTIVE.type);
-        AppUserInfoVo user = UserHolder.getUser();
-        appUser.setId(user.getId());
+        AppUserInfoVo appUserInfoVo = UserHolder.getUser();
+        appUser.setId(appUserInfoVo.getId());
         // 更新到数据库
         appUserMapper.updateById(appUser);
-        // 缓存双删策略
-
-        return appUser;
+        BeanUtil.copyProperties(appUser, appUserInfoVo);
+        redis.set(RedisKeyUtil.getUserTokenKey(token), JsonUtils.objectToJson(appUserInfoVo),
+                RedisConstant.EXPIRATION_SEVEN_DAY);
+        return appUserInfoVo;
     }
 }

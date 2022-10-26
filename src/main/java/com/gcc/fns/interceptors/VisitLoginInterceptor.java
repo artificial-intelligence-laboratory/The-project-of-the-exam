@@ -1,9 +1,6 @@
 package com.gcc.fns.interceptors;
 
-import com.gcc.fns.common.utils.GraceJSONResult;
-import com.gcc.fns.common.utils.JsonUtils;
-import com.gcc.fns.common.utils.RedisKeyUtil;
-import com.gcc.fns.common.utils.RedisOperator;
+import com.gcc.fns.common.utils.*;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 
@@ -22,9 +19,13 @@ public class VisitLoginInterceptor implements HandlerInterceptor {
     @Resource
     private RedisOperator redis;
 
+    @Resource
+    private JWTUtil jwtUtil;
+
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         String token = request.getHeader("Authorization");
+        Long userId = jwtUtil.getUserId(token);
         boolean keyIsExist = redis.keyIsExist(RedisKeyUtil.getUserTokenKey(token));
         if (keyIsExist) {
             String json = JsonUtils.objectToJson(GraceJSONResult.ok());

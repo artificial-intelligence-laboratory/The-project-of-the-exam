@@ -1,14 +1,13 @@
 package com.gcc.fns.controller;
 
-import cn.hutool.core.bean.BeanUtil;
 import com.gcc.fns.common.utils.GraceJSONResult;
-import com.gcc.fns.pojo.AppUser;
 import com.gcc.fns.pojo.dto.AppUserInfoDto;
 import com.gcc.fns.pojo.vo.AppUserInfoVo;
 import com.gcc.fns.service.AppUserService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 /**
@@ -29,9 +28,10 @@ public class UserController {
     }
 
     @PostMapping("/updateUserInfo")
-    public GraceJSONResult updateUserInfo(@RequestBody @Valid AppUserInfoDto appUserInfoDto) {
-        AppUser appUser = appUserService.updateUserInfo(appUserInfoDto);
-        AppUserInfoVo appUserInfoVo = BeanUtil.copyProperties(appUser, AppUserInfoVo.class);
+    public GraceJSONResult updateUserInfo(@RequestBody @Valid AppUserInfoDto appUserInfoDto,
+                                          HttpServletRequest request) {
+        String token = request.getHeader("Authorization");
+        AppUserInfoVo appUserInfoVo = appUserService.updateUserInfo(appUserInfoDto, token);
         return GraceJSONResult.ok(appUserInfoVo);
     }
 }

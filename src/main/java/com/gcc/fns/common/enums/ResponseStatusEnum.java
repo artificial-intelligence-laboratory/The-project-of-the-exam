@@ -25,12 +25,18 @@ public enum ResponseStatusEnum {
 
     /* 邮箱相关 */
     MAIL_SEND_FAILED(554, false,"验证码发送失败，请重新发送"),
-    MAIL_NEED_WAIT_ERROR(505,false,"验证码发送太快啦~请稍后再试！"),
-    MAIL_CODE_EXPIRE(511,false,"邮箱验证码已过期，请重新发送"),
-    MAIL_CODE_ERROR(510,false,"验证码不正确，请重新输入"),
+    MAIL_NEED_WAIT_ERROR(555,false,"验证码发送太快啦~请稍后再试！"),
+    MAIL_CODE_EXPIRE(556,false,"邮箱验证码已过期，请重新发送"),
+    MAIL_CODE_ERROR(557,false,"验证码不正确，请重新输入"),
 
     /* 文件相关 */
-    FILE_MAX_SIZE_ERROR(513,false,"仅支持2MB大小以下的图片上传！");
+    FILE_FORMATTER_FAILD(572,false,"文件图片格式不支持！"),
+    FILE_NOT_EXIST_ERROR(573,false,"你所查看的文件不存在！"),
+    FILE_NAME_NOT(575,false,"文件名不能为空！"),
+    FILE_UPLOAD_NULL_ERROR(570,false,"文件不能为空，请选择一个文件再上传！"),
+    FILE_UPLOAD_ERROR(571,false,"文件上传失败，请重试！"),
+    FILE_UPLOAD_COUNT_OVER(571,false,"您今天的上传次数已用完"),
+    FILE_MAX_SIZE_ERROR(577,false,"仅支持2MB大小以下的图片上传！");
 
 
     // 响应业务状态

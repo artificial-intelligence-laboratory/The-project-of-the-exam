@@ -1,9 +1,10 @@
+
+
 spring:
   profiles:
     active: dev
   application:
     name: gcc-fns  # 应用名
-
 
 #--------------------------------------------
 # 邮箱相关配置
@@ -21,10 +22,6 @@ spring:
     multipart:
       max-file-size: 2MB          # 最大上传文件大小
       max-request-size: 2MB       # 最大请求大小
-
-server:
-  tomcat:
-    max-swallow-size: 2MB
 
 
 #--------------------------------------------
@@ -44,4 +41,8 @@ custom:
     secret: 2d#g24            # 秘钥
     expiration: 10080         # 过期时间（分钟）
 
+
+server:
+  tomcat:
+    max-swallow-size: -1     # 最大吞吐，-1为不限制
 

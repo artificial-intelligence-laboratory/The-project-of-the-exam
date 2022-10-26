@@ -3,10 +3,7 @@ package com.gcc.fns.interceptors;
 import com.gcc.fns.common.constant.RedisConstant;
 import com.gcc.fns.common.enums.ResponseStatusEnum;
 import com.gcc.fns.common.exception.ThrowException;
-import com.gcc.fns.common.utils.JsonUtils;
-import com.gcc.fns.common.utils.RedisKeyUtil;
-import com.gcc.fns.common.utils.RedisOperator;
-import com.gcc.fns.common.utils.UserHolder;
+import com.gcc.fns.common.utils.*;
 import com.gcc.fns.pojo.vo.AppUserInfoVo;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Component;
@@ -27,6 +24,8 @@ public class LoginInterceptor implements HandlerInterceptor {
     @Resource
     private RedisOperator redis;
 
+    @Resource
+    private JWTUtil jwtUtil;
 
     @Override
     public boolean preHandle(HttpServletRequest request,
@@ -37,6 +36,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         if (StringUtils.isBlank(token)) {
             ThrowException.custom(ResponseStatusEnum.UN_LOGIN);
         }
+        Long userId = jwtUtil.getUserId(token);
         // redis中不存在表示已过期，重新登录
         String userTokenKey = RedisKeyUtil.getUserTokenKey(token);
         String jsonUser = redis.get(userTokenKey);

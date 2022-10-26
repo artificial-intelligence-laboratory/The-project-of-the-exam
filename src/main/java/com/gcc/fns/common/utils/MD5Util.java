@@ -3,6 +3,9 @@ package com.gcc.fns.common.utils;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.util.DigestUtils;
 
+import java.io.IOException;
+import java.io.InputStream;
+
 /**
  * @author xiaozhi
  * @description MD5加密
@@ -29,6 +32,17 @@ public class MD5Util {
      */
     public static String encodeByMD5(String salt, String password) {
         return DigestUtils.md5DigestAsHex((salt + password).getBytes());
+    }
+
+    /**
+     * 生成文件MD5
+     */
+    public static String filenameByMD5(InputStream inputStream) {
+        try {
+            return DigestUtils.md5DigestAsHex(inputStream);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static void main(String[] args) {

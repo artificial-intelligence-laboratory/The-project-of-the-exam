@@ -26,5 +26,5 @@ public interface AppUserService extends IService<AppUser> {
      */
     AppUserInfoVo getUserInfo();
 
-    AppUser updateUserInfo(AppUserInfoDto appUserInfoDto);
+    AppUserInfoVo updateUserInfo(AppUserInfoDto appUserInfoDto, String token);
 }

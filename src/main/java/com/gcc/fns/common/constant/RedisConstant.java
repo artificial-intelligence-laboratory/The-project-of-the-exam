@@ -30,9 +30,19 @@ public class RedisConstant {
     public final static String LOGIN_IP_KEY = "login:ip";
 
     /**
+     * 文件上传次数
+     */
+    public final static String UPLOAD_COUNT_KEY = "upload:count";
+
+    /**
      * 过期时间 (7天)
      */
     public final static Integer EXPIRATION_SEVEN_DAY = 60 * 60 * 24 * 7;
+
+    /**
+     * 过期时间（1天）
+     */
+    public final static Integer EXPIRATION_ONE_DAY = 60 * 60 * 24;
 
     /**
      * 过期时间 (60s)
