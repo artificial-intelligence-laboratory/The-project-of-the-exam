@@ -11,6 +11,8 @@ import com.gcc.fns.model.dto.CodeLoginRequest;
 import com.gcc.fns.model.dto.PwdLoginRequest;
 import com.gcc.fns.model.dto.SendMailRequest;
 import com.gcc.fns.service.AppUserService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -27,6 +29,7 @@ import javax.validation.Valid;
  * @description
  * @create 2022-10-2022/10/24 23:21
  */
+@Api(value = "登录接口", tags = "登录接口")
 @RestController()
 @RequestMapping("/passport")
 @Slf4j
@@ -38,6 +41,7 @@ public class LoginController extends BaseController{
     @Autowired
     private AppUserService appUserService;
 
+    @ApiOperation(value = "发送验证码接口", notes = "传入邮箱账号发送验证码")
     @PostMapping("/sendCode")
     public GraceJSONResult sendCode(@RequestBody @Valid SendMailRequest sendMailRequest,
                                     HttpServletRequest request) {
@@ -58,7 +62,7 @@ public class LoginController extends BaseController{
         return GraceJSONResult.ok();
     }
 
-
+    @ApiOperation(value = "验证码登录接口", notes = "邮箱和验证码的方式登录，登录成功返回token")
     @PostMapping("/codeLogin")
     public GraceJSONResult codeLogin(@RequestBody @Valid CodeLoginRequest codeLoginRequest) {
         String email = codeLoginRequest.getEmail();
@@ -68,6 +72,7 @@ public class LoginController extends BaseController{
         return GraceJSONResult.ok(token);
     }
 
+    @ApiOperation(value = "验证码登录接口", notes = "邮箱和密码的方式登录，登录成功返回token")
     @PostMapping("/pwdLogin")
     public GraceJSONResult pwdLogin(@RequestBody @Valid PwdLoginRequest pwdLoginRequest) {
         String email = pwdLoginRequest.getEmail();
