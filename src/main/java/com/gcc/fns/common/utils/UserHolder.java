@@ -1,7 +1,7 @@
 package com.gcc.fns.common.utils;
 
 
-import com.gcc.fns.pojo.vo.AppUserInfoVo;
+import com.gcc.fns.model.vo.AppUserInfoVo;
 
 public class UserHolder {
     private static final ThreadLocal<AppUserInfoVo> tl = new ThreadLocal<>();

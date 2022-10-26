@@ -1,7 +1,7 @@
 package com.gcc.fns.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.gcc.fns.pojo.AppUser;
+import com.gcc.fns.model.entity.AppUser;
 
 /**
  * @author xiaozhi

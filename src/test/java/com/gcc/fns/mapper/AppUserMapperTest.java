@@ -1,6 +1,6 @@
 package com.gcc.fns.mapper;
 
-import com.gcc.fns.pojo.AppUser;
+import com.gcc.fns.model.entity.AppUser;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 

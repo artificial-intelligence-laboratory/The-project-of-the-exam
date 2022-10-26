@@ -1,8 +1,8 @@
 package com.gcc.fns.controller;
 
 import com.gcc.fns.common.utils.GraceJSONResult;
-import com.gcc.fns.pojo.dto.AppUserInfoDto;
-import com.gcc.fns.pojo.vo.AppUserInfoVo;
+import com.gcc.fns.model.dto.AppUserInfoDto;
+import com.gcc.fns.model.vo.AppUserInfoVo;
 import com.gcc.fns.service.AppUserService;
 import org.springframework.web.bind.annotation.*;
 

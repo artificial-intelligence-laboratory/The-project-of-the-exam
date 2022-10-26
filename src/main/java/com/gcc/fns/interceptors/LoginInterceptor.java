@@ -4,7 +4,7 @@ import com.gcc.fns.common.constant.RedisConstant;
 import com.gcc.fns.common.enums.ResponseStatusEnum;
 import com.gcc.fns.common.exception.ThrowException;
 import com.gcc.fns.common.utils.*;
-import com.gcc.fns.pojo.vo.AppUserInfoVo;
+import com.gcc.fns.model.vo.AppUserInfoVo;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;

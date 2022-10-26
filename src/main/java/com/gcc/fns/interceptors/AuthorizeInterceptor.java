@@ -4,7 +4,7 @@ import com.gcc.fns.common.enums.ResponseStatusEnum;
 import com.gcc.fns.common.enums.UserStatus;
 import com.gcc.fns.common.exception.ThrowException;
 import com.gcc.fns.common.utils.UserHolder;
-import com.gcc.fns.pojo.vo.AppUserInfoVo;
+import com.gcc.fns.model.vo.AppUserInfoVo;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 

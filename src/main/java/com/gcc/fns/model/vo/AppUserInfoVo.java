@@ -1,4 +1,4 @@
-package com.gcc.fns.pojo.vo;
+package com.gcc.fns.model.vo;
 
 import lombok.Data;
 

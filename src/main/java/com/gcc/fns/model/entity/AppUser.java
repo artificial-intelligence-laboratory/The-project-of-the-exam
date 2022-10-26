@@ -1,4 +1,4 @@
-package com.gcc.fns.pojo;
+package com.gcc.fns.model.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;

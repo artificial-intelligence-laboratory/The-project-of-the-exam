@@ -1,9 +1,9 @@
 package com.gcc.fns.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.gcc.fns.pojo.AppUser;
-import com.gcc.fns.pojo.dto.AppUserInfoDto;
-import com.gcc.fns.pojo.vo.AppUserInfoVo;
+import com.gcc.fns.model.entity.AppUser;
+import com.gcc.fns.model.dto.AppUserInfoDto;
+import com.gcc.fns.model.vo.AppUserInfoVo;
 
 public interface AppUserService extends IService<AppUser> {
 

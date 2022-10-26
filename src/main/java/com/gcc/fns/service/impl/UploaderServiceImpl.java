@@ -9,7 +9,7 @@ import com.gcc.fns.common.utils.RedisKeyUtil;
 import com.gcc.fns.common.utils.RedisOperator;
 import com.gcc.fns.common.utils.UserHolder;
 import com.gcc.fns.common.utils.aliyun.AliyunOSSUtil;
-import com.gcc.fns.pojo.vo.AppUserInfoVo;
+import com.gcc.fns.model.vo.AppUserInfoVo;
 import com.gcc.fns.service.UploaderService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;

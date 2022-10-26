@@ -1,4 +1,4 @@
-package com.gcc.fns.pojo.dto;
+package com.gcc.fns.model.dto;
 
 import lombok.Data;
 

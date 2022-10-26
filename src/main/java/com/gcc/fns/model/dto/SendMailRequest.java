@@ -1,4 +1,4 @@
-package com.gcc.fns.pojo.dto;
+package com.gcc.fns.model.dto;
 
 import lombok.Data;
 
@@ -8,18 +8,15 @@ import java.io.Serializable;
 
 /**
  * @author xiaozhi
- * @description
- * @create 2022-10-2022/10/25 11:16
+ * @description 验证码登录请求体
+ * @create 2022-10-2022/10/24 23:16
  */
 @Data
-public class CodeLoginRequest implements Serializable {
+public class SendMailRequest implements Serializable {
 
     private static final long serialVersionUID = 3191241716373120793L;
 
     @Email(message = "邮箱格式不正确，请重新输入")
     @NotBlank(message = "邮箱不能为空")
     private String email;
-
-    @NotBlank(message = "验证码不能为空")
-    private String code;
 }
