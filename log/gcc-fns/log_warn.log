@@ -236,3 +236,4 @@ Caused by: java.lang.ClassNotFoundException: springfox.documentation.spring.web.
 	... 30 common frames omitted
 2022-10-26 23:35:59,167 WARN [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder [CompositeLog.java:127] For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
 2022-10-26 23:43:28,317 WARN [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder [CompositeLog.java:127] For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2022-10-26 23:45:39,897 WARN [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder [CompositeLog.java:127] For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
