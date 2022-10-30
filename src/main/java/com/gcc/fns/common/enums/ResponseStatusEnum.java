@@ -14,7 +14,7 @@ public enum ResponseStatusEnum {
     TICKET_INVALID(502,false,"会话失效，请重新登录！"),
     USER_INACTIVE_ERROR(509,false,"请前往[账号设置]修改信息激活后再进行后续操作！"),
     USER_FROZEN_ERROR(522,false,"用户被冻结，请联系管理员解冻"),
-    USER_NOT_PASSWORD(510,false,"当前账号还未设置密码，请使用验证码登录"),
+    USER_NOT_PASSWORD(510,false,"当前账号还未设置密码，请设置密码再使用密码登录"),
     USER_NOT_NULL(511, false, "账号和密码不能为空"),
     USER_LOGIN_PWD_ERROR(512, false, "账号或密码错误，请重新输入"),
     USER_LOGIN_CODE_ERROR(513, false, "账号或验证码错误，请重新输入"),

@@ -4,11 +4,65 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.gcc.fns.mapper.OrderMapper">
 
-    <resultMap id="orderMap" type="order">
-
+    <!-- 查接订单的映射 -->
+    <resultMap id="orderMap" type="orderVo">
+        <id property="id" column="oid"/>
+        <result property="title" column="title"/>
+        <result property="details" column="details"/>
+        <result property="beCareful" column="be_careful"/>
+        <result property="fee" column="fee"/>
+        <result property="workPlace" column="work_place"/>
+        <result property="createTime" column="create_time"/>
+        <result property="closedTime" column=""/>
+        <result property="type" column="type"/>
+        <association property="orderUser" javaType="appUserInfoVo">
+            <id property="id" column="id"/>
+            <result property="username" column="username"/>
+            <result property="avatar" column="avatar"/>
+            <result property="academy" column="academy"/>
+            <result property="specialities" column="specialities"/>
+            <result property="classes" column="classes"/>
+            <result property="num" column="num"/>
+            <result property="phone" column="nickname"/>
+        </association>
     </resultMap>
-    <select id="selectOrderById" resultMap="orderMap">
 
+    <!-- 查询接单用户相关 -->
+    <sql id="selectForTargetUserFiled">
+        select
+            <if test="isSelectFromUser = true">
+                uf.id, uf.face_url, uf.nickname, uf.college,uf.major, uf.class_name, uf.phone,
+            </if>
+            <if test="isSelectFromUser = false">
+                ut.id, ut.face_url, ut.nickname, ut.college, ut.major, ut.class_name, ut.phone,
+            </if>
+            t.type,
+            o.id oid, o.title, o.details, o.be_careful, o.fee,
+            o.work_place, o.`status`, o.create_time, o.update_time
+        from
+            t_order o JOIN t_order_type t ON o.type_id = t.id
+                      JOIN t_app_user ut ON o.target_user_id = ut.id
+                      JOIN t_app_user uf ON o.from_user_id = uf.id
+    </sql>
+
+    <!-- 查询发单用户相关 -->
+    <sql id="selectForFromUserFiled">
+        select
+            uf.id, uf.face_url, uf.nickname, uf.college,
+            uf.major, uf.class_name, uf.phone,
+            t.type,
+            o.id oid, o.title, o.details, o.be_careful,
+            o.fee, o.work_place, o.`status`, o.`create_time`, o.`update_time`
+        from
+            t_order o JOIN t_order_type t ON o.type_id = t.id
+                      JOIN t_app_user ut ON o.target_user_id = ut.id
+                      JOIN t_app_user uf ON o.from_user_id = uf.id
+    </sql>
+
+    <select id="selectOrderByUserId" resultMap="orderMap" resultType="list">
+        <include refid="selectForTargetUserFiled"></include>
+        where ut.id = #{id}
+        ORDER BY o.create_time DESC
     </select>
 
 

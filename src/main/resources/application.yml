@@ -1,5 +1,3 @@
-
-
 spring:
   profiles:
     active: dev
@@ -39,7 +37,7 @@ custom:
   jwt:
     subject: GCC-FNS          # 主体名
     secret: 2d#g24            # 秘钥
-    expiration: 10080         # 过期时间（分钟）
+    expiration: 7         # 过期时间（天数）
 
   upload:
     count: 3                  # 用户文件上传最大次数

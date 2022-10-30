@@ -19,7 +19,7 @@ public class AppUserMapperTest {
 
     @Test
     public void test(){
-        AppUser appUser = appUserMapper.selectById(1L);
+        AppUser appUser = appUserMapper.selectById(11L);
         System.out.println(appUser);
     }
 }

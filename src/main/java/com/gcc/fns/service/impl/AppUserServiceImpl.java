@@ -9,8 +9,8 @@ import com.gcc.fns.common.enums.UserStatus;
 import com.gcc.fns.common.exception.ThrowException;
 import com.gcc.fns.common.utils.*;
 import com.gcc.fns.mapper.AppUserMapper;
-import com.gcc.fns.model.entity.AppUser;
 import com.gcc.fns.model.dto.AppUserInfoDto;
+import com.gcc.fns.model.entity.AppUser;
 import com.gcc.fns.model.vo.AppUserInfoVo;
 import com.gcc.fns.service.AppUserService;
 import org.apache.commons.lang3.StringUtils;
@@ -19,6 +19,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author xiaozhi
@@ -39,7 +41,7 @@ public class AppUserServiceImpl extends ServiceImpl<AppUserMapper, AppUser> impl
 
     @Transactional
     @Override
-    public String loginForCode(String email, String code) {
+    public Map<String, Object> loginForCode(String email, String code) {
         if (StringUtils.isAnyBlank(email, code)) {
             ThrowException.custom(ResponseStatusEnum.MAIL_CODE_NOT_EMPTY);
         }
@@ -55,40 +57,51 @@ public class AppUserServiceImpl extends ServiceImpl<AppUserMapper, AppUser> impl
         AppUser appUser = getUser(email);
         // 不存在就创建
         if (appUser == null) {
+            appUser = new AppUser();
             appUser.setEmail(email);
             appUser.setCreateTime(new Date());
             appUser.setUpdateTime(new Date());
             // 插入数据库
             appUserMapper.insert(appUser);
         }
-        return getToken(appUser);
+        return getTokenAndUserInfo(appUser);
     }
 
     @Transactional
     @Override
-    public String loginForPwd(String email, String password) {
+    public Map<String, Object> loginForPwd(String email, String password) {
         if (StringUtils.isAnyBlank(email, password)) {
             ThrowException.custom(ResponseStatusEnum.USER_NOT_NULL);
         }
         // 根据email查询用户
-        AppUser user = getUser(email);
+        AppUser appUser = getUser(email);
         // 不存在用户
-        if (user == null) {
+        if (appUser == null) {
             ThrowException.custom(ResponseStatusEnum.USER_NOT_EXIST);
         }
         // 用户密码功能未开启
-        if (StringUtils.isBlank(user.getPassword())) {
+        if (StringUtils.isBlank(appUser.getPassword())) {
             ThrowException.custom(ResponseStatusEnum.USER_NOT_PASSWORD);
         }
         // 密码加密
-        password = MD5Util.encodeByMD5(user.getSalt(), password);
+        password = MD5Util.encodeByMD5(appUser.getSalt(), password);
         // 账号或密码不一致
-        if (!StringUtils.equals(email, user.getEmail()) || !StringUtils.equals(password, user.getPassword())) {
+        if (!StringUtils.equals(email, appUser.getEmail()) || !StringUtils.equals(password, appUser.getPassword())) {
             ThrowException.custom(ResponseStatusEnum.USER_LOGIN_PWD_ERROR);
         }
+        return getTokenAndUserInfo(appUser);
+    }
 
-        // 返回登录token
-        return getToken(user);
+    /**
+     * 获取token和用户信息
+     */
+    private Map<String, Object> getTokenAndUserInfo(AppUser appUser) {
+        Map<String, Object> map = new HashMap<>();
+        String token = getToken(appUser);
+        AppUserInfoVo appUserInfoVo = BeanUtil.copyProperties(appUser, AppUserInfoVo.class);
+        map.put("token", token);
+        map.put("user", appUserInfoVo);
+        return map;
     }
 
     private String getToken(AppUser user) {

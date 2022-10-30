@@ -23,6 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+import java.util.Map;
 
 /**
  * @author xiaozhi
@@ -67,9 +68,8 @@ public class LoginController extends BaseController{
     public GraceJSONResult codeLogin(@RequestBody @Valid CodeLoginRequest codeLoginRequest) {
         String email = codeLoginRequest.getEmail();
         String code = codeLoginRequest.getCode();
-        // 生成token并写入到数据库中
-        String token = appUserService.loginForCode(email, code);
-        return GraceJSONResult.ok(token);
+        Map<String, Object> map = appUserService.loginForCode(email, code);
+        return GraceJSONResult.ok(map);
     }
 
     @ApiOperation(value = "验证码登录接口", notes = "邮箱和密码的方式登录，登录成功返回token")
@@ -77,7 +77,7 @@ public class LoginController extends BaseController{
     public GraceJSONResult pwdLogin(@RequestBody @Valid PwdLoginRequest pwdLoginRequest) {
         String email = pwdLoginRequest.getEmail();
         String password = pwdLoginRequest.getPassword();
-        String token = appUserService.loginForPwd(email, password);
-        return GraceJSONResult.ok(token);
+        Map<String, Object> map = appUserService.loginForPwd(email, password);
+        return GraceJSONResult.ok(map);
     }
 }

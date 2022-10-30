@@ -29,15 +29,18 @@ public class InterceptorConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(loginInterceptor)
-                .addPathPatterns("/user/**")
-                .addPathPatterns("/file/**");
+                .addPathPatterns(
+                        "/user/**",
+                        "/file/**");
 
         registry.addInterceptor(authorizeInterceptor)
-                .addPathPatterns("/user/**")
-                .excludePathPatterns("/user/updateUserInfo");
+                .addPathPatterns(
+                        "/user/**",
+                        "/file/**");
 
         registry.addInterceptor(visitLoginInterceptor)
-                .addPathPatterns("/passport/codeLogin")
-                .addPathPatterns("/passport/pwdLogin");
+                .addPathPatterns(
+                        "/passport/codeLogin",
+                        "/passport/pwdLogin");
     }
 }

@@ -1,16 +1,18 @@
 package com.gcc.fns.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.gcc.fns.model.entity.AppUser;
 import com.gcc.fns.model.dto.AppUserInfoDto;
+import com.gcc.fns.model.entity.AppUser;
 import com.gcc.fns.model.vo.AppUserInfoVo;
+
+import java.util.Map;
 
 public interface AppUserService extends IService<AppUser> {
 
     /**
      * 验证码登录
      */
-    String loginForCode(String email, String code);
+    Map<String, Object> loginForCode(String email, String code);
 
     /**
      * 账号密码登录
@@ -18,7 +20,7 @@ public interface AppUserService extends IService<AppUser> {
      * @param password
      * @return
      */
-    String loginForPwd(String email, String password);
+    Map<String, Object> loginForPwd(String email, String password);
 
     /**
      * 获取用户基本信息

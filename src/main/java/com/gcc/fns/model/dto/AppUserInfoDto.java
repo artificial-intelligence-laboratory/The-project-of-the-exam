@@ -18,30 +18,38 @@ public class AppUserInfoDto implements Serializable {
     /**
      * 昵称
      */
-    private String nickname;
+    @NotBlank(message = "昵称不能为空")
+    private String username;
 
     /**
      * 用户头像地址
      */
-    private String faceUrl;
+    @NotBlank(message = "头像不能为空")
+    private String avatar;
 
     /**
      * 学院
      */
     @NotBlank(message = "学院不能为空")
-    private String college;
+    private String academy;
 
     /**
      * 专业
      */
     @NotBlank(message = "专业不能为空")
-    private String major;
+    private String specialities;
 
     /**
      * 班级名
      */
     @NotBlank(message = "班级不能为空")
-    private String className;
+    private String classes;
+
+    /**
+     * 学号
+     */
+    @NotBlank(message = "学号不能为空")
+    private String num;
 
     /**
      * 手机号

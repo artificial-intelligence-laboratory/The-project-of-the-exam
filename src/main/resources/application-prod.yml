@@ -1,11 +1,11 @@
 server:
-  port: 9999
+  port: 8888
 
 spring:
   datasource:
     username: root
-    password: abc123
-    url: jdbc:mysql://192.168.6.156:3306/gcc-fns?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSsl=false
+    password: Aliyun@qq.com
+    url: jdbc:mysql://localhost:3306/gcc-fns?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8&useSsl=false
     driver-class-name: com.mysql.cj.jdbc.Driver
 
     druid:
@@ -34,13 +34,20 @@ spring:
           config:
             drop-table-allow: false
 
+
+  redis:
+    database: 3
+    host: 120.24.226.87
+    port: 6379
+    password: redis888***
+
+# dev环境下开启日志
+mybatis-plus:
+  configuration:
+    log-impl: ""   # prod环境下关闭日志
+
 logging:
   file:
     path: ./log         # 设置日志文件存放位置
   level:
-    com.gcc.fns: info   # 设置对应的包的日志等
-
-
-mybatis-plus:
-  configuration:
-    log-impl: ''   # prod环境下关闭日志
+    com.gcc.fns: info  # 设置对应的包的日志等级

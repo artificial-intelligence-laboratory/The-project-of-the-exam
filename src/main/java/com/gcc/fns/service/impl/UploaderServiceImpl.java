@@ -1,7 +1,6 @@
 package com.gcc.fns.service.impl;
 
 import cn.hutool.core.io.file.FileNameUtil;
-import com.gcc.fns.common.constant.RedisConstant;
 import com.gcc.fns.common.enums.ResponseStatusEnum;
 import com.gcc.fns.common.exception.ThrowException;
 import com.gcc.fns.common.utils.MD5Util;
@@ -43,14 +42,14 @@ public class UploaderServiceImpl implements UploaderService {
         AppUserInfoVo user = UserHolder.getUser();
         Long id = user.getId();
         // 用户一天只能修改三次
-        String count = redis.get(RedisKeyUtil.getUploadCount(id));
-        if (count != null) {
-            if (Integer.valueOf(count) >= 3) {
-                ThrowException.custom(ResponseStatusEnum.FILE_UPLOAD_COUNT_OVER);
-            }
-        } else {
-            redis.set(RedisKeyUtil.getUploadCount(id), "0",RedisConstant.EXPIRATION_ONE_DAY);
-        }
+//        String count = redis.get(RedisKeyUtil.getUploadCount(id));
+//        if (count != null) {
+//            if (Integer.valueOf(count) >= 3) {
+//                ThrowException.custom(ResponseStatusEnum.FILE_UPLOAD_COUNT_OVER);
+//            }
+//        } else {
+//            redis.set(RedisKeyUtil.getUploadCount(id), "0",RedisConstant.EXPIRATION_ONE_DAY);
+//        }
         // 文件不能为空
         if (file == null) {
             ThrowException.custom(ResponseStatusEnum.FILE_UPLOAD_NULL_ERROR);

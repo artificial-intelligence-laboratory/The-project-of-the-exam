@@ -45,27 +45,32 @@ public class AppUser implements Serializable {
     /**
      * 昵称
      */
-    private String nickname;
+    private String username;
 
     /**
      * 用户头像地址
      */
-    private String faceUrl;
+    private String avatar;
 
     /**
      * 学院
      */
-    private String college;
+    private String academy;
 
     /**
      * 专业
      */
-    private String major;
+    private String specialities;
 
     /**
      * 班级名
      */
-    private String className;
+    private String classes;
+
+    /**
+     * 学号
+     */
+    private String num;
 
     /**
      * 手机号

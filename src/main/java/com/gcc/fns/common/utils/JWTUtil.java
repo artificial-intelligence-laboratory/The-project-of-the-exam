@@ -40,7 +40,7 @@ public class JWTUtil {
     public String createToken(Long userId, String username) {
         return Jwts.builder()
                 .setSubject(subject)
-                .setExpiration(DateUtils.addMinutes(new Date(), expiration))
+                .setExpiration(DateUtils.addDays(new Date(), expiration))
                 .claim("userId", userId)
                 .claim("username", username)
                 .signWith(SignatureAlgorithm.HS512, secret)

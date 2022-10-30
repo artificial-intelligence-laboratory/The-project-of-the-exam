@@ -1,12 +1,14 @@
-package com.gcc.fns.model.entity;
+package com.gcc.fns.model.vo;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 
 /**
@@ -16,7 +18,7 @@ import java.util.Date;
  */
 @TableName("t_order")
 @Data
-public class Order implements Serializable {
+public class OrderVo implements Serializable {
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
@@ -28,15 +30,9 @@ public class Order implements Serializable {
     private Long id;
 
     /**
-     * 发单用户id
+     * 订单用户：发单用户和接单用户
      */
-    private Long fromUserId;
-
-    /**
-     * 接单用户id
-     */
-
-    private Long targetUserId;
+    private AppUserInfoVo orderUser;
 
     /**
      * 标题
@@ -61,31 +57,23 @@ public class Order implements Serializable {
     /**
      * 金额
      */
-    private Double fee;
+    private BigDecimal fee;
 
     /**
      * 订单类型
      */
-    private Integer typeId;
-
-    /**
-     * 状态：0-待审核 1-代接取 2-待结束 3-已结束 4-待验收
-     */
-    private Integer status;
+    private String type;
 
     /**
      * 创建时间
      */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date createTime;
-
-    /**
-     * 更新时间
-     */
-    private Date updateTime;
 
     /**
      * 结束时间
      */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date closedTime;
 
 }

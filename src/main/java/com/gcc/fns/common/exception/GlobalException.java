@@ -34,7 +34,6 @@ public class GlobalException {
     @ExceptionHandler(BindException.class)
     public GraceJSONResult returnErrorInfo(BindException e) {
         String message = e.getFieldErrors().get(0).getDefaultMessage();
-        log.error(e.getMessage(), e);
         return GraceJSONResult.errorMsg(message);
     }
 
@@ -44,7 +43,6 @@ public class GlobalException {
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public GraceJSONResult returnErrorInfo(MethodArgumentNotValidException e) {
         String message = e.getBindingResult().getFieldErrors().get(0).getDefaultMessage();
-        log.error(e.getMessage(), e);
         return GraceJSONResult.errorMsg(message);
     }
 
@@ -53,7 +51,6 @@ public class GlobalException {
      */
     @ExceptionHandler({MultipartException.class})
     public GraceJSONResult getSizeOverError(MaxUploadSizeExceededException e) {
-        log.error(e.getMessage(), e);
         return GraceJSONResult.errorCustom(ResponseStatusEnum.FILE_MAX_SIZE_ERROR);
     }
 
