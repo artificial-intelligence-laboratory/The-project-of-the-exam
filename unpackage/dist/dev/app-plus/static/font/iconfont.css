@@ -1,0 +1,103 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 2609616 */
+
+  src: 
+       
+    /*   url('/static/font/iconfont.woff2') format('woff2'),
+       url('/static/font/iconfont.woff') format('woff'),
+	   url('/static/font/iconfont.ttf') format('truetype'), */
+	   
+	    url('https://at.alicdn.com/t/c/font_2609616_ug660m936il.woff2?t=1666315561882') format('woff2'),
+	    url('https://at.alicdn.com/t/c/font_2609616_ug660m936il.woff?t=1666315561882') format('woff'),
+	    url('https://at.alicdn.com/t/c/font_2609616_ug660m936il.ttf?t=1666315561882') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 40rpx;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 订单 */
+.Order_icon{
+	font-family: "iconfont" !important;
+	font-size: 50rpx;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+.icon-jinxingzhong:before {
+  content: "\e63f";
+}
+
+.icon-renwu:before {
+  content: "\e640";
+}
+
+.icon-daishenhe:before {
+  content: "\e601";
+}
+
+.icon-complete-fill:before {
+  content: "\e677";
+}
+
+.icon-send-selected-copy:before {
+  content: "\eb27";
+}
+
+.icon-accept-selected:before {
+  content: "\eb28";
+}
+
+.icon-send:before {
+  content: "\e8f2";
+}
+
+.icon-jiedan:before {
+  content: "\e633";
+}
+
+.icon-dating:before {
+  content: "\e7bd";
+}
+
+.icon-profile-selected:before {
+  content: "\eb25";
+}
+
+.icon-chat-selected:before {
+  content: "\eb26";
+}
+
+.icon-chat:before {
+  content: "\e639";
+}
+
+.icon-Profile:before {
+  content: "\e615";
+}
+
+.icon-shezhi:before {
+  content: "\e68f";
+}
+
+.icon-fenxiang:before {
+  content: "\eb24";
+}
+
+.icon-guanyuwomen:before {
+  content: "\e65e";
+}
+
+.icon-tuichu:before {
+  content: "\e892";
+}
+
+.icon-woderenwu:before {
+  content: "\e672";
+}

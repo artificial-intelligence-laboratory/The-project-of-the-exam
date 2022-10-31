@@ -1,0 +1,17 @@
+	.title{
+		
+	}
+	.box1{
+		width: 500rpx;height: 500rpx;background: yellow;
+	}
+	.box2{
+		height: 200rpx;width: 200rpx;background: pink;
+	}
+	.active-box2{
+		background: red;
+	}
+	.active-box{
+		background: green;
+	}
+	
+	

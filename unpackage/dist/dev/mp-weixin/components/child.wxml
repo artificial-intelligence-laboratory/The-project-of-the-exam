@@ -1,0 +1,1 @@
+<view>{{''+DadData.name+''}}<button type="default" data-event-opts="{{[['tap',[['SendtoDad',['$event']]]]]}}" bindtap="__e">向父组件发送</button></view>

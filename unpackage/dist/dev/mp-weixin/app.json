@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/Profile/Profile",
+    "pages/accept/accept",
+    "pages/detail/detail",
+    "pages/Contact/Contact"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "小灵通",
+    "navigationBarBackgroundColor": "#e7e7e7",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#2979FF",
+    "borderStyle": "black",
+    "backgroundColor": "white",
+    "iconfontSrc": "static/font/iconfont.ttf",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "接单",
+        "iconfont": {
+          "text": "",
+          "selectedText": "",
+          "selectedColor": "#1296DB"
+        }
+      },
+      {
+        "pagePath": "pages/accept/accept",
+        "text": "发单",
+        "iconfont": {
+          "text": "",
+          "selectedText": ""
+        }
+      },
+      {
+        "pagePath": "pages/Contact/Contact",
+        "text": "聊天",
+        "iconfont": {
+          "text": "",
+          "selectedText": ""
+        }
+      },
+      {
+        "pagePath": "pages/Profile/Profile",
+        "text": "我的",
+        "iconfont": {
+          "text": "",
+          "selectedText": ""
+        }
+      }
+    ]
+  },
+  "uniStatistics": {
+    "enable": true
+  },
+  "usingComponents": {}
+}

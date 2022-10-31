@@ -1,0 +1,168 @@
+{
+	"pages": [{
+			"path": "pages/index/index", //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+			"style": {
+				"navigationBarTitleText": "", // 在数组内配置了nav的标题，优先使用，若没有则使用全局配置
+				"navigationBarTextStyle": "white",
+				"backgroundColor": "#4CD964", // 下拉背景颜色
+				"backgroundTextStyle": "light"
+			}
+		},
+		{
+			"path": "pages/Profile/Profile",
+			"style": {
+				
+			}
+		},
+		{
+			"path": "pages/getOrder/getOrder",
+			"style": {
+				
+			}
+		},
+		{
+			"path": "pages/detail/detail",
+			"style": {
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 200
+
+			}
+		},
+		{
+			"path": "pages/Profile/SecondPages/MySend",
+			"style": {
+				"navigationBarTitleText": "我的发布"
+			}
+		},
+		{
+			"path": "pages/Profile/SecondPages/MyOrder",
+			"style": {
+				"navigationBarTitleText": "我的接单"
+			}
+		},
+		{
+			"path": "pages/Contact/ContactList",
+			"style": {
+				"backgroundColor": "white",
+				"navigationStyle":"custom"
+			}
+		},
+		{
+			"path": "pages/Login/login",
+			"style": {
+				"backgroundColor": "#eeeeee"
+			}
+		},
+		{
+			"path": "pages/Contact/SecondPage/Chat"
+		},
+		{
+			"path": "pages/Profile/SecondPages/About"
+		},
+		{
+			"path": "pages/Profile/SecondPages/Setting",
+			"style": {
+				"navigationBarTitleText": "账户设置"
+			}
+		},
+		{
+			"path": "pages/Profile/SecondPages/Share",
+			"style": {
+				"navigationBarTitleText": "推荐给好友"
+				
+			}
+		},
+		{
+			"path": "pages/Profile/ThirdPage/ProfileSetting",
+			"style": {
+				"navigationBarTitleText": "账户设置"
+			}
+		},
+		{
+			"path": "pages/Profile/ThirdPage/MessageSetting",
+			"style": {
+	
+				"navigationBarTitleText": "消息设置"
+
+			}
+		},
+		{
+			"path": "pages/Profile/SecondPages/UserDetail",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarBackgroundColor": "#eeeeee"
+	},
+"app-plus": {
+		"animationType": "slide-in-right",
+		"animationDuration": 100
+	},
+
+	"tabBar": {
+		"color": "#000000",
+		"borderStyle": "black",
+		"backgroundColor": "white",
+		"iconfontSrc": "http://at.alicdn.com/t/c/font_2609616_ug660m936il.ttf?t=1666315561882",
+		"list": [
+			{
+				// 接单资讯
+				"pagePath": "pages/index/index",
+				"text": "接单",
+				"iconfont": {
+					"text": "\ue633",
+					"selectedText": "\ueb28"
+
+
+				}
+
+			},
+			
+			// 发单资讯
+			{
+				"pagePath": "pages/getOrder/getOrder",
+				"text": "发单",
+				"iconfont": {
+					"text": "\ue8f2",
+					"selectedText": "\ueb27"
+				}
+
+			},
+
+			//聊天页面		
+			{
+				"pagePath": "pages/Contact/ContactList",
+				"text": "聊天",
+				"iconfont": {
+					"text": "\ue639",
+					"selectedText": "\ueb26"
+
+				}
+
+
+			},
+
+
+			// 我的页面
+			{
+				"pagePath": "pages/Profile/Profile",
+				"text": "我的",
+				"iconfont": {
+					"text": "\ue615",
+					"selectedText": "\ueb25"
+				}
+
+			}
+
+
+
+
+		]
+
+	}
+
+
+}

@@ -1,0 +1,1 @@
+<view>列表页<view class="_ul"><block wx:for="{{resultList}}" wx:for-item="item" wx:for-index="index"><view class="_li">{{item.cate_name}}</view></block></view><button data-event-opts="{{[['tap',[['setImage',['$event']]]]]}}" bindtap="__e">设置照片</button><block wx:for="{{ImgArr}}" wx:for-item="item" wx:for-index="index"><image src="{{item}}"></image></block></view>

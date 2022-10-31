@@ -1,0 +1,151 @@
+page {
+		background-color: #eeeeee;
+	}
+	#Order_icon{
+		// outline: 1px solid black;
+		width: 60rpx;
+		height: 60rpx;
+		line-height: 60rpx;
+		text-align: center;
+	}
+	.all{
+		position: relative;
+		top:20rpx;
+		right: -480rpx;
+		
+	}
+	.mysend{
+		position: relative;
+		top:30rpx;
+		left: 30rpx;
+	}
+	.box1 {
+		border-radius: 20rpx;
+		display: flex;
+		margin: 0 auto;
+		justify-content: space-between;
+		flex-direction: column;
+		width: 95%;
+	}
+
+	.box2 {
+		border-radius: 20rpx;
+		background: white;
+		margin: 0 auto;
+		margin-bottom: 50rpx;
+		height: 300rpx;
+		width: 95%;
+		// outline: 1px solid black;
+	}
+
+	.swiper {
+		margin-top: 60rpx;
+		height: 200rpx;
+	}
+
+	.grid-text {
+		font-size: 24rpx;
+		color: #909399;
+		padding: 10rpx 0 10rpx 0rpx;
+		/* #ifndef APP-PLUS */
+		box-sizing: border-box;
+		/* #endif */
+	}
+
+	#WhiteBox {
+		background: white;
+
+	}
+
+	.personal {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 30rpx 0 40rpx 30rpx;
+	}
+
+	.personal-main {
+		display: flex;
+		align-items: center;
+	}
+
+	.personal-info {
+		display: flex;
+		flex-direction: column;
+		height: 130rpx;
+		justify-content: space-around;
+		/* outline: 1px solid black; */
+	}
+
+	.u-avatar {
+		margin-right: 30rpx;
+	}
+
+	.navbar-right {
+		padding: 0 40rpx;
+	}
+
+	.navbar-right-icon {
+		margin-left: 50rpx;
+	}
+
+	.SettingItem {
+		display: flex;
+		align-items: center;
+		background-color: #ffffff;
+		/* margin-bottom: 20rpx; */
+		width: 90%;
+		margin: 0 auto;
+	}
+	
+	.p-right-icon {
+		padding: 0 10rpx;
+	}
+
+	.item-bottom-solid {
+		// outline: 1px solid black;
+		border-bottom: 0.5px solid #e6e6e6;
+	}
+	.left-a{
+		// outline: 1px solid black;
+
+	}
+	.p-left {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 60rpx;
+		height: 60rpx;
+		padding: 10rpx;
+		margin: 20rpx;
+		margin-left: 0;
+		color: #FFFFFF;
+
+		// outline: 1px solid black;
+	}
+
+	.p-right {
+		height: 90rpx;
+		flex: 1;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		// outline: 1px solid black;
+	}
+
+	.p-right-main {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.p-right-main-name {
+		font-size: 36rpx;
+		font-weight: 500;
+	}
+
+	.p-right-main-time {
+		margin-right: 20rpx;
+		font-size: 24rpx;
+		color: $profile-grey;
+	}
