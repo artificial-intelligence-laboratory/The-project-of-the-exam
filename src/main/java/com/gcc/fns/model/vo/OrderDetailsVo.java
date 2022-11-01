@@ -13,12 +13,12 @@ import java.util.Date;
 
 /**
  * @author xiaozhi
- * @description 订单类
+ * @description 订单详细信息返回类
  * @create 2022-10-2022/10/26 14:59
  */
 @TableName("t_order")
 @Data
-public class OrderVo implements Serializable {
+public class OrderDetailsVo implements Serializable {
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
@@ -65,13 +65,26 @@ public class OrderVo implements Serializable {
     private String type;
 
     /**
+     * 开始时间
+     */
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
+    private Date startTime;
+
+
+    /**
+     * 结束时间
+     */
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
+    private Date endTime;
+
+    /**
      * 创建时间
      */
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date createTime;
 
     /**
-     * 结束时间
+     * 订单结束时间
      */
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date closedTime;

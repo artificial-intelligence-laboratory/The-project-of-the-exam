@@ -31,12 +31,16 @@ public class InterceptorConfig implements WebMvcConfigurer {
         registry.addInterceptor(loginInterceptor)
                 .addPathPatterns(
                         "/user/**",
-                        "/file/**");
+                        "/file/**",
+                        "/order/**",
+                        "/passport/logout");
 
         registry.addInterceptor(authorizeInterceptor)
                 .addPathPatterns(
                         "/user/**",
-                        "/file/**");
+                        "/file/**",
+                        "/order/**",
+                        "/passport/logout");
 
         registry.addInterceptor(visitLoginInterceptor)
                 .addPathPatterns(

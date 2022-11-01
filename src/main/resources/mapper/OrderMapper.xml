@@ -5,7 +5,7 @@
 <mapper namespace="com.gcc.fns.mapper.OrderMapper">
 
     <!-- 查接订单的映射 -->
-    <resultMap id="orderMap" type="orderVo">
+    <resultMap id="orderMap" type="orderDetailsVo">
         <id property="id" column="oid"/>
         <result property="title" column="title"/>
         <result property="details" column="details"/>
@@ -13,56 +13,42 @@
         <result property="fee" column="fee"/>
         <result property="workPlace" column="work_place"/>
         <result property="createTime" column="create_time"/>
-        <result property="closedTime" column=""/>
+        <result property="closedTime" column="closed_time"/>
+        <result property="startTime" column="start_time"/>
+        <result property="endTime" column="end_time"/>
         <result property="type" column="type"/>
         <association property="orderUser" javaType="appUserInfoVo">
-            <id property="id" column="id"/>
+            <id property="id" column="uid"/>
             <result property="username" column="username"/>
             <result property="avatar" column="avatar"/>
             <result property="academy" column="academy"/>
             <result property="specialities" column="specialities"/>
             <result property="classes" column="classes"/>
             <result property="num" column="num"/>
-            <result property="phone" column="nickname"/>
+            <result property="phone" column="phone"/>
         </association>
     </resultMap>
 
     <!-- 查询接单用户相关 -->
     <sql id="selectForTargetUserFiled">
         select
-            <if test="isSelectFromUser = true">
-                uf.id, uf.face_url, uf.nickname, uf.college,uf.major, uf.class_name, uf.phone,
+            <if test="isSelectFromUser == true">
+                uf.id uid, uf.avatar, uf.username, uf.academy,uf.specialities, uf.classes, uf.phone, uf.num,
             </if>
-            <if test="isSelectFromUser = false">
-                ut.id, ut.face_url, ut.nickname, ut.college, ut.major, ut.class_name, ut.phone,
+            <if test="isSelectFromUser == false">
+                ut.id uid, ut.avatar, ut.username, ut.academy, ut.specialities, ut.classes, ut.phone, ut.num,
             </if>
-            t.type,
-            o.id oid, o.title, o.details, o.be_careful, o.fee,
-            o.work_place, o.`status`, o.create_time, o.update_time
+            t.type, o.id oid, o.title, o.details, o.be_careful, o.fee,
+            o.work_place, o.`status`, o.create_time, o.update_time, o.start_time, o.end_time
         from
-            t_order o JOIN t_order_type t ON o.type_id = t.id
-                      JOIN t_app_user ut ON o.target_user_id = ut.id
-                      JOIN t_app_user uf ON o.from_user_id = uf.id
+            t_order o LEFT JOIN t_order_type t ON o.type_id = t.id
+                      LEFT JOIN t_app_user ut ON o.target_user_id = ut.id
+                      LEFT JOIN t_app_user uf ON o.from_user_id = uf.id
     </sql>
 
-    <!-- 查询发单用户相关 -->
-    <sql id="selectForFromUserFiled">
-        select
-            uf.id, uf.face_url, uf.nickname, uf.college,
-            uf.major, uf.class_name, uf.phone,
-            t.type,
-            o.id oid, o.title, o.details, o.be_careful,
-            o.fee, o.work_place, o.`status`, o.`create_time`, o.`update_time`
-        from
-            t_order o JOIN t_order_type t ON o.type_id = t.id
-                      JOIN t_app_user ut ON o.target_user_id = ut.id
-                      JOIN t_app_user uf ON o.from_user_id = uf.id
-    </sql>
-
-    <select id="selectOrderByUserId" resultMap="orderMap" resultType="list">
+    <select id="selectOrderByOrderId" resultMap="orderMap" resultType="orderDetailsVo">
         <include refid="selectForTargetUserFiled"></include>
-        where ut.id = #{id}
-        ORDER BY o.create_time DESC
+        where o.id = #{id};
     </select>
 
 

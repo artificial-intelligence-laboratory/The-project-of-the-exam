@@ -1,12 +1,13 @@
 package com.gcc.fns.mapper;
 
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.gcc.fns.model.entity.Order;
+import com.gcc.fns.model.vo.OrderDetailsVo;
+import org.apache.commons.lang3.time.DateUtils;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.util.List;
+import java.util.Date;
 
 /**
  * @author xiaozhi
@@ -19,26 +20,29 @@ public class OrderMapperTest {
     @Autowired
     private OrderMapper orderMapper;
 
+
     @Test
-    public void testSelectOrderByUserId(){
-        Page<Order> page = new Page<>(1, 5);
-        List<Order> orders = orderMapper.selectOrderByUserId(page, 11L, true);
-        orders.forEach(o -> {
-            System.out.println(o.getCreateTime());
-        });
+    public void selectOrderByOrderId(){
+        OrderDetailsVo orderDetailsVo = orderMapper.selectOrderByOrderId(1586669634512232450L, false);
+        System.out.println(orderDetailsVo);
     }
 
     @Test
     public void testInsertOrder(){
-        Order order = new Order();
-        order.setFromUserId(11L);
-        order.setTitle("帮拿快递");
-        order.setDetails("帮拿快递");
-        order.setBeCareful("易碎物，轻放");
-        order.setFee(5.0);
-        order.setTypeId(1);
-        order.setWorkPlace("26栋菜鸟");
-        orderMapper.insert(order);
-        System.out.println(order);
+        for (int i = 0; i < 10; i++) {
+            Order order = new Order();
+            order.setFromUserId(11L);
+            order.setTitle("帮拿快递");
+            order.setDetails("帮拿快递");
+            order.setBeCareful("易碎物，轻放");
+            order.setFee(5.0);
+            order.setTypeId(1);
+            order.setWorkPlace("26栋菜鸟");
+            order.setStatus(1);
+            order.setStartTime(new Date());
+            order.setEndTime(DateUtils.addDays(new Date(), 1));
+            orderMapper.insert(order);
+        }
     }
+
 }

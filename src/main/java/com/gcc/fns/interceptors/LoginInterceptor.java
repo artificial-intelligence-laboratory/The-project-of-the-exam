@@ -36,7 +36,6 @@ public class LoginInterceptor implements HandlerInterceptor {
         if (StringUtils.isBlank(token)) {
             ThrowException.custom(ResponseStatusEnum.UN_LOGIN);
         }
-        Long userId = jwtUtil.getUserId(token);
         // redis中不存在表示已过期，重新登录
         String userTokenKey = RedisKeyUtil.getUserTokenKey(token);
         String jsonUser = redis.get(userTokenKey);
@@ -44,7 +43,7 @@ public class LoginInterceptor implements HandlerInterceptor {
             ThrowException.custom(ResponseStatusEnum.TICKET_INVALID);
         }
         AppUserInfoVo appUserInfoVo = JsonUtils.jsonToPojo(jsonUser, AppUserInfoVo.class);
-        // 保存到ThreadLocal
+        // 保存到ThreadLocal，本次请求持有用户
         UserHolder.saveUser(appUserInfoVo);
         // token还有30分钟过期就进行刷新
         if (redis.ttl(userTokenKey) <= RedisConstant.EXPIRATION_THIRTY_MINUTES) {

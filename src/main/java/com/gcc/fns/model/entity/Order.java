@@ -74,6 +74,16 @@ public class Order implements Serializable {
     private Integer status;
 
     /**
+     * 开始时间
+     */
+    private Date startTime;
+
+    /**
+     * 结束时间
+     */
+    private Date endTime;
+
+    /**
      * 创建时间
      */
     private Date createTime;

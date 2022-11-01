@@ -3,10 +3,7 @@ package com.gcc.fns.controller;
 import cn.hutool.core.util.RandomUtil;
 import com.gcc.fns.common.constant.RedisConstant;
 import com.gcc.fns.common.enums.ResponseStatusEnum;
-import com.gcc.fns.common.utils.GraceJSONResult;
-import com.gcc.fns.common.utils.IpUtil;
-import com.gcc.fns.common.utils.RedisKeyUtil;
-import com.gcc.fns.common.utils.SendMailUtil;
+import com.gcc.fns.common.utils.*;
 import com.gcc.fns.model.dto.CodeLoginRequest;
 import com.gcc.fns.model.dto.PwdLoginRequest;
 import com.gcc.fns.model.dto.SendMailRequest;
@@ -15,10 +12,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -79,5 +73,15 @@ public class LoginController extends BaseController{
         String password = pwdLoginRequest.getPassword();
         Map<String, Object> map = appUserService.loginForPwd(email, password);
         return GraceJSONResult.ok(map);
+    }
+
+    @ApiOperation(value = "退出登录接口", notes = "退出登录，删除token")
+    @GetMapping("/logout")
+    public GraceJSONResult logout(HttpServletRequest request) {
+        String token = request.getHeader("Authorization");
+        String userTokenKey = RedisKeyUtil.getUserTokenKey(token);
+        // 删除缓存session
+        redis.del(userTokenKey);
+        return GraceJSONResult.ok();
     }
 }

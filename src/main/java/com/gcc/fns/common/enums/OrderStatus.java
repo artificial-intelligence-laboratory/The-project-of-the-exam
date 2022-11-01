@@ -13,11 +13,19 @@ public enum OrderStatus {
     CLOSED(3, "已结束"),
     TO_BE_ACCEPTED(4, "待验收");
 
-    public final int code;
-    public final String status;
+    private final int code;
+    private final String status;
 
     OrderStatus(int code, String status) {
         this.code = code;
         this.status = status;
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public String getStatus() {
+        return status;
     }
 }

@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import java.io.Serializable;
 
 /**
  * @author xiaozhi
@@ -11,7 +12,7 @@ import javax.validation.constraints.NotBlank;
  * @create 2022-10-2022/10/25 16:32
  */
 @Data
-public class PwdLoginRequest {
+public class PwdLoginRequest implements Serializable {
 
     private static final long serialVersionUID = 319122316373120793L;
 
