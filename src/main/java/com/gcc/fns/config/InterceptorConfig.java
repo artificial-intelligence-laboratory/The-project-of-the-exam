@@ -40,7 +40,11 @@ public class InterceptorConfig implements WebMvcConfigurer {
                         "/user/**",
                         "/file/**",
                         "/order/**",
-                        "/passport/logout");
+                        "/passport/logout")
+                .excludePathPatterns(
+                        "/user/getUserInfo",
+                        "/user/updateUserInfo",
+                        "/file/uploadFace");
 
         registry.addInterceptor(visitLoginInterceptor)
                 .addPathPatterns(

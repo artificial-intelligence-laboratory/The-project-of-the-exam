@@ -71,6 +71,7 @@ public class UploaderServiceImpl implements UploaderService {
         try {
             String uploadFilename = MD5Util.filenameByMD5(file.getInputStream()) + "." + extName;
             filePath = aliyunOSSUtil.uploadFile(file.getInputStream(), uploadFilename);
+            log.error("文件上传成功，ID为{}的用户上传了文件：{}", user.getId(), filePath);
         } catch (IOException e) {
             log.error("文件上传异常：{}", e.getMessage());
             ThrowException.custom(ResponseStatusEnum.FILE_UPLOAD_ERROR);
