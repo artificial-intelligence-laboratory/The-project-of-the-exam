@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 填入java下所在包名-->
+<mapper namespace="com.gcc.fns.mapper.MessageInfoMapper">
+    <resultMap id="BaseResultMap" type="com.gcc.fns.model.entity.MessageInfo">
+        <id column="id"  property="id" />
+        <result column="from_user_id"  property="fromUserId" />
+        <result column="to_user_id"  property="toUserId" />
+        <result column="content"  property="content" />
+        <result column="create_time"  property="createTime" />
+        <result column="un_read_state"  property="unReadState" />
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, from_user_id,  to_user_id, content, create_time, un_read_state
+    </sql>
+    <!--查询select-->
+    <select id="selectByPrimaryKey" resultType="com.gcc.fns.model.entity.MessageInfo">
+        select
+        <include refid="Base_Column_List" />
+        from t_message_info
+        where id = #{id}
+    </select>
+
+
+    <select id="select" resultType="com.gcc.fns.model.entity.MessageInfo">
+        SELECT * FROM t_message_info
+        WHERE 1 = 1
+        <if test="fromUserId != null">
+            AND from_user_id = #{fromUserId}
+        </if>
+        <if test="toUserId != null">
+            AND to_user_id = #{toUserId}
+        </if>
+        <if test="content != null">
+            AND content = #{content}
+        </if>
+        <if test="createTime != null">
+            AND create_time = #{createTime}
+        </if>
+        <if test="unReadState != null">
+            AND un_read_state = #{unReadState}
+        </if>
+    </select>
+
+    <select id="selectMsgList" resultType="com.gcc.fns.model.entity.MessageInfo">
+        SELECT * FROM t_message_info
+        WHERE (
+              (to_user_id = #{toUserId} AND from_user_id = #{fromUserId})
+              OR (to_user_id = #{fromUserId} AND from_user_id = #{toUserId})
+              )
+    </select>
+
+    <!--插入inset-->
+    <insert id="insertSelective">
+        insert into t_message_info
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">id,</if>
+            <if test="fromUserId != null">from_user_id,</if>
+            <if test="toUserId != null">
+                to_user_id,
+            </if>
+            <if test="content != null">
+                content,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="unReadState != null">
+                un_read_state,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id},
+            </if>
+            <if test="fromUserId != null">
+                #{fromUserId},
+            </if>
+            <if test="toUserId != null">
+                #{toUserId},
+            </if>
+            <if test="content != null">
+                #{content},
+            </if>
+            <if test="createTime != null">
+                #{createTime},
+            </if>
+            <if test="unReadState != null">
+                #{unReadState},
+            </if>
+        </trim>
+    </insert>
+
+    <insert id="insert">
+        insert into t_message_info (id, from_user_id,to_user_id,content,un_read_state,create_time)
+        values (#{id}, #{fromUserId},#{toUserId}, #{content},#{unReadState}, #{createTime})
+    </insert>
+
+
+    <!--修改update-->
+    <update id="updateByPrimaryKeySelective">
+        update t_message_info
+        <set>
+            <if test="fromUserId != null">
+                from_user_id = #{fromUserId},
+            </if>
+            <if test="toUserId != null">
+                to_user_id = #{toUserId},
+            </if>
+            <if test="content != null">
+                content = #{content},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime},
+            </if>
+            <if test="unReadState != null">
+                un_read_state = #{unReadState},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <update id="updateByPrimaryKey">
+        update t_message_info
+        set from_user_id = #{fromUserId},
+            to_user_id = #{toUserId},
+            content = #{content},
+            create_time = #{createTime},
+            un_read_state = #{unReadFlag}
+        where id = #{id}
+    </update>
+
+
+    <update id="msgRead">
+        UPDATE t_message_info SET un_read_state = 1 WHERE from_user_id = #{fromUserId} AND to_user_id = #{toUserId}
+    </update>
+
+    <!--删除delete-->
+
+    <delete id="deleteByPrimaryKey">
+        delete from t_message_info
+        where id = #{id}
+    </delete>
+
+
+</mapper>

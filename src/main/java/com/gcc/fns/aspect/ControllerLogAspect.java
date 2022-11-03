@@ -24,6 +24,21 @@ import java.util.UUID;
 @Slf4j
 public class ControllerLogAspect {
 
+//    解除拦截，无效，暂时留存
+//    @AfterThrowing(pointcut = "execution( * com.gcc.fns.controller..*.*(..)) " +
+//            "&& !execution(* com.gcc.fns.service.impl.WebSocket..*.*(..)) " , throwing = "e")
+//    public void afterThrowing(JoinPoint joinPoint, Throwable e) {
+//        log.error("Exception in {}.{}() with cause = {}", joinPoint.getSignature().getDeclaringTypeName(),
+//                joinPoint.getSignature().getName(), e.getCause() != null ? e.getCause() : "NULL");
+//    }
+//
+//    @AfterThrowing(pointcut = "execution( * com.gcc.fns.config..*.*(..)) " +
+//            "&& !execution(* com.gcc.fns.config.WebSocketConfig..*.*(..)) " , throwing = "e")
+//    public void afterThrowing2(JoinPoint joinPoint, Throwable e) {
+//        log.error("Exception in {}.{}() with cause = {}", joinPoint.getSignature().getDeclaringTypeName(),
+//                joinPoint.getSignature().getName(), e.getCause() != null ? e.getCause() : "NULL");
+//    }
+
     /**
      * 执行拦截
      */

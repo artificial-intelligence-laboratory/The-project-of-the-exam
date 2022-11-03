@@ -4,4 +4,23 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.gcc.fns.mapper.AppUserMapper">
 
+
+    <select id="selectByPrimaryUserKey" resultType="com.gcc.fns.model.entity.AppUser">
+        select id,`user_name`
+        from `t_app_user`
+        where id = #{id}
+    </select>
+
+
+    <select id="getCloudList" resultType="com.gcc.fns.model.entity.AppUser">
+        SELECT id,`user_name` FROM t_app_user
+        <if test="list != null">
+            WHERE id not in
+            <foreach collection="list" open="(" close=")" separator="," item="i">
+                #{i}
+            </foreach>
+        </if>
+    </select>
+
+
 </mapper>
