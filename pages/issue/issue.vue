@@ -103,11 +103,12 @@
 		},
 		methods: {
 			createOrder(){
+				let that = this
 			uni.request({
-			  url: "http://120.24.226.87:8888/order/createOrder",
+			  url:  that.$baseUrl + "/order/createOrder", 
 			  method:'POST',
 			  success: (res) => {
-			    console.log(res);
+			    console.log(res.data);
 			  },
 			  fail: (err) => {
 			    console.error(err);

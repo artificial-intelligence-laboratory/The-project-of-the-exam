@@ -166,14 +166,15 @@
 			// 
 			loginByEmail() {
 				let that = this
+				console.log(this.$baseUrl + "/passport/codeLogin")
 				uni.request({
 					url: that.$baseUrl + "/passport/codeLogin",
 					method:'POST',
 					data: {
-						// email: that.email,
-						// code:that.code
-						email: "826697618@qq.com",
-						code:"377489"
+						email: that.email,
+						code:that.code
+						// email: "826697618@qq.com",
+						// code:"655810"
 					},
 					header:{
 						'Content-Type':'application/json'
@@ -215,8 +216,10 @@
 			},
 			loginByPwd() {
 				let that = this
+				let url =that.$baseUrl + "/passport/pwdLogin"
+
 				uni.request({
-					url: that.$baseUrl + "/passport/pwdLogin",
+					url: url,
 					method:'POST',
 					data: {
 						// email: that.email,
@@ -228,6 +231,7 @@
 					},
 					success(res) {
 						console.log(res)
+						
 						// 登录验证是否成功
 						if (res.data.status != '200') {
 							uni.showToast({
@@ -262,8 +266,8 @@
 				})
 			}
 		},
-		onReady() {
-
+		onLoad() {
+				
 		}
 	}
 </script>

@@ -57,15 +57,14 @@
 					</view>
 				</view>
 			</view>
-			<view>
-				<view class="cu-bar btn-group padding">
-					<button class="cu-btn bg-green shadow-blur round lg">保存</button>
+		</view>
+		<view>
+			<view class="footer" type="primary" block>
+				<view class="cu-bar btn-group padding" >
+					<button class="cu-btn bg-green shadow-blur round lg ">领取任务</button>
 				</view>
 			</view>
-		</view>
-		<view class="box">
-			<view class="cu-bar tabbar margin-bottom bg-white">
-			</view>
+
 		</view>
 	</view>
 
@@ -123,5 +122,15 @@
 		line-height: 50rpx;
 		margin: 15px 20px 0px 20px;
 		white-space: pre-wrap;
+	}
+
+	.footer {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		line-height: var(--footer-height);
+		background: #ffffff;
+		/* color: #fff; */
+		height: 70px;
 	}
 </style>

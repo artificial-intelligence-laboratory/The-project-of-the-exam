@@ -1,37 +1,19 @@
 {
 	"pages": [{
-			"path": "pages/Profile/Profile", //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+			"path": "pages/order/order", //首页显示接单大厅
 			"style": {
-				"navigationBarTitleText": "", // 在数组内配置了nav的标题，优先使用，若没有则使用全局配置
-				"navigationBarTextStyle": "white",
-				"backgroundColor": "#eee", // 下拉背景颜色
-				"backgroundTextStyle": "light"
+				"enablePullDownRefresh": true,
+				"navigationStyle": "custom"
 			}
 		},
+		
+		// 我的页面模块
 		{
 			"path": "pages/Profile/Profile",
 			"style": {
 				
 			}
-		},
-		
-		
-		// 发布订单模块
-		{
-			"path": "pages/issue/issue",
-			"style": {
-				
-			}
-		},
-		{
-			"path": "pages/detail/detail",
-			"style": {
-				"enablePullDownRefresh": true,
-				"onReachBottomDistance": 200
-
-			}
-		},
-		{
+		},{
 			"path": "pages/Profile/SecondPages/MySend",
 			"style": {
 				"navigationBarTitleText": "我的发布"
@@ -42,30 +24,7 @@
 			"style": {
 				"navigationBarTitleText": "我的接单"
 			}
-		},
-		
-		{
-			"path": "pages/Login/login",
-			"style": {
-				"backgroundColor": "#eeeeee"
-			}
-		},
-		// 聊天页面
-		{
-			"path": "pages/Contact/ContactList",
-			"style": {
-				"backgroundColor": "white",
-				"navigationStyle":"custom"
-			}
-		},
-		{
-			"path": "pages/Contact/SecondPage/Chat",
-			"style": {
-				"navigationStyle": "custom"
-			}
-		},
-		
-		{
+		},{
 			"path": "pages/Profile/SecondPages/About"
 		},
 		{
@@ -96,17 +55,58 @@
 			}
 		},
 		{
+			"path": "pages/Profile/SecondPages/UserDetail",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		
+		
+		
+		// 发布订单模块
+		{
+			"path": "pages/issue/issue",
+			"style": {
+				
+			}
+		},
+		{
+			"path": "pages/issue/wait"
+		},
+		
+		
+		
+		
+		// 聊天页面
+		{
+			"path": "pages/Contact/ContactList",
+			"style": {
+				"backgroundColor": "white",
+				"navigationStyle":"custom"
+			}
+		},
+		{
 			"path": "pages/Contact/SecondPage/Chat",
 			"style": {
 				"navigationStyle": "custom"
 			}
 		},
+		
+		
 		{
-			"path": "pages/Profile/SecondPages/UserDetail",
+			"path": "pages/Contact/SecondPage/Chat",
 			"style": {
 				"navigationStyle": "custom"
 			}
+		},
+		// 登录页面
+		{
+			"path": "pages/Login/login",
+			"style": {
+				
+			}
 		}
+		
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
@@ -138,7 +138,7 @@
 			
 			// 发单资讯
 			{
-				"pagePath": "pages/getOrder/getOrder",
+				"pagePath": "pages/issue/issue",
 				"text": "发单",
 				"iconfont": {
 					"text": "\ue8f2",
