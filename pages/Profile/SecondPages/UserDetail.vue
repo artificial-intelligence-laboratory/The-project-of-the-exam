@@ -8,8 +8,10 @@
 				</view>
 			</u-navbar>
 		</view>
-
+		<!-- 加载动画 -->
+		<u-loading-icon text="个人信息加载中..." size="30" :show="IsLoading"></u-loading-icon>
 		<u-cell-group>
+			
 
 			<u-cell class="avatar-item" title="头像" :border="false" :isLink="true" @click="chooseAvaters=true">
 
@@ -59,6 +61,7 @@
 	export default {
 		data() {
 			return {
+				IsLoading:false,
 				AlterName: '', // 用户现在正修改的字段
 				show: false,
 				userInsert: '', // 用户在弹出窗口输入的需要修改的文本
@@ -66,12 +69,12 @@
 				user: {
 					avatar: '', // 头像
 					username: '不爱吃湘菜', // 昵称
-					phone: '13450209670', // 手机
+					phone: '', // 手机
 					num: '学号123',
-					academy: '计算机学院',
-					specialities: '软件工程',
-					classes: '软工5班',
-					status: ''
+					academy: '',
+					specialities: '',
+					classes: '',
+					status: '0'
 				},
 				chooseAvaters: false, // 操作菜单的显示隐藏
 				lists: [ // 操作菜单的列表内容
@@ -93,7 +96,7 @@
 				this.getUserInfo()
 				if (this.user.status == '1') {
 					uni.switchTab({
-						url: '/pages/Profile/Profile'
+						url:  '/pages/Profile/Profile',
 					})
 
 				} else {
@@ -109,7 +112,7 @@
 			commitInfo() {
 				let that = this
 				uni.request({
-					url: '/user/updateUserInfo',
+					url: that.$baseUrl + '/user/updateUserInfo',
 					method: 'POST',
 					data: {
 						classes: that.user.classes,
@@ -126,6 +129,15 @@
 					},
 					success(res) {
 						console.log("更改发送", res)
+						if(res.data.status=='200'){
+							uni.showToast({
+								title:res.data.msg,
+								
+							})
+						}
+						setTimeout(()=>{
+							that.getUserInfo()
+						},1500)
 
 					},
 					fail(err) {
@@ -134,7 +146,7 @@
 
 				})
 
-				this.getUserInfo()
+				
 			},
 
 
@@ -222,10 +234,10 @@
 					sourceType: ['album', 'camera'], //album 从相册选图，camera 使用相机
 					success: function(res) {
 						that.PreviewImageList = res.tempFilePaths
-						console.log(that.PreviewImageList[0]); //若是数组就需要转成json字符串，其实现在一个头像不用
+						console.log(that.PreviewImageList[0]); 			//获取用户图片
 						// 上传服务器
 						const uploadTask = uni.uploadFile({
-							url: '/file/uploadFace',
+							url:  that.$baseUrl+'/file/uploadFace',
 							filePath: that.PreviewImageList[0], // 做成数组为了以后能拓展
 							header: {
 								'Authorization': uni.getStorageSync('token'),
@@ -233,7 +245,7 @@
 							name: 'file',
 							success(uploadFileRes) {
 								let url = JSON.parse(uploadFileRes.data) // 获取网络url
-								console.log(url)
+								console.log("服务器图片地址",url)
 								that.user.avatar = url.data
 								uni.setStorageSync('userInfo', that.user) //改完头像把user存储
 							}
@@ -255,26 +267,45 @@
 			// 封装查看用户数据库方法    从服务器 => Local_Storage
 			getUserInfo() {
 				let that = this
+				this.IsLoading=true
 				uni.request({
-					url: '/user/getUserInfo',
+					url: that.$baseUrl + '/user/getUserInfo',
 					method: 'GET',
 					header: {
 						'Authorization': uni.getStorageSync('token')
 					},
 					success(res) {
-						console.log("获取用户信息", res.data.data)
-						if (res.data != null) {
+						console.log("获取用户信息", res)
+						if (res.data.status == '200') {
 							uni.setStorageSync('userInfo', res.data.data)
 							that.user = uni.getStorageSync('userInfo')
-						}
+						}else if(res.data.status == '502'){		//502状态，需要重新登录
+							uni.showToast({
+								title:res.data.msg,
+								icon:'error',
+								duration:3000,
+								success() {
+									uni.navigateTo({
+										url:'/pages/Login/login'
+									})
+								}
+							})
 
+						}else{
+							uni.showToast({
+								title:res.data.msg,
+								icon:'error',
+								duration:3000,
+							})
+						}
+							that.IsLoading = false
 					}
 
 				})
 			},
 		},
 
-		onShow() {
+		onLoad() {
 			this.getUserInfo()
 		},
 

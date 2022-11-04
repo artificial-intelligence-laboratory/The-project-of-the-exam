@@ -120,7 +120,7 @@
 					if (this.$refs.uCode.canGetCode) { // 注意：用户可能在倒计时的过程中点击获取验证码的按钮，组件内部提供了通过ref获取的canGetCode变量
 						// 请求验证码
 						uni.request({
-							url: getApp().globalData.baseUrl+"/passport/sendCode",
+							url: that.$baseUrl+"/passport/sendCode",
 							method:'POST',
 							data: {
 								'email':that.email
@@ -167,13 +167,13 @@
 			loginByEmail() {
 				let that = this
 				uni.request({
-					url: getApp().globalData.baseUrl + "/passport/codeLogin",
+					url: that.$baseUrl + "/passport/codeLogin",
 					method:'POST',
 					data: {
 						// email: that.email,
 						// code:that.code
 						email: "826697618@qq.com",
-						code:"216286"
+						code:"377489"
 					},
 					header:{
 						'Content-Type':'application/json'
@@ -216,7 +216,7 @@
 			loginByPwd() {
 				let that = this
 				uni.request({
-					url: getApp().globalData.baseUrl + "/passport/pwdLogin",
+					url: that.$baseUrl + "/passport/pwdLogin",
 					method:'POST',
 					data: {
 						// email: that.email,

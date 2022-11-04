@@ -89,28 +89,12 @@
 			"port": 8888, //端口号
 			"disableHostCheck": true,
 			"proxy": {
-				"/user/updateUserInfo": {
+				"/api": {
 					"target": "http://120.24.226.87:8888/",
 					"changeOrigin": true,
 					"secure": false,
 					"pathRewrite": {
-						"^/user/updateUserInfo": "/user/updateUserInfo"
-					}
-				},
-				"/file/uploadFace":{
-					"target": "http://120.24.226.87:8888/",
-					"changeOrigin": true,
-					"secure": false,
-					"pathRewrite": {
-						"^/file/uploadFace": "/file/uploadFace"
-					}
-				},
-				"/user/getUserInfo":{
-					"target": "http://120.24.226.87:8888/",
-					"changeOrigin": true,
-					"secure": false,
-					"pathRewrite": {
-						"^/user/getUserInfo": "/user/getUserInfo"
+						"^/api": "/"
 					}
 				}
 			}

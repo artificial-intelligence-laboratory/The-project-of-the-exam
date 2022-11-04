@@ -1,5 +1,6 @@
 <template>
 	<view>
+		
 		<view class="personal" @click="NavToDetail">
 			<view class="personal-main">
 				<u-avatar :src="user.avatar" mode="square" size="100" class="u-avatar"></u-avatar>
@@ -13,8 +14,11 @@
 
 		<!-- 我的发布 -->
 		<view id="WhiteBox" class="box2">
-			<span class="mysend">{{CardName}}</span>
-			<span class="all" @click="goALL">全部 ></span>
+			<view class="tools">
+				<span class="mysend">{{CardName}}</span>
+				<span class="all" @click="goALL">全部 ></span>
+			</view>
+			
 			<swiper :indicator-dots="true" class="swiper" @change="changeCardName">
 				<swiper-item>
 					<u-grid :border="false">
@@ -109,7 +113,7 @@
 					},
 					{
 						name: '退出登录',
-						id: '',
+						id: 'Logout',
 						icon: 'iconfont icon-tuichu',
 
 					},
@@ -160,7 +164,7 @@
 				} else {
 					Pagename = "MySend"
 				}
-				let url = '/pages/Profile/SecondPages/' + Pagename + '?index'+0 // id判断进入哪个页面
+				let url = '/pages/Profile/SecondPages/' + Pagename // id判断进入哪个页面
 				uni.navigateTo({
 					url: url,
 					animationType: 'slide-in-right',
@@ -193,8 +197,9 @@
 			},
 			// 点击跳转功能
 			onClick(item) {
+				let that = this
 				let url = '/pages/Profile/SecondPages/' + item.id 
-				if (item.id != '') {
+				if (item.id != 'Logout') {
 					uni.navigateTo({
 						url: url,
 						animationType: 'slide-in-right',
@@ -204,17 +209,42 @@
 						}
 					})
 				} else {
+					
+					uni.request({
+						url:that.$baseUrl + '/passport/logout',
+						header: {
+							'Content-Type': 'application/json',
+							'Authorization': uni.getStorageSync('token')
+						},
+						success(res) {
+							console.log("退出登录", res.data)
+							uni.setStorageSync('token','')
+							if(res.data.status=='200'){
+								uni.showToast({
+									title:'退出成功',
+									icon:'success',
+									duration:3000
+								})
+								uni.navigateTo({
+									url:'/pages/Login/login'
+								})
+							}
+
+						},
+					})
+					
+					
 					// TODO: 退出软件  判断:安卓【ios]
-					// #ifdef APP-PLUS
-					if (plus.os.name.toLowerCase() === 'android') {
-						plus.runtime.quit();
-					} else {
-						const threadClass = plus.ios.importClass("NSThread");
-						const mainThread = plus.ios.invoke(threadClass, "mainThread");
-						plus.ios.invoke(mainThread, "exit");
-						// plus.ios.import('UIApplication').sharedApplication().performSelector('exit');
-					}
-					// #endif
+					// // #ifdef APP-PLUS
+					// if (plus.os.name.toLowerCase() === 'android') {
+					// 	plus.runtime.quit();
+					// } else {
+					// 	const threadClass = plus.ios.importClass("NSThread");
+					// 	const mainThread = plus.ios.invoke(threadClass, "mainThread");
+					// 	plus.ios.invoke(mainThread, "exit");
+					// 	// plus.ios.import('UIApplication').sharedApplication().performSelector('exit');
+					// }
+					// // #endif
 				}
 
 			},
@@ -233,12 +263,15 @@
 
 		onShow() {
 			// 判断用户是否登录
-			if(uni.getStorageSync('token')==null){
+			if(uni.getStorageSync('token')==null||uni.getStorageSync('token')==""){
 				uni.navigateTo({
 					url:'/pages/Login/login'
 				})
 			}else{
-				this.user = uni.getStorageSync('userInfo')	
+				setTimeout(()=>{
+					this.user = uni.getStorageSync('userInfo')	
+				},1000)
+				
 			}
 			
 			

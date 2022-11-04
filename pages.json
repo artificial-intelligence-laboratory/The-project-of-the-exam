@@ -40,6 +40,14 @@
 				"navigationBarTitleText": "我的接单"
 			}
 		},
+		
+		{
+			"path": "pages/Login/login",
+			"style": {
+				"backgroundColor": "#eeeeee"
+			}
+		},
+		// 聊天页面
 		{
 			"path": "pages/Contact/ContactList",
 			"style": {
@@ -48,14 +56,12 @@
 			}
 		},
 		{
-			"path": "pages/Login/login",
+			"path": "pages/Contact/SecondPage/Chat",
 			"style": {
-				"backgroundColor": "#eeeeee"
+				"navigationStyle": "custom"
 			}
 		},
-		{
-			"path": "pages/Contact/SecondPage/Chat"
-		},
+		
 		{
 			"path": "pages/Profile/SecondPages/About"
 		},
@@ -84,6 +90,12 @@
 	
 				"navigationBarTitleText": "消息设置"
 
+			}
+		},
+		{
+			"path": "pages/Contact/SecondPage/Chat",
+			"style": {
+				"navigationStyle": "custom"
 			}
 		},
 		{
