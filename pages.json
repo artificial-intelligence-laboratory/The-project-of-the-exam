@@ -1,10 +1,10 @@
 {
 	"pages": [{
-			"path": "pages/index/index", //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+			"path": "pages/Profile/Profile", //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 			"style": {
 				"navigationBarTitleText": "", // 在数组内配置了nav的标题，优先使用，若没有则使用全局配置
 				"navigationBarTextStyle": "white",
-				"backgroundColor": "#4CD964", // 下拉背景颜色
+				"backgroundColor": "#eee", // 下拉背景颜色
 				"backgroundTextStyle": "light"
 			}
 		},
@@ -14,8 +14,11 @@
 				
 			}
 		},
+		
+		
+		// 发布订单模块
 		{
-			"path": "pages/getOrder/getOrder",
+			"path": "pages/issue/issue",
 			"style": {
 				
 			}
@@ -122,7 +125,7 @@
 		"list": [
 			{
 				// 接单资讯
-				"pagePath": "pages/index/index",
+				"pagePath": "pages/order/order",
 				"text": "接单",
 				"iconfont": {
 					"text": "\ue633",
