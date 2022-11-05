@@ -9,10 +9,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -47,11 +44,12 @@ public class MessageInfoController {
         Long fromUserId = sessionList.getUserId();
         Long toUserId = sessionList.getToUserId();
         List<MessageInfo> messageInfoList = messageInfoMapper.selectMsgList(fromUserId,toUserId);
+        String avatar = sessionList.getAvatar();
         //更新消息已读
         messageInfoMapper.msgRead(fromUserId,toUserId);
         //更新会话里面的未读消息
         sessionListMapper.updateUnReadCount(fromUserId,toUserId);
-        return AjaxResult.success(messageInfoList);
+        return AjaxResult.success(messageInfoList,messageInfoList.size());
     }
 
 }

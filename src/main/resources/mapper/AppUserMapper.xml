@@ -23,4 +23,11 @@
     </select>
 
 
+    <select id="selectByIdAvatar" resultType="java.lang.String">
+        select `face_url`
+        from `t_app_user`
+        where id = #{id}
+    </select>
+
+
 </mapper>

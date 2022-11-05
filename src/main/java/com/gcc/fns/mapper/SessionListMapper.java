@@ -1,5 +1,6 @@
 package com.gcc.fns.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.gcc.fns.model.entity.SessionList;
 import org.apache.ibatis.annotations.Param;
 
@@ -9,7 +10,7 @@ import java.util.List;
  * @author snail
  * @create 2022-10-30  17:16
  */
-public interface SessionListMapper {
+public interface SessionListMapper extends BaseMapper<SessionList> {
 
     //根据id查询消息列表
     SessionList selectByPrimaryKey(Long id);

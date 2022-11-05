@@ -9,6 +9,7 @@ import com.gcc.fns.mapper.SessionListMapper;
 import com.gcc.fns.model.entity.AppUser;
 import com.gcc.fns.model.entity.MessageInfo;
 import com.gcc.fns.model.entity.SessionList;
+import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
@@ -29,6 +30,7 @@ import java.util.List;
  * @create 2022-10-30  17:28
  */
 @Component
+@Api(value = "websocket连接接口")
 @ServerEndpoint("/webSocket/{userId}/{sessionId}")
 @Slf4j
 public class WebSocket {
@@ -58,7 +60,7 @@ public class WebSocket {
         this.session = session;
         SessionUtil.webSockets.put(userId, WebSocket.this);
         List<Object> list = new ArrayList<>();
-        list.add(session);
+        list.add(sessionId);
         list.add(session);
         SessionUtil.sessionPool.put(userId,list);
         log.info("【websocket消息】有新的连接，总数为:"+SessionUtil.webSockets.size());
@@ -93,11 +95,10 @@ public class WebSocket {
      * @author Snail
      * @date 2022/11/2 22:48
      */
-
-
     @OnMessage
     public void OnMessage(String message){
         String sessionId = this.session.getRequestParameterMap().get("sessionId").get(0);
+
         if (sessionId == null){
             System.out.println("sessionId 错误");
         }
@@ -114,6 +115,7 @@ public class WebSocket {
 
         //获取本用户的id 将消息发送过去
         SessionList sessionList = sessionListMapper.selectByPrimaryKey(Long.parseLong(sessionId));
+
         AppUser user = appUserMapper.selectByPrimaryUserKey(sessionList.getUserId());
         MessageInfo messageInfo = new MessageInfo();
         messageInfo.setContent(message);
@@ -121,6 +123,8 @@ public class WebSocket {
         messageInfo.setFromUserId(sessionList.getUserId());
         messageInfo.setToUserId(sessionList.getToUserId());
         messageInfo.setUnReadState(0);
+//        //自己的头像，发送给对方的消息里面带有
+//        messageInfo.setAvatar(appUserMapper.selectById(sessionList.getUserId()).getAvatar());
 
         //消息持久化
         messageInfoMapper.insert(messageInfo);
@@ -130,7 +134,6 @@ public class WebSocket {
         if (list == null || list.isEmpty()){
             //不存在，更新未读数
             sessionListMapper.addUnReadCount(sessionList.getToUserId(),sessionList.getUserId());
-
         }else {
             //存在，判断会话存在不存在
             String id = sessionListMapper.selectIdByUser(sessionList.getToUserId(),sessionList.getUserId() ) + "";
@@ -146,17 +149,20 @@ public class WebSocket {
                     tempSessionList.setUserId(sessionList.getToUserId());
                     tempSessionList.setListName(user.getUsername());
                     tempSessionList.setUnReadCount(1);
+//                    messageInfo.setAvatar(appUserMapper.selectById(sessionList.getUserId()).getAvatar());
                     sessionListMapper.insert(tempSessionList);
                 }else {
                     //更新未读消息数量
                     sessionListMapper.addUnReadCount(sessionList.getToUserId(),sessionList.getUserId());
                 }
+
                 //会话不存在发送列表消息
                 List<SessionList> sessionLists = sessionListMapper.selectByUserId(sessionList.getToUserId());
+
                 sendTextMessage(sessionList.getToUserId(),JsonUtils.objectToJson(sessionLists));
             }
-            log.info("【websocket消息】收到客户端消息:"+message);
         }
+        log.info("【websocket消息】收到客户端消息:"+message);
     }
 
 
@@ -170,6 +176,7 @@ public class WebSocket {
      * @date 2022/11/2 22:49
      */
     public void sendTextMessage(Long userId,String message){
+
         Session session = (Session) SessionUtil.sessionPool.get(userId).get(1);
         if (session != null){
             try {

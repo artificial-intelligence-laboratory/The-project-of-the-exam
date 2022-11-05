@@ -13,44 +13,37 @@ public class AjaxResult<T> {
     /**
      * 返回状态码
      */
-
     private Integer code;
 
     /**
      * 返回的数据
      */
-
     private T data;
 
     /**
      * 总条数
      */
-
     private Long total;
 
     /**
      * 成功与否
      */
-
     private Boolean success;
 
     /**
      * 消息提示
      */
-
     private String msg;
 
     /**
      * 错误描述
      */
-
     private String errDesc;
 
-    /**
-     * 用户token
-     */
-
-    private String token;
+//    /**
+//     * 用户token
+//     */
+//    private String token;
 
     public AjaxResult() {
     }
@@ -121,6 +114,16 @@ public class AjaxResult<T> {
         result.setData(data);
         return result;
     }
+
+    public static <T> AjaxResult<T> success(T data,String url){
+        AjaxResult<T> result = new AjaxResult<>();
+        result.setSuccess(true);
+        result.setMsg("操作成功");
+        result.setData(data);
+        result.setData(data);
+        return result;
+    }
+
 
     /**
      * 操作成功

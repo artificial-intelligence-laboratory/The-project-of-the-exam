@@ -9,6 +9,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -21,6 +22,7 @@ import java.util.List;
 @Api(value = "会话接口",tags = "会话接口")
 @RequestMapping("/session")
 @RestController
+@Slf4j
 public class SessionController {
 
     @Resource
@@ -37,7 +39,7 @@ public class SessionController {
    @GetMapping("/alreadySessionList")
    public AjaxResult<?> sessionListAlready(@RequestParam Long userId){
        List<SessionList> sessionLists = sessionListMapper.selectByUserId(userId);
-       return AjaxResult.success(sessionLists);
+       return AjaxResult.success(sessionLists, sessionLists.size());
    }
 
    @ApiOperation(value = "建立正在等待会话的用户列表",notes = "建立正在等待会话的用户列表" +
@@ -50,7 +52,11 @@ public class SessionController {
        List<Long> list = sessionListMapper.selectUserIdByUserId(userId);
        list.add(userId);
        List<AppUser> cloudList = appUserMapper.getCloudList(list);
-       return AjaxResult.success(cloudList);
+//       Long toUserId = sessionListMapper.selectByPrimaryKey(userId).getToUserId();
+//       cloudList.add(appUserMapper.selectById(toUserId).getAvatar());
+
+//       messageInfo.setAvatar(appUserMapper.selectById(sessionList.getUserId()).getAvatar());
+       return AjaxResult.success(cloudList,cloudList.size());
    }
 
    @ApiOperation(value = "创建一个会话",notes = "创建一个未建立的会话，如果对面也没建立，这也会给对方建立" +
@@ -62,25 +68,32 @@ public class SessionController {
    })
    @PostMapping("/createSession")
    public AjaxResult<?> createSession(@RequestParam Long userId,@RequestParam Long toUserId,@RequestParam String toUserName){
+
         SessionList sessionList = new SessionList();
         sessionList.setUserId(userId);
         sessionList.setToUserId(toUserId);
         sessionList.setListName(toUserName);
         sessionList.setUnReadCount(0);
+        //存对方的头像
+//        sessionList.setAvatar(appUserMapper.selectById(toUserId).getAvatar());
+       sessionList.setAvatar(appUserMapper.selectByIdAvatar(toUserId));
 
+       log.info("dddd");
        // 判断会话存在不存在
        Long ifSession = sessionListMapper.selectIdByUser(userId,toUserId);
        Long ifToSession = sessionListMapper.selectIdByUser(toUserId,userId);
        if (ifSession ==null || ifSession <= 0) {
            sessionListMapper.insert(sessionList);
        }else {
-           //判断对方和我建立会话，如果没有，也要建立
-           //给对方建立会话
+           // 判断对方和我建立会话，如果没有，也要建立
+           // 给对方建立会话
            if (ifToSession ==null || ifToSession <= 0){
                AppUser appUser = appUserMapper.selectByPrimaryUserKey(userId);
                sessionList.setUserId(toUserId);
                sessionList.setToUserId(userId);
                sessionList.setListName(appUser.getUsername());
+               //自己的头像存给对方
+               sessionList.setAvatar(appUserMapper.selectByIdAvatar(userId));
                sessionListMapper.insert(sessionList);
            }
            return AjaxResult.failure("会话已存在，建立失败,请直接发消息");
@@ -92,6 +105,8 @@ public class SessionController {
            sessionList.setUserId(toUserId);
            sessionList.setToUserId(userId);
            sessionList.setListName(appUser.getUsername());
+           //自己的头像存给对方
+           sessionList.setAvatar(appUserMapper.selectByIdAvatar(userId));
            sessionListMapper.insert(sessionList);
        }
        return AjaxResult.success();

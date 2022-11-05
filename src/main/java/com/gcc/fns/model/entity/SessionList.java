@@ -37,4 +37,9 @@ public class SessionList implements Serializable {
      * 未读消息数
      */
     private Integer unReadCount;
+
+    /**
+     *对方的头像
+     */
+    private String avatar;
 }

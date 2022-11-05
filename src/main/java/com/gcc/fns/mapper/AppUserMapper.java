@@ -16,6 +16,9 @@ public interface AppUserMapper extends BaseMapper<AppUser> {
     //查询id
     AppUser selectByPrimaryUserKey(Long id);
 
+    //通过id查询头像
+    String selectByIdAvatar(Long id);
+
     //查询消息列表
     List<AppUser> getCloudList(@Param("list") List<Long> list);
 

@@ -12,7 +12,7 @@
         <result column="un_read_count"  property="unReadCount" />
     </resultMap>
     <sql id="Base_Column_List">
-        id, user_id,to_user_id, list_name, un_read_count
+        id, user_id,to_user_id, list_name, un_read_count,avatar
     </sql>
 
     <select id="selectByPrimaryKey" resultType="com.gcc.fns.model.entity.SessionList">
@@ -65,9 +65,8 @@
 
 
     <insert id="insert">
-        insert into t_session_list (id, user_id, to_user_id,list_name,un_read_count)
-        values (#{id}, #{userId}, #{toUserId}, #{listName},
-                #{unReadCount})
+        insert into t_session_list (user_id, to_user_id,list_name,un_read_count,avatar)
+        values (#{userId}, #{toUserId}, #{listName},#{unReadCount},#{avatar})
     </insert>
 
 
