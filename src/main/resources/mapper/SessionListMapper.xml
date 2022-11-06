@@ -10,9 +10,12 @@
         <result column="to_user_id"  property="toUserId" />
         <result column="list_name"  property="listName" />
         <result column="un_read_count"  property="unReadCount" />
+        <result column="avatar" property="avatar" />
+        <result column="last_content" property="lastContent"/>
+        <result column="last_time" property="lastTime"/>
     </resultMap>
     <sql id="Base_Column_List">
-        id, user_id,to_user_id, list_name, un_read_count,avatar
+        id, user_id,to_user_id, list_name, un_read_count,avatar,last_content,last_time
     </sql>
 
     <select id="selectByPrimaryKey" resultType="com.gcc.fns.model.entity.SessionList">
@@ -27,36 +30,9 @@
     </select>
 
 
-
-
     <select id="selectUserIdByUserId" resultType="java.lang.Long">
         SELECT to_user_id FROM t_session_list WHERE user_id = #{id}
     </select>
-
-
-
-
-    <select id="select" resultType="com.gcc.fns.model.entity.SessionList">
-        SELECT * FROM t_session_list
-        <trim prefix="WHERE" suffixOverrides="AND">
-            <if test="id != null">
-                id = #{id},
-            </if>
-            <if test="userId != null">
-                user_id = #{userId},
-            </if>
-            <if test="toUserId != null">
-                to_user_id = #{toUserId},
-            </if>
-            <if test="listName != null">
-                list_name = #{listName},
-            </if>
-            <if test="unReadCount != null">
-                un_read_count = #{unReadCount},
-            </if>
-        </trim>
-    </select>
-
 
     <select id="selectByUserId" resultType="com.gcc.fns.model.entity.SessionList">
         SELECT * FROM t_session_list WHERE user_id = #{id}
@@ -69,86 +45,15 @@
         values (#{userId}, #{toUserId}, #{listName},#{unReadCount},#{avatar})
     </insert>
 
-
-    <insert id="insertSelective">
-        insert into t_session_list
-        <trim prefix="(" suffix=")" suffixOverrides=",">
-            <if test="id != null">
-                id,
-            </if>
-            <if test="userId != null">
-                user_id,
-            </if>
-            <if test="toUserId != null">
-                to_user_id,
-            </if>
-            <if test="listName != null">
-                list_name,
-            </if>
-            <if test="unReadCount != null">
-                un_read_count,
-            </if>
-        </trim>
-        <trim prefix="values (" suffix=")" suffixOverrides=",">
-            <if test="id != null">
-                #{id},
-            </if>
-            <if test="userId != null">
-                #{userId},
-            </if>
-            <if test="toUserId != null">
-                #{toUserId},
-            </if>
-            <if test="listName != null">
-                #{listName},
-            </if>
-            <if test="unReadCount != null">
-                #{unReadCount},
-            </if>
-        </trim>
-
-    </insert>
-
-
-    <insert id="addUnReadCount">
-        UPDATE t_session_list SET un_read_count = un_read_count + 1
+    <update id="addUnReadCount">
+        UPDATE t_session_list SET un_read_count = un_read_count + 1,last_content = #{lastContent},last_time= #{lastTime}
         WHERE user_id = #{userId} AND to_user_id = #{toUserId}
-    </insert>
-
-    <update id="updateByPrimaryKeySelective">
-        update t_session_list
-        <set>
-            <if test="userId != null">
-                user_id = #{userId},
-            </if>
-            <if test="toUserId != null">
-                to_user_id = #{toUserId},
-            </if>
-            <if test="listName != null">
-                list_name = #{listName},
-            </if>
-            <if test="unReadCount != null">
-                un_read_count = #{unReadCount},
-            </if>
-        </set>
-        where id = #{id}
-    </update>
-
-
-    <update id="updateByPrimaryKey">
-        update t_session_list
-        set user_id = #{userId},
-            to_user_id = #{toUserId},
-            list_name = #{listName},
-            un_read_count = #{unReadCount}
-        where id = #{id}
     </update>
 
     <delete id="deleteByPrimaryKey">
         delete from t_session_list
         where id = #{id}
     </delete>
-
 
     <update id="updateUnReadCount">
         UPDATE t_session_list SET un_read_count = 0

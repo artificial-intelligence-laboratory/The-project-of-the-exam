@@ -36,7 +36,10 @@ public enum ResponseStatusEnum {
     FILE_UPLOAD_NULL_ERROR(570,false,"文件不能为空，请选择一个文件再上传！"),
     FILE_UPLOAD_ERROR(571,false,"文件上传失败，请重试！"),
     FILE_UPLOAD_COUNT_OVER(571,false,"您今天的上传次数已用完"),
-    FILE_MAX_SIZE_ERROR(577,false,"仅支持2MB大小以下的图片上传！");
+    FILE_MAX_SIZE_ERROR(577,false,"仅支持2MB大小以下的图片上传！"),
+
+    /* 聊天相关 */
+    CHAR_ALREADY_EXISTS(801,false,"会话已存在，建立失败,请直接发消息！");
 
 
     // 响应业务状态

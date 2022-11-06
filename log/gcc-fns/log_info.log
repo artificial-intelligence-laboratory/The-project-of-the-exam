@@ -781,3 +781,468 @@
 2022-11-06 02:29:51,241 INFO [http-nio-9999-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 11 ms
 2022-11-06 02:29:51,287 INFO [http-nio-9999-exec-1] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:60] request start，id: c6a97b79-e986-45b0-bbce-7b2902bc71fd, path: /session/alreadySessionList, ip: 127.0.0.1, params: [19]
 2022-11-06 02:29:51,440 INFO [http-nio-9999-exec-1] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:67] request end, id: c6a97b79-e986-45b0-bbce-7b2902bc71fd, cost: 157ms
+2022-11-06 16:33:37,234 INFO [restartedMain] c.g.f.GccFnsApplication [StartupInfoLogger.java:55] Starting GccFnsApplication on LAPTOP-K72C2H75 with PID 10896 (D:\AppData\FNS\fns\The-project-of-the-exam\target\classes started by 温格 in D:\AppData\FNS\fns\The-project-of-the-exam)
+2022-11-06 16:33:37,237 INFO [restartedMain] c.g.f.GccFnsApplication [SpringApplication.java:655] The following profiles are active: dev
+2022-11-06 16:33:37,296 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-06 16:33:37,297 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-06 16:33:38,243 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:249] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-11-06 16:33:38,246 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:127] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-11-06 16:33:38,289 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:187] Finished Spring Data repository scanning in 24ms. Found 0 Redis repository interfaces.
+2022-11-06 16:33:38,614 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 16:33:38,754 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'spring.datasource.druid-com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties' of type [com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 16:33:38,761 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'advisor' of type [org.springframework.aop.support.RegexpMethodPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 16:33:39,142 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:92] Tomcat initialized with port(s): 9999 (http)
+2022-11-06 16:33:39,151 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-9999"]
+2022-11-06 16:33:39,152 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2022-11-06 16:33:39,152 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-11-06 16:33:39,254 INFO [restartedMain] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2022-11-06 16:33:39,254 INFO [restartedMain] o.s.w.c.ContextLoader [ServletWebServerApplicationContext.java:284] Root WebApplicationContext: initialization completed in 1957 ms
+2022-11-06 16:33:39,721 INFO [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-11-06 16:33:40,802 INFO [restartedMain] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-11-06 16:33:42,393 INFO [restartedMain] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-06 16:33:42,441 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
+2022-11-06 16:33:42,774 INFO [restartedMain] s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java:84] Context refreshed
+2022-11-06 16:33:42,788 INFO [restartedMain] s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java:87] Found 1 custom documentation plugin(s)
+2022-11-06 16:33:42,796 INFO [restartedMain] s.d.s.w.s.ApiListingReferenceScanner [ApiListingReferenceScanner.java:44] Scanning for api listing references
+2022-11-06 16:33:42,971 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-9999"]
+2022-11-06 16:33:42,995 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:204] Tomcat started on port(s): 9999 (http) with context path ''
+2022-11-06 16:33:42,999 INFO [restartedMain] c.g.f.GccFnsApplication [StartupInfoLogger.java:61] Started GccFnsApplication in 6.338 seconds (JVM running for 7.517)
+2022-11-06 16:47:42,490 INFO [restartedMain] c.g.f.GccFnsApplication [StartupInfoLogger.java:55] Starting GccFnsApplication on LAPTOP-K72C2H75 with PID 18440 (D:\AppData\FNS\fns\The-project-of-the-exam\target\classes started by 温格 in D:\AppData\FNS\fns\The-project-of-the-exam)
+2022-11-06 16:47:42,491 INFO [restartedMain] c.g.f.GccFnsApplication [SpringApplication.java:655] The following profiles are active: dev
+2022-11-06 16:47:42,526 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-06 16:47:42,526 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-06 16:47:43,233 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:249] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-11-06 16:47:43,235 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:127] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-11-06 16:47:43,265 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:187] Finished Spring Data repository scanning in 19ms. Found 0 Redis repository interfaces.
+2022-11-06 16:47:43,520 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 16:47:43,708 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'spring.datasource.druid-com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties' of type [com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 16:47:43,717 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'advisor' of type [org.springframework.aop.support.RegexpMethodPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 16:47:44,082 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:92] Tomcat initialized with port(s): 9999 (http)
+2022-11-06 16:47:44,088 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-9999"]
+2022-11-06 16:47:44,089 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2022-11-06 16:47:44,089 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-11-06 16:47:44,176 INFO [restartedMain] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2022-11-06 16:47:44,177 INFO [restartedMain] o.s.w.c.ContextLoader [ServletWebServerApplicationContext.java:284] Root WebApplicationContext: initialization completed in 1650 ms
+2022-11-06 16:47:44,552 INFO [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-11-06 16:47:45,466 INFO [restartedMain] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-11-06 16:47:45,688 INFO [restartedMain] c.a.d.p.DruidDataSource [DruidDataSource.java:1948] {dataSource-1} closing ...
+2022-11-06 16:47:45,704 INFO [restartedMain] c.a.d.p.DruidDataSource [DruidDataSource.java:2020] {dataSource-1} closed
+2022-11-06 16:47:45,718 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Stopping service [Tomcat]
+2022-11-06 16:47:45,727 INFO [restartedMain] o.s.b.a.l.ConditionEvaluationReportLoggingListener [ConditionEvaluationReportLoggingListener.java:136] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-06 16:49:37,332 INFO [restartedMain] c.g.f.GccFnsApplication [StartupInfoLogger.java:55] Starting GccFnsApplication on LAPTOP-K72C2H75 with PID 19108 (D:\AppData\FNS\fns\The-project-of-the-exam\target\classes started by 温格 in D:\AppData\FNS\fns\The-project-of-the-exam)
+2022-11-06 16:49:37,333 INFO [restartedMain] c.g.f.GccFnsApplication [SpringApplication.java:655] The following profiles are active: dev
+2022-11-06 16:49:37,365 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-06 16:49:37,365 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-06 16:49:38,092 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:249] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-11-06 16:49:38,094 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:127] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-11-06 16:49:38,131 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:187] Finished Spring Data repository scanning in 26ms. Found 0 Redis repository interfaces.
+2022-11-06 16:49:38,371 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 16:49:38,487 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'spring.datasource.druid-com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties' of type [com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 16:49:38,493 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'advisor' of type [org.springframework.aop.support.RegexpMethodPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 16:49:38,818 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:92] Tomcat initialized with port(s): 9999 (http)
+2022-11-06 16:49:38,825 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-9999"]
+2022-11-06 16:49:38,826 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2022-11-06 16:49:38,826 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-11-06 16:49:38,917 INFO [restartedMain] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2022-11-06 16:49:38,918 INFO [restartedMain] o.s.w.c.ContextLoader [ServletWebServerApplicationContext.java:284] Root WebApplicationContext: initialization completed in 1553 ms
+2022-11-06 16:49:39,311 INFO [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-11-06 16:49:40,250 INFO [restartedMain] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-11-06 16:49:40,489 INFO [restartedMain] c.a.d.p.DruidDataSource [DruidDataSource.java:1948] {dataSource-1} closing ...
+2022-11-06 16:49:40,494 INFO [restartedMain] c.a.d.p.DruidDataSource [DruidDataSource.java:2020] {dataSource-1} closed
+2022-11-06 16:49:40,508 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Stopping service [Tomcat]
+2022-11-06 16:49:40,517 INFO [restartedMain] o.s.b.a.l.ConditionEvaluationReportLoggingListener [ConditionEvaluationReportLoggingListener.java:136] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-06 16:50:18,029 INFO [restartedMain] c.g.f.GccFnsApplication [StartupInfoLogger.java:55] Starting GccFnsApplication on LAPTOP-K72C2H75 with PID 3120 (D:\AppData\FNS\fns\The-project-of-the-exam\target\classes started by 温格 in D:\AppData\FNS\fns\The-project-of-the-exam)
+2022-11-06 16:50:18,030 INFO [restartedMain] c.g.f.GccFnsApplication [SpringApplication.java:655] The following profiles are active: dev
+2022-11-06 16:50:18,061 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-06 16:50:18,062 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-06 16:50:18,790 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:249] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-11-06 16:50:18,792 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:127] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-11-06 16:50:18,823 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:187] Finished Spring Data repository scanning in 19ms. Found 0 Redis repository interfaces.
+2022-11-06 16:50:19,061 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 16:50:19,178 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'spring.datasource.druid-com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties' of type [com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 16:50:19,184 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'advisor' of type [org.springframework.aop.support.RegexpMethodPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 16:50:19,511 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:92] Tomcat initialized with port(s): 9999 (http)
+2022-11-06 16:50:19,517 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-9999"]
+2022-11-06 16:50:19,518 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2022-11-06 16:50:19,518 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-11-06 16:50:19,609 INFO [restartedMain] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2022-11-06 16:50:19,609 INFO [restartedMain] o.s.w.c.ContextLoader [ServletWebServerApplicationContext.java:284] Root WebApplicationContext: initialization completed in 1547 ms
+2022-11-06 16:50:19,984 INFO [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-11-06 16:50:20,936 INFO [restartedMain] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-11-06 16:50:21,184 INFO [restartedMain] c.a.d.p.DruidDataSource [DruidDataSource.java:1948] {dataSource-1} closing ...
+2022-11-06 16:50:21,189 INFO [restartedMain] c.a.d.p.DruidDataSource [DruidDataSource.java:2020] {dataSource-1} closed
+2022-11-06 16:50:21,203 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Stopping service [Tomcat]
+2022-11-06 16:50:21,213 INFO [restartedMain] o.s.b.a.l.ConditionEvaluationReportLoggingListener [ConditionEvaluationReportLoggingListener.java:136] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-06 16:51:27,551 INFO [restartedMain] c.g.f.GccFnsApplication [StartupInfoLogger.java:55] Starting GccFnsApplication on LAPTOP-K72C2H75 with PID 7220 (D:\AppData\FNS\fns\The-project-of-the-exam\target\classes started by 温格 in D:\AppData\FNS\fns\The-project-of-the-exam)
+2022-11-06 16:51:27,551 INFO [restartedMain] c.g.f.GccFnsApplication [SpringApplication.java:655] The following profiles are active: dev
+2022-11-06 16:51:27,583 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-06 16:51:27,583 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-06 16:51:28,287 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:249] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-11-06 16:51:28,289 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:127] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-11-06 16:51:28,323 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:187] Finished Spring Data repository scanning in 23ms. Found 0 Redis repository interfaces.
+2022-11-06 16:51:28,563 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 16:51:28,680 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'spring.datasource.druid-com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties' of type [com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 16:51:28,686 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'advisor' of type [org.springframework.aop.support.RegexpMethodPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 16:51:29,005 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:92] Tomcat initialized with port(s): 9999 (http)
+2022-11-06 16:51:29,012 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-9999"]
+2022-11-06 16:51:29,013 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2022-11-06 16:51:29,013 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-11-06 16:51:29,125 INFO [restartedMain] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2022-11-06 16:51:29,126 INFO [restartedMain] o.s.w.c.ContextLoader [ServletWebServerApplicationContext.java:284] Root WebApplicationContext: initialization completed in 1543 ms
+2022-11-06 16:51:29,527 INFO [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-11-06 16:51:30,434 INFO [restartedMain] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-11-06 16:51:30,670 INFO [restartedMain] c.a.d.p.DruidDataSource [DruidDataSource.java:1948] {dataSource-1} closing ...
+2022-11-06 16:51:30,674 INFO [restartedMain] c.a.d.p.DruidDataSource [DruidDataSource.java:2020] {dataSource-1} closed
+2022-11-06 16:51:30,689 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Stopping service [Tomcat]
+2022-11-06 16:51:30,697 INFO [restartedMain] o.s.b.a.l.ConditionEvaluationReportLoggingListener [ConditionEvaluationReportLoggingListener.java:136] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-11-06 16:52:53,581 INFO [restartedMain] c.g.f.GccFnsApplication [StartupInfoLogger.java:55] Starting GccFnsApplication on LAPTOP-K72C2H75 with PID 8268 (D:\AppData\FNS\fns\The-project-of-the-exam\target\classes started by 温格 in D:\AppData\FNS\fns\The-project-of-the-exam)
+2022-11-06 16:52:53,583 INFO [restartedMain] c.g.f.GccFnsApplication [SpringApplication.java:655] The following profiles are active: dev
+2022-11-06 16:52:53,619 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-06 16:52:53,620 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-06 16:52:54,341 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:249] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-11-06 16:52:54,343 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:127] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-11-06 16:52:54,374 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:187] Finished Spring Data repository scanning in 18ms. Found 0 Redis repository interfaces.
+2022-11-06 16:52:54,611 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 16:52:54,739 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'spring.datasource.druid-com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties' of type [com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 16:52:54,746 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'advisor' of type [org.springframework.aop.support.RegexpMethodPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 16:52:55,072 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:92] Tomcat initialized with port(s): 9999 (http)
+2022-11-06 16:52:55,079 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-9999"]
+2022-11-06 16:52:55,079 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2022-11-06 16:52:55,080 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-11-06 16:52:55,171 INFO [restartedMain] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2022-11-06 16:52:55,171 INFO [restartedMain] o.s.w.c.ContextLoader [ServletWebServerApplicationContext.java:284] Root WebApplicationContext: initialization completed in 1551 ms
+2022-11-06 16:52:55,572 INFO [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-11-06 16:52:56,495 INFO [restartedMain] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-11-06 16:52:58,001 INFO [restartedMain] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-06 16:52:58,044 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
+2022-11-06 16:52:58,342 INFO [restartedMain] s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java:84] Context refreshed
+2022-11-06 16:52:58,352 INFO [restartedMain] s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java:87] Found 1 custom documentation plugin(s)
+2022-11-06 16:52:58,360 INFO [restartedMain] s.d.s.w.s.ApiListingReferenceScanner [ApiListingReferenceScanner.java:44] Scanning for api listing references
+2022-11-06 16:52:58,525 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-9999"]
+2022-11-06 16:52:58,544 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:204] Tomcat started on port(s): 9999 (http) with context path ''
+2022-11-06 16:52:58,546 INFO [restartedMain] c.g.f.GccFnsApplication [StartupInfoLogger.java:61] Started GccFnsApplication in 5.387 seconds (JVM running for 6.72)
+2022-11-06 16:53:05,358 INFO [http-nio-9999-exec-1] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-06 16:53:05,358 INFO [http-nio-9999-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2022-11-06 16:53:05,368 INFO [http-nio-9999-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 10 ms
+2022-11-06 16:53:05,416 INFO [http-nio-9999-exec-1] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:60] request start，id: 3d9164ec-d10c-4af8-bfa6-865ff6ebc4e7, path: /session/alreadySessionList, ip: 127.0.0.1, params: [19]
+2022-11-06 16:53:05,562 INFO [http-nio-9999-exec-1] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:67] request end, id: 3d9164ec-d10c-4af8-bfa6-865ff6ebc4e7, cost: 149ms
+2022-11-06 16:53:21,543 INFO [http-nio-9999-exec-3] c.g.f.s.i.WebSocket [WebSocket.java:66] 【websocket消息】有新的连接，总数为:1
+2022-11-06 16:53:23,024 INFO [http-nio-9999-exec-8] c.g.f.s.i.WebSocket [WebSocket.java:66] 【websocket消息】有新的连接，总数为:2
+2022-11-06 16:53:24,911 INFO [http-nio-9999-exec-4] c.g.f.s.i.WebSocket [WebSocket.java:165] 【websocket消息】收到客户端消息:sddss
+2022-11-06 16:53:54,299 INFO [http-nio-9999-exec-9] c.g.f.s.i.WebSocket [WebSocket.java:165] 【websocket消息】收到客户端消息:睡觉
+2022-11-06 16:54:20,052 INFO [http-nio-9999-exec-7] c.g.f.s.i.WebSocket [WebSocket.java:165] 【websocket消息】收到客户端消息:不睡了，起床吃饭
+2022-11-06 16:54:54,610 INFO [http-nio-9999-exec-5] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:60] request start，id: 0d3a23f3-a063-4de2-bedf-e090025183a3, path: /session/createSession, ip: 127.0.0.1, params: [11, 19, 万楷瑞]
+2022-11-06 16:54:54,616 INFO [http-nio-9999-exec-5] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:67] request end, id: 0d3a23f3-a063-4de2-bedf-e090025183a3, cost: 6ms
+2022-11-06 16:55:01,886 INFO [http-nio-9999-exec-10] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:60] request start，id: c06ca74f-fd60-47b7-8659-5275db61ace1, path: /session/createSession, ip: 127.0.0.1, params: [17, 19, 万楷瑞]
+2022-11-06 16:55:01,906 INFO [http-nio-9999-exec-10] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:67] request end, id: c06ca74f-fd60-47b7-8659-5275db61ace1, cost: 19ms
+2022-11-06 16:57:13,992 INFO [restartedMain] c.g.f.GccFnsApplication [StartupInfoLogger.java:55] Starting GccFnsApplication on LAPTOP-K72C2H75 with PID 19952 (D:\AppData\FNS\fns\The-project-of-the-exam\target\classes started by 温格 in D:\AppData\FNS\fns\The-project-of-the-exam)
+2022-11-06 16:57:13,993 INFO [restartedMain] c.g.f.GccFnsApplication [SpringApplication.java:655] The following profiles are active: dev
+2022-11-06 16:57:14,024 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-06 16:57:14,025 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-06 16:57:14,758 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:249] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-11-06 16:57:14,760 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:127] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-11-06 16:57:14,791 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:187] Finished Spring Data repository scanning in 19ms. Found 0 Redis repository interfaces.
+2022-11-06 16:57:15,041 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 16:57:15,157 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'spring.datasource.druid-com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties' of type [com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 16:57:15,164 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'advisor' of type [org.springframework.aop.support.RegexpMethodPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 16:57:15,483 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:92] Tomcat initialized with port(s): 9999 (http)
+2022-11-06 16:57:15,490 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-9999"]
+2022-11-06 16:57:15,490 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2022-11-06 16:57:15,491 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-11-06 16:57:15,578 INFO [restartedMain] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2022-11-06 16:57:15,579 INFO [restartedMain] o.s.w.c.ContextLoader [ServletWebServerApplicationContext.java:284] Root WebApplicationContext: initialization completed in 1554 ms
+2022-11-06 16:57:15,964 INFO [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-11-06 16:57:16,882 INFO [restartedMain] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-11-06 16:57:18,410 INFO [restartedMain] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-06 16:57:18,451 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
+2022-11-06 16:57:18,739 INFO [restartedMain] s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java:84] Context refreshed
+2022-11-06 16:57:18,749 INFO [restartedMain] s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java:87] Found 1 custom documentation plugin(s)
+2022-11-06 16:57:18,758 INFO [restartedMain] s.d.s.w.s.ApiListingReferenceScanner [ApiListingReferenceScanner.java:44] Scanning for api listing references
+2022-11-06 16:57:18,921 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-9999"]
+2022-11-06 16:57:18,939 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:204] Tomcat started on port(s): 9999 (http) with context path ''
+2022-11-06 16:57:18,941 INFO [restartedMain] c.g.f.GccFnsApplication [StartupInfoLogger.java:61] Started GccFnsApplication in 5.364 seconds (JVM running for 6.644)
+2022-11-06 16:57:23,827 INFO [http-nio-9999-exec-1] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-06 16:57:23,827 INFO [http-nio-9999-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2022-11-06 16:57:23,838 INFO [http-nio-9999-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 10 ms
+2022-11-06 16:57:23,877 INFO [http-nio-9999-exec-1] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:60] request start，id: 91a214e6-7444-4007-93c6-98b6828b137b, path: /session/createSession, ip: 127.0.0.1, params: [17, 19, 万楷瑞]
+2022-11-06 16:57:24,016 INFO [http-nio-9999-exec-1] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:67] request end, id: 91a214e6-7444-4007-93c6-98b6828b137b, cost: 140ms
+2022-11-06 17:00:04,874 INFO [restartedMain] c.g.f.GccFnsApplication [StartupInfoLogger.java:55] Starting GccFnsApplication on LAPTOP-K72C2H75 with PID 3332 (D:\AppData\FNS\fns\The-project-of-the-exam\target\classes started by 温格 in D:\AppData\FNS\fns\The-project-of-the-exam)
+2022-11-06 17:00:04,875 INFO [restartedMain] c.g.f.GccFnsApplication [SpringApplication.java:655] The following profiles are active: dev
+2022-11-06 17:00:04,910 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-06 17:00:04,911 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-06 17:00:05,673 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:249] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-11-06 17:00:05,675 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:127] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-11-06 17:00:05,706 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:187] Finished Spring Data repository scanning in 19ms. Found 0 Redis repository interfaces.
+2022-11-06 17:00:05,952 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 17:00:06,072 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'spring.datasource.druid-com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties' of type [com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 17:00:06,078 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'advisor' of type [org.springframework.aop.support.RegexpMethodPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 17:00:06,420 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:92] Tomcat initialized with port(s): 9999 (http)
+2022-11-06 17:00:06,427 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-9999"]
+2022-11-06 17:00:06,427 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2022-11-06 17:00:06,427 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-11-06 17:00:06,517 INFO [restartedMain] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2022-11-06 17:00:06,518 INFO [restartedMain] o.s.w.c.ContextLoader [ServletWebServerApplicationContext.java:284] Root WebApplicationContext: initialization completed in 1607 ms
+2022-11-06 17:00:06,904 INFO [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-11-06 17:00:07,817 INFO [restartedMain] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-11-06 17:00:09,377 INFO [restartedMain] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-06 17:00:09,419 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
+2022-11-06 17:00:09,708 INFO [restartedMain] s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java:84] Context refreshed
+2022-11-06 17:00:09,718 INFO [restartedMain] s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java:87] Found 1 custom documentation plugin(s)
+2022-11-06 17:00:09,726 INFO [restartedMain] s.d.s.w.s.ApiListingReferenceScanner [ApiListingReferenceScanner.java:44] Scanning for api listing references
+2022-11-06 17:00:09,892 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-9999"]
+2022-11-06 17:00:09,910 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:204] Tomcat started on port(s): 9999 (http) with context path ''
+2022-11-06 17:00:09,913 INFO [restartedMain] c.g.f.GccFnsApplication [StartupInfoLogger.java:61] Started GccFnsApplication in 5.463 seconds (JVM running for 6.658)
+2022-11-06 17:00:18,191 INFO [http-nio-9999-exec-1] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-06 17:00:18,191 INFO [http-nio-9999-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2022-11-06 17:00:18,200 INFO [http-nio-9999-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 9 ms
+2022-11-06 17:00:18,241 INFO [http-nio-9999-exec-1] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:60] request start，id: 594867ae-1f73-44f0-bf45-1eb946d2a3a5, path: /session/createSession, ip: 127.0.0.1, params: [17, 19, 万楷瑞]
+2022-11-06 17:00:18,417 INFO [http-nio-9999-exec-1] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:67] request end, id: 594867ae-1f73-44f0-bf45-1eb946d2a3a5, cost: 179ms
+2022-11-06 17:04:03,706 INFO [restartedMain] c.g.f.GccFnsApplication [StartupInfoLogger.java:55] Starting GccFnsApplication on LAPTOP-K72C2H75 with PID 20712 (D:\AppData\FNS\fns\The-project-of-the-exam\target\classes started by 温格 in D:\AppData\FNS\fns\The-project-of-the-exam)
+2022-11-06 17:04:03,707 INFO [restartedMain] c.g.f.GccFnsApplication [SpringApplication.java:655] The following profiles are active: dev
+2022-11-06 17:04:03,742 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-06 17:04:03,743 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-06 17:04:04,484 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:249] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-11-06 17:04:04,487 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:127] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-11-06 17:04:04,522 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:187] Finished Spring Data repository scanning in 22ms. Found 0 Redis repository interfaces.
+2022-11-06 17:04:04,769 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 17:04:04,892 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'spring.datasource.druid-com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties' of type [com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 17:04:04,898 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'advisor' of type [org.springframework.aop.support.RegexpMethodPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 17:04:05,230 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:92] Tomcat initialized with port(s): 9999 (http)
+2022-11-06 17:04:05,237 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-9999"]
+2022-11-06 17:04:05,237 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2022-11-06 17:04:05,238 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-11-06 17:04:05,326 INFO [restartedMain] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2022-11-06 17:04:05,326 INFO [restartedMain] o.s.w.c.ContextLoader [ServletWebServerApplicationContext.java:284] Root WebApplicationContext: initialization completed in 1583 ms
+2022-11-06 17:04:05,707 INFO [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-11-06 17:04:06,650 INFO [restartedMain] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-11-06 17:04:08,195 INFO [restartedMain] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-06 17:04:08,239 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
+2022-11-06 17:04:08,527 INFO [restartedMain] s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java:84] Context refreshed
+2022-11-06 17:04:08,538 INFO [restartedMain] s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java:87] Found 1 custom documentation plugin(s)
+2022-11-06 17:04:08,546 INFO [restartedMain] s.d.s.w.s.ApiListingReferenceScanner [ApiListingReferenceScanner.java:44] Scanning for api listing references
+2022-11-06 17:04:08,705 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-9999"]
+2022-11-06 17:04:08,724 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:204] Tomcat started on port(s): 9999 (http) with context path ''
+2022-11-06 17:04:08,726 INFO [restartedMain] c.g.f.GccFnsApplication [StartupInfoLogger.java:61] Started GccFnsApplication in 5.479 seconds (JVM running for 6.84)
+2022-11-06 17:05:22,795 INFO [http-nio-9999-exec-2] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-06 17:05:22,795 INFO [http-nio-9999-exec-2] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2022-11-06 17:05:22,805 INFO [http-nio-9999-exec-2] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 9 ms
+2022-11-06 17:05:22,849 INFO [http-nio-9999-exec-2] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:60] request start，id: c9993aaa-fa96-46ed-b08a-aa7ce0556912, path: /session/createSession, ip: 127.0.0.1, params: [17, 19, 万楷瑞]
+2022-11-06 17:05:23,011 INFO [http-nio-9999-exec-2] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:67] request end, id: c9993aaa-fa96-46ed-b08a-aa7ce0556912, cost: 165ms
+2022-11-06 17:05:32,711 INFO [http-nio-9999-exec-3] c.g.f.s.i.WebSocket [WebSocket.java:66] 【websocket消息】有新的连接，总数为:1
+2022-11-06 17:05:37,996 INFO [http-nio-9999-exec-4] c.g.f.s.i.WebSocket [WebSocket.java:66] 【websocket消息】有新的连接，总数为:2
+2022-11-06 17:05:39,834 INFO [http-nio-9999-exec-5] c.g.f.s.i.WebSocket [WebSocket.java:66] 【websocket消息】有新的连接，总数为:2
+2022-11-06 17:05:44,162 INFO [http-nio-9999-exec-6] c.g.f.s.i.WebSocket [WebSocket.java:165] 【websocket消息】收到客户端消息:sss
+2022-11-06 17:06:47,537 INFO [http-nio-9999-exec-7] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:60] request start，id: a71c2ce9-b0f7-422d-aaf2-f17957df6c7d, path: /session/alreadySessionList, ip: 127.0.0.1, params: [19]
+2022-11-06 17:06:47,544 INFO [http-nio-9999-exec-7] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:67] request end, id: a71c2ce9-b0f7-422d-aaf2-f17957df6c7d, cost: 6ms
+2022-11-06 17:06:57,322 INFO [http-nio-9999-exec-9] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:60] request start，id: 443274a0-5005-4056-8ca2-999390a380d5, path: /session/createSession, ip: 127.0.0.1, params: [17, 19, 万楷瑞]
+2022-11-06 17:06:57,329 INFO [http-nio-9999-exec-9] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:67] request end, id: 443274a0-5005-4056-8ca2-999390a380d5, cost: 7ms
+2022-11-06 17:13:01,348 INFO [restartedMain] c.g.f.GccFnsApplication [StartupInfoLogger.java:55] Starting GccFnsApplication on LAPTOP-K72C2H75 with PID 6560 (D:\AppData\FNS\fns\The-project-of-the-exam\target\classes started by 温格 in D:\AppData\FNS\fns\The-project-of-the-exam)
+2022-11-06 17:13:01,349 INFO [restartedMain] c.g.f.GccFnsApplication [SpringApplication.java:655] The following profiles are active: dev
+2022-11-06 17:13:01,380 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-06 17:13:01,380 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-06 17:13:02,099 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:249] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-11-06 17:13:02,101 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:127] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-11-06 17:13:02,131 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:187] Finished Spring Data repository scanning in 19ms. Found 0 Redis repository interfaces.
+2022-11-06 17:13:02,367 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 17:13:02,486 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'spring.datasource.druid-com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties' of type [com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 17:13:02,492 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'advisor' of type [org.springframework.aop.support.RegexpMethodPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 17:13:02,811 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:92] Tomcat initialized with port(s): 9999 (http)
+2022-11-06 17:13:02,819 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-9999"]
+2022-11-06 17:13:02,819 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2022-11-06 17:13:02,819 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-11-06 17:13:02,912 INFO [restartedMain] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2022-11-06 17:13:02,912 INFO [restartedMain] o.s.w.c.ContextLoader [ServletWebServerApplicationContext.java:284] Root WebApplicationContext: initialization completed in 1532 ms
+2022-11-06 17:13:03,278 INFO [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-11-06 17:13:04,183 INFO [restartedMain] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-11-06 17:13:05,676 INFO [restartedMain] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-06 17:13:05,718 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
+2022-11-06 17:13:05,998 INFO [restartedMain] s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java:84] Context refreshed
+2022-11-06 17:13:06,007 INFO [restartedMain] s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java:87] Found 1 custom documentation plugin(s)
+2022-11-06 17:13:06,014 INFO [restartedMain] s.d.s.w.s.ApiListingReferenceScanner [ApiListingReferenceScanner.java:44] Scanning for api listing references
+2022-11-06 17:13:06,169 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-9999"]
+2022-11-06 17:13:06,186 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:204] Tomcat started on port(s): 9999 (http) with context path ''
+2022-11-06 17:13:06,189 INFO [restartedMain] c.g.f.GccFnsApplication [StartupInfoLogger.java:61] Started GccFnsApplication in 5.27 seconds (JVM running for 6.497)
+2022-11-06 17:13:08,730 INFO [http-nio-9999-exec-1] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-06 17:13:08,730 INFO [http-nio-9999-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2022-11-06 17:13:08,739 INFO [http-nio-9999-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 8 ms
+2022-11-06 17:13:08,783 INFO [http-nio-9999-exec-1] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:60] request start，id: b4f6e9f2-78be-4fb6-9eae-7fca1db4cc3a, path: /session/createSession, ip: 127.0.0.1, params: [17, 19, 万楷瑞]
+2022-11-06 17:13:35,713 INFO [restartedMain] c.g.f.GccFnsApplication [StartupInfoLogger.java:55] Starting GccFnsApplication on LAPTOP-K72C2H75 with PID 16764 (D:\AppData\FNS\fns\The-project-of-the-exam\target\classes started by 温格 in D:\AppData\FNS\fns\The-project-of-the-exam)
+2022-11-06 17:13:35,714 INFO [restartedMain] c.g.f.GccFnsApplication [SpringApplication.java:655] The following profiles are active: dev
+2022-11-06 17:13:35,750 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-06 17:13:35,751 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-06 17:13:36,476 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:249] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-11-06 17:13:36,478 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:127] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-11-06 17:13:36,510 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:187] Finished Spring Data repository scanning in 20ms. Found 0 Redis repository interfaces.
+2022-11-06 17:13:36,813 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 17:13:36,932 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'spring.datasource.druid-com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties' of type [com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 17:13:36,938 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'advisor' of type [org.springframework.aop.support.RegexpMethodPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 17:13:37,258 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:92] Tomcat initialized with port(s): 9999 (http)
+2022-11-06 17:13:37,264 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-9999"]
+2022-11-06 17:13:37,265 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2022-11-06 17:13:37,265 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-11-06 17:13:37,363 INFO [restartedMain] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2022-11-06 17:13:37,364 INFO [restartedMain] o.s.w.c.ContextLoader [ServletWebServerApplicationContext.java:284] Root WebApplicationContext: initialization completed in 1613 ms
+2022-11-06 17:13:37,746 INFO [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-11-06 17:13:38,678 INFO [restartedMain] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-11-06 17:13:40,409 INFO [restartedMain] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-06 17:13:40,462 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
+2022-11-06 17:13:40,783 INFO [restartedMain] s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java:84] Context refreshed
+2022-11-06 17:13:40,792 INFO [restartedMain] s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java:87] Found 1 custom documentation plugin(s)
+2022-11-06 17:13:40,801 INFO [restartedMain] s.d.s.w.s.ApiListingReferenceScanner [ApiListingReferenceScanner.java:44] Scanning for api listing references
+2022-11-06 17:13:40,961 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-9999"]
+2022-11-06 17:13:40,981 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:204] Tomcat started on port(s): 9999 (http) with context path ''
+2022-11-06 17:13:40,983 INFO [restartedMain] c.g.f.GccFnsApplication [StartupInfoLogger.java:61] Started GccFnsApplication in 5.749 seconds (JVM running for 6.949)
+2022-11-06 17:13:43,750 INFO [http-nio-9999-exec-1] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-06 17:13:43,750 INFO [http-nio-9999-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2022-11-06 17:13:43,760 INFO [http-nio-9999-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 10 ms
+2022-11-06 17:13:43,803 INFO [http-nio-9999-exec-1] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:60] request start，id: 25de0d44-221e-4d12-b026-72459e14a35c, path: /session/createSession, ip: 127.0.0.1, params: [17, 19, 万楷瑞]
+2022-11-06 17:23:35,422 INFO [restartedMain] c.g.f.GccFnsApplication [StartupInfoLogger.java:55] Starting GccFnsApplication on LAPTOP-K72C2H75 with PID 20496 (D:\AppData\FNS\fns\The-project-of-the-exam\target\classes started by 温格 in D:\AppData\FNS\fns\The-project-of-the-exam)
+2022-11-06 17:23:35,424 INFO [restartedMain] c.g.f.GccFnsApplication [SpringApplication.java:655] The following profiles are active: dev
+2022-11-06 17:23:35,460 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-06 17:23:35,461 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-06 17:23:36,215 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:249] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-11-06 17:23:36,217 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:127] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-11-06 17:23:36,248 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:187] Finished Spring Data repository scanning in 19ms. Found 0 Redis repository interfaces.
+2022-11-06 17:23:36,481 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 17:23:36,600 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'spring.datasource.druid-com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties' of type [com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 17:23:36,608 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'advisor' of type [org.springframework.aop.support.RegexpMethodPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 17:23:36,941 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:92] Tomcat initialized with port(s): 9999 (http)
+2022-11-06 17:23:36,948 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-9999"]
+2022-11-06 17:23:36,949 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2022-11-06 17:23:36,949 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-11-06 17:23:37,054 INFO [restartedMain] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2022-11-06 17:23:37,055 INFO [restartedMain] o.s.w.c.ContextLoader [ServletWebServerApplicationContext.java:284] Root WebApplicationContext: initialization completed in 1594 ms
+2022-11-06 17:23:37,442 INFO [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-11-06 17:23:38,363 INFO [restartedMain] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-11-06 17:23:39,857 INFO [restartedMain] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-06 17:23:39,898 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
+2022-11-06 17:23:40,189 INFO [restartedMain] s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java:84] Context refreshed
+2022-11-06 17:23:40,200 INFO [restartedMain] s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java:87] Found 1 custom documentation plugin(s)
+2022-11-06 17:23:40,207 INFO [restartedMain] s.d.s.w.s.ApiListingReferenceScanner [ApiListingReferenceScanner.java:44] Scanning for api listing references
+2022-11-06 17:23:40,369 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-9999"]
+2022-11-06 17:23:40,386 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:204] Tomcat started on port(s): 9999 (http) with context path ''
+2022-11-06 17:23:40,389 INFO [restartedMain] c.g.f.GccFnsApplication [StartupInfoLogger.java:61] Started GccFnsApplication in 5.378 seconds (JVM running for 6.552)
+2022-11-06 17:23:50,794 INFO [http-nio-9999-exec-1] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-06 17:23:50,795 INFO [http-nio-9999-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2022-11-06 17:23:50,805 INFO [http-nio-9999-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 10 ms
+2022-11-06 17:23:50,845 INFO [http-nio-9999-exec-1] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:60] request start，id: aec3f23e-e0ce-487b-8716-a7e3b084ae4e, path: /session/createSession, ip: 127.0.0.1, params: [17, 19, 万楷瑞]
+2022-11-06 17:23:54,328 INFO [http-nio-9999-exec-3] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:60] request start，id: e8720e61-7b32-4936-9fee-af115782af05, path: /session/alreadySessionList, ip: 127.0.0.1, params: [19]
+2022-11-06 17:23:54,336 INFO [http-nio-9999-exec-3] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:67] request end, id: e8720e61-7b32-4936-9fee-af115782af05, cost: 7ms
+2022-11-06 17:23:57,799 INFO [http-nio-9999-exec-5] c.g.f.s.i.WebSocket [WebSocket.java:66] 【websocket消息】有新的连接，总数为:1
+2022-11-06 17:24:09,540 INFO [http-nio-9999-exec-6] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:60] request start，id: 6d16de67-81d4-4ce2-9e06-a353ed5d3db7, path: /session/delSession, ip: 127.0.0.1, params: [55]
+2022-11-06 17:24:09,547 INFO [http-nio-9999-exec-6] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:67] request end, id: 6d16de67-81d4-4ce2-9e06-a353ed5d3db7, cost: 6ms
+2022-11-06 17:24:14,942 INFO [http-nio-9999-exec-8] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:60] request start，id: d6e24b83-7844-4f5c-a2f1-110a89877078, path: /session/delSession, ip: 127.0.0.1, params: [54]
+2022-11-06 17:24:14,947 INFO [http-nio-9999-exec-8] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:67] request end, id: d6e24b83-7844-4f5c-a2f1-110a89877078, cost: 5ms
+2022-11-06 17:24:19,177 INFO [http-nio-9999-exec-10] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:60] request start，id: 51332fa1-3597-4a7d-96b8-9c55f3fbc47a, path: /session/createSession, ip: 127.0.0.1, params: [17, 19, 万楷瑞]
+2022-11-06 17:24:19,204 INFO [http-nio-9999-exec-10] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:67] request end, id: 51332fa1-3597-4a7d-96b8-9c55f3fbc47a, cost: 26ms
+2022-11-06 17:24:23,332 INFO [http-nio-9999-exec-2] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:60] request start，id: 0917b370-9b35-487f-badd-16e4af1e9834, path: /session/delSession, ip: 127.0.0.1, params: [56]
+2022-11-06 17:24:23,337 INFO [http-nio-9999-exec-2] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:67] request end, id: 0917b370-9b35-487f-badd-16e4af1e9834, cost: 4ms
+2022-11-06 17:24:25,529 INFO [http-nio-9999-exec-9] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:60] request start，id: f2f6c9aa-f19e-4898-9071-a335df924d5a, path: /session/createSession, ip: 127.0.0.1, params: [17, 19, 万楷瑞]
+2022-11-06 17:24:25,542 INFO [http-nio-9999-exec-9] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:67] request end, id: f2f6c9aa-f19e-4898-9071-a335df924d5a, cost: 12ms
+2022-11-06 17:24:36,816 INFO [http-nio-9999-exec-6] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:60] request start，id: 28953306-9027-456d-a0af-64e39c6b0267, path: /session/delSession, ip: 127.0.0.1, params: [57]
+2022-11-06 17:24:36,821 INFO [http-nio-9999-exec-6] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:67] request end, id: 28953306-9027-456d-a0af-64e39c6b0267, cost: 4ms
+2022-11-06 17:24:38,956 INFO [http-nio-9999-exec-8] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:60] request start，id: e32c2c70-eb57-455b-93a5-18239cba4c6f, path: /session/createSession, ip: 127.0.0.1, params: [17, 19, 万楷瑞]
+2022-11-06 17:26:26,007 INFO [restartedMain] c.g.f.GccFnsApplication [StartupInfoLogger.java:55] Starting GccFnsApplication on LAPTOP-K72C2H75 with PID 20132 (D:\AppData\FNS\fns\The-project-of-the-exam\target\classes started by 温格 in D:\AppData\FNS\fns\The-project-of-the-exam)
+2022-11-06 17:26:26,008 INFO [restartedMain] c.g.f.GccFnsApplication [SpringApplication.java:655] The following profiles are active: dev
+2022-11-06 17:26:26,050 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-06 17:26:26,050 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-06 17:26:26,799 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:249] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-11-06 17:26:26,801 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:127] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-11-06 17:26:26,843 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:187] Finished Spring Data repository scanning in 29ms. Found 0 Redis repository interfaces.
+2022-11-06 17:26:27,077 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 17:26:27,219 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'spring.datasource.druid-com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties' of type [com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 17:26:27,226 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'advisor' of type [org.springframework.aop.support.RegexpMethodPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 17:26:27,569 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:92] Tomcat initialized with port(s): 9999 (http)
+2022-11-06 17:26:27,576 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-9999"]
+2022-11-06 17:26:27,577 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2022-11-06 17:26:27,577 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-11-06 17:26:27,673 INFO [restartedMain] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2022-11-06 17:26:27,673 INFO [restartedMain] o.s.w.c.ContextLoader [ServletWebServerApplicationContext.java:284] Root WebApplicationContext: initialization completed in 1623 ms
+2022-11-06 17:26:28,042 INFO [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-11-06 17:26:28,951 INFO [restartedMain] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-11-06 17:26:30,496 INFO [restartedMain] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-06 17:26:30,539 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
+2022-11-06 17:26:30,817 INFO [restartedMain] s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java:84] Context refreshed
+2022-11-06 17:26:30,828 INFO [restartedMain] s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java:87] Found 1 custom documentation plugin(s)
+2022-11-06 17:26:30,836 INFO [restartedMain] s.d.s.w.s.ApiListingReferenceScanner [ApiListingReferenceScanner.java:44] Scanning for api listing references
+2022-11-06 17:26:31,003 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-9999"]
+2022-11-06 17:26:31,024 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:204] Tomcat started on port(s): 9999 (http) with context path ''
+2022-11-06 17:26:31,028 INFO [restartedMain] c.g.f.GccFnsApplication [StartupInfoLogger.java:61] Started GccFnsApplication in 5.485 seconds (JVM running for 6.723)
+2022-11-06 17:26:35,274 INFO [http-nio-9999-exec-2] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-06 17:26:35,275 INFO [http-nio-9999-exec-2] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2022-11-06 17:26:35,285 INFO [http-nio-9999-exec-2] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 10 ms
+2022-11-06 17:26:35,329 INFO [http-nio-9999-exec-2] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:46] request start，id: c02428fe-fd0a-47b7-80c9-9b0ecda4aae6, path: /session/createSession, ip: 127.0.0.1, params: [17, 19, 万楷瑞]
+2022-11-06 17:26:36,760 INFO [http-nio-9999-exec-3] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:46] request start，id: df25244d-67d0-4dec-8028-3170e1ac06be, path: /session/createSession, ip: 127.0.0.1, params: [17, 19, 万楷瑞]
+2022-11-06 17:26:40,691 INFO [http-nio-9999-exec-5] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:46] request start，id: 14357356-6a25-4deb-a877-64398222723d, path: /session/delSession, ip: 127.0.0.1, params: [57]
+2022-11-06 17:26:40,696 INFO [http-nio-9999-exec-5] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:53] request end, id: 14357356-6a25-4deb-a877-64398222723d, cost: 5ms
+2022-11-06 17:26:42,025 INFO [http-nio-9999-exec-6] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:46] request start，id: 8d57bc27-5474-45e3-8229-b4280abcfad8, path: /session/delSession, ip: 127.0.0.1, params: [57]
+2022-11-06 17:26:42,028 INFO [http-nio-9999-exec-6] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:53] request end, id: 8d57bc27-5474-45e3-8229-b4280abcfad8, cost: 2ms
+2022-11-06 17:26:42,920 INFO [http-nio-9999-exec-10] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:46] request start，id: e6158e64-1635-4b18-8382-41d831e54c13, path: /session/delSession, ip: 127.0.0.1, params: [57]
+2022-11-06 17:26:42,923 INFO [http-nio-9999-exec-10] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:53] request end, id: e6158e64-1635-4b18-8382-41d831e54c13, cost: 2ms
+2022-11-06 17:26:56,752 INFO [http-nio-9999-exec-2] c.g.f.s.i.WebSocket [WebSocket.java:66] 【websocket消息】有新的连接，总数为:1
+2022-11-06 17:27:00,883 INFO [http-nio-9999-exec-1] c.g.f.s.i.WebSocket [WebSocket.java:66] 【websocket消息】有新的连接，总数为:2
+2022-11-06 17:27:02,333 INFO [http-nio-9999-exec-3] c.g.f.s.i.WebSocket [WebSocket.java:88] 【websocket消息】连接断开，总数为:1
+2022-11-06 17:27:38,453 INFO [http-nio-9999-exec-4] c.g.f.s.i.WebSocket [WebSocket.java:88] 【websocket消息】连接断开，总数为:0
+2022-11-06 17:27:39,073 INFO [http-nio-9999-exec-5] c.g.f.s.i.WebSocket [WebSocket.java:66] 【websocket消息】有新的连接，总数为:1
+2022-11-06 17:27:41,722 INFO [http-nio-9999-exec-7] c.g.f.s.i.WebSocket [WebSocket.java:66] 【websocket消息】有新的连接，总数为:1
+2022-11-06 17:27:48,566 INFO [http-nio-9999-exec-6] c.g.f.s.i.WebSocket [WebSocket.java:88] 【websocket消息】连接断开，总数为:0
+2022-11-06 17:28:30,925 INFO [http-nio-9999-exec-8] c.g.f.s.i.WebSocket [WebSocket.java:66] 【websocket消息】有新的连接，总数为:1
+2022-11-06 17:28:37,698 INFO [http-nio-9999-exec-10] c.g.f.s.i.WebSocket [WebSocket.java:162] 【websocket消息】收到客户端消息:你吃饭嘛
+2022-11-06 17:29:13,809 INFO [http-nio-9999-exec-9] c.g.f.s.i.WebSocket [WebSocket.java:162] 【websocket消息】收到客户端消息:吃嘛
+2022-11-06 17:29:17,083 INFO [http-nio-9999-exec-2] c.g.f.s.i.WebSocket [WebSocket.java:88] 【websocket消息】连接断开，总数为:0
+2022-11-06 17:29:17,533 INFO [http-nio-9999-exec-1] c.g.f.s.i.WebSocket [WebSocket.java:66] 【websocket消息】有新的连接，总数为:1
+2022-11-06 17:29:21,013 INFO [http-nio-9999-exec-3] c.g.f.s.i.WebSocket [WebSocket.java:162] 【websocket消息】收到客户端消息:吃嘛
+2022-11-06 17:29:54,684 INFO [http-nio-9999-exec-4] c.g.f.s.i.WebSocket [WebSocket.java:88] 【websocket消息】连接断开，总数为:0
+2022-11-06 17:30:27,726 INFO [http-nio-9999-exec-5] c.g.f.s.i.WebSocket [WebSocket.java:66] 【websocket消息】有新的连接，总数为:1
+2022-11-06 17:30:32,820 INFO [http-nio-9999-exec-7] c.g.f.s.i.WebSocket [WebSocket.java:88] 【websocket消息】连接断开，总数为:0
+2022-11-06 17:31:03,141 INFO [http-nio-9999-exec-6] c.g.f.s.i.WebSocket [WebSocket.java:88] 【websocket消息】连接断开，总数为:0
+2022-11-06 17:31:03,658 INFO [http-nio-9999-exec-8] c.g.f.s.i.WebSocket [WebSocket.java:66] 【websocket消息】有新的连接，总数为:1
+2022-11-06 17:31:05,234 INFO [http-nio-9999-exec-10] c.g.f.s.i.WebSocket [WebSocket.java:66] 【websocket消息】有新的连接，总数为:2
+2022-11-06 17:31:09,041 INFO [http-nio-9999-exec-9] c.g.f.s.i.WebSocket [WebSocket.java:162] 【websocket消息】收到客户端消息:吃饭啊
+2022-11-06 17:31:36,449 INFO [http-nio-9999-exec-2] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:46] request start，id: 2d2a5bb2-730c-4892-ac60-408401199215, path: /session/alreadySessionList, ip: 127.0.0.1, params: [19]
+2022-11-06 17:31:36,454 INFO [http-nio-9999-exec-2] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:53] request end, id: 2d2a5bb2-730c-4892-ac60-408401199215, cost: 4ms
+2022-11-06 17:32:08,523 INFO [restartedMain] c.g.f.GccFnsApplication [StartupInfoLogger.java:55] Starting GccFnsApplication on LAPTOP-K72C2H75 with PID 16168 (D:\AppData\FNS\fns\The-project-of-the-exam\target\classes started by 温格 in D:\AppData\FNS\fns\The-project-of-the-exam)
+2022-11-06 17:32:08,525 INFO [restartedMain] c.g.f.GccFnsApplication [SpringApplication.java:655] The following profiles are active: dev
+2022-11-06 17:32:08,566 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-11-06 17:32:08,566 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:225] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-11-06 17:32:09,398 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:249] Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-11-06 17:32:09,400 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:127] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-11-06 17:32:09,431 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:187] Finished Spring Data repository scanning in 20ms. Found 0 Redis repository interfaces.
+2022-11-06 17:32:09,668 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration' of type [com.alibaba.druid.spring.boot.autoconfigure.stat.DruidSpringAopConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 17:32:09,804 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'spring.datasource.druid-com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties' of type [com.alibaba.druid.spring.boot.autoconfigure.properties.DruidStatProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 17:32:09,812 INFO [restartedMain] o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [PostProcessorRegistrationDelegate.java:330] Bean 'advisor' of type [org.springframework.aop.support.RegexpMethodPointcutAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-11-06 17:32:10,162 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:92] Tomcat initialized with port(s): 9999 (http)
+2022-11-06 17:32:10,169 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-9999"]
+2022-11-06 17:32:10,170 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2022-11-06 17:32:10,170 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.31]
+2022-11-06 17:32:10,272 INFO [restartedMain] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2022-11-06 17:32:10,273 INFO [restartedMain] o.s.w.c.ContextLoader [ServletWebServerApplicationContext.java:284] Root WebApplicationContext: initialization completed in 1706 ms
+2022-11-06 17:32:10,660 INFO [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure [DruidDataSourceAutoConfigure.java:56] Init DruidDataSource
+2022-11-06 17:32:11,645 INFO [restartedMain] c.a.d.p.DruidDataSource [DruidDataSource.java:1003] {dataSource-1} inited
+2022-11-06 17:32:13,194 INFO [restartedMain] o.s.s.c.ThreadPoolTaskExecutor [ExecutorConfigurationSupport.java:181] Initializing ExecutorService 'applicationTaskExecutor'
+2022-11-06 17:32:13,236 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:58] LiveReload server is running on port 35729
+2022-11-06 17:32:13,555 INFO [restartedMain] s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java:84] Context refreshed
+2022-11-06 17:32:13,564 INFO [restartedMain] s.d.s.w.p.DocumentationPluginsBootstrapper [DocumentationPluginsBootstrapper.java:87] Found 1 custom documentation plugin(s)
+2022-11-06 17:32:13,572 INFO [restartedMain] s.d.s.w.s.ApiListingReferenceScanner [ApiListingReferenceScanner.java:44] Scanning for api listing references
+2022-11-06 17:32:13,727 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-9999"]
+2022-11-06 17:32:13,750 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:204] Tomcat started on port(s): 9999 (http) with context path ''
+2022-11-06 17:32:13,753 INFO [restartedMain] c.g.f.GccFnsApplication [StartupInfoLogger.java:61] Started GccFnsApplication in 5.686 seconds (JVM running for 6.891)
+2022-11-06 17:32:15,952 INFO [http-nio-9999-exec-1] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-11-06 17:32:15,952 INFO [http-nio-9999-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2022-11-06 17:32:15,961 INFO [http-nio-9999-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 9 ms
+2022-11-06 17:32:16,009 INFO [http-nio-9999-exec-1] c.g.f.s.i.WebSocket [WebSocket.java:66] 【websocket消息】有新的连接，总数为:1
+2022-11-06 17:32:17,279 INFO [http-nio-9999-exec-2] c.g.f.s.i.WebSocket [WebSocket.java:66] 【websocket消息】有新的连接，总数为:2
+2022-11-06 17:32:23,313 INFO [http-nio-9999-exec-3] c.g.f.s.i.WebSocket [WebSocket.java:162] 【websocket消息】收到客户端消息:吃饭
+2022-11-06 17:32:40,844 INFO [http-nio-9999-exec-6] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:46] request start，id: 1f3c820b-3841-4a9c-b624-0f8a8a7d8768, path: /session/alreadySessionList, ip: 127.0.0.1, params: [19]
+2022-11-06 17:32:40,849 INFO [http-nio-9999-exec-6] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:53] request end, id: 1f3c820b-3841-4a9c-b624-0f8a8a7d8768, cost: 8ms
+2022-11-06 17:32:47,751 INFO [http-nio-9999-exec-7] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:46] request start，id: a6f19f3f-b1b5-4740-8bfa-5e9f1a4fdf0b, path: /session/createSession, ip: 127.0.0.1, params: [17, 19, 万楷瑞]
+2022-11-06 17:32:50,502 INFO [http-nio-9999-exec-5] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:46] request start，id: c56b8d38-763c-4dff-950f-2f972d748b81, path: /message/msgList, ip: 127.0.0.1, params: [49]
+2022-11-06 17:32:50,526 INFO [http-nio-9999-exec-5] c.g.f.a.ControllerLogAspect [ControllerLogAspect.java:53] request end, id: c56b8d38-763c-4dff-950f-2f972d748b81, cost: 23ms

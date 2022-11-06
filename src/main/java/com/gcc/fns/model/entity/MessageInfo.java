@@ -54,11 +54,6 @@ public class MessageInfo implements Serializable {
      */
     private Integer unReadState;
 
-//    /**
-//     *头像
-//     */
-//    private String avatar;
-
 
 }
 

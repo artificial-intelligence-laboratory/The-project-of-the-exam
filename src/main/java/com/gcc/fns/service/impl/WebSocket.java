@@ -123,17 +123,15 @@ public class WebSocket {
         messageInfo.setFromUserId(sessionList.getUserId());
         messageInfo.setToUserId(sessionList.getToUserId());
         messageInfo.setUnReadState(0);
-//        //自己的头像，发送给对方的消息里面带有
-//        messageInfo.setAvatar(appUserMapper.selectById(sessionList.getUserId()).getAvatar());
 
         //消息持久化
         messageInfoMapper.insert(messageInfo);
 
-        //判断用户是否存在，不存在就结束
+        //判断用户是否在线，不存在就结束
         List<Object> list = SessionUtil.sessionPool.get(sessionList.getUserId());
         if (list == null || list.isEmpty()){
-            //不存在，更新未读数
-            sessionListMapper.addUnReadCount(sessionList.getToUserId(),sessionList.getUserId());
+            //不存在，更新未读数和未读消息和时间
+            sessionListMapper.addUnReadCount(sessionList.getToUserId(),sessionList.getUserId(),messageInfo.getContent(),messageInfo.getCreateTime());
         }else {
             //存在，判断会话存在不存在
             String id = sessionListMapper.selectIdByUser(sessionList.getToUserId(),sessionList.getUserId() ) + "";
@@ -149,11 +147,10 @@ public class WebSocket {
                     tempSessionList.setUserId(sessionList.getToUserId());
                     tempSessionList.setListName(user.getUsername());
                     tempSessionList.setUnReadCount(1);
-//                    messageInfo.setAvatar(appUserMapper.selectById(sessionList.getUserId()).getAvatar());
                     sessionListMapper.insert(tempSessionList);
                 }else {
                     //更新未读消息数量
-                    sessionListMapper.addUnReadCount(sessionList.getToUserId(),sessionList.getUserId());
+                    sessionListMapper.addUnReadCount(sessionList.getToUserId(),sessionList.getUserId(),messageInfo.getContent(),messageInfo.getCreateTime());
                 }
 
                 //会话不存在发送列表消息

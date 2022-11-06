@@ -15,34 +15,35 @@
     <sql id="Base_Column_List">
         id, from_user_id,  to_user_id, content, create_time, un_read_state
     </sql>
-    <!--查询select-->
-    <select id="selectByPrimaryKey" resultType="com.gcc.fns.model.entity.MessageInfo">
-        select
-        <include refid="Base_Column_List" />
-        from t_message_info
-        where id = #{id}
-    </select>
+
+<!--    &lt;!&ndash;查询select&ndash;&gt;-->
+<!--    <select id="selectByPrimaryKey" resultType="com.gcc.fns.model.entity.MessageInfo">-->
+<!--        select-->
+<!--        <include refid="Base_Column_List" />-->
+<!--        from t_message_info-->
+<!--        where id = #{id}-->
+<!--    </select>-->
 
 
-    <select id="select" resultType="com.gcc.fns.model.entity.MessageInfo">
-        SELECT * FROM t_message_info
-        WHERE 1 = 1
-        <if test="fromUserId != null">
-            AND from_user_id = #{fromUserId}
-        </if>
-        <if test="toUserId != null">
-            AND to_user_id = #{toUserId}
-        </if>
-        <if test="content != null">
-            AND content = #{content}
-        </if>
-        <if test="createTime != null">
-            AND create_time = #{createTime}
-        </if>
-        <if test="unReadState != null">
-            AND un_read_state = #{unReadState}
-        </if>
-    </select>
+<!--    <select id="select" resultType="com.gcc.fns.model.entity.MessageInfo">-->
+<!--        SELECT * FROM t_message_info-->
+<!--        WHERE 1 = 1-->
+<!--        <if test="fromUserId != null">-->
+<!--            AND from_user_id = #{fromUserId}-->
+<!--        </if>-->
+<!--        <if test="toUserId != null">-->
+<!--            AND to_user_id = #{toUserId}-->
+<!--        </if>-->
+<!--        <if test="content != null">-->
+<!--            AND content = #{content}-->
+<!--        </if>-->
+<!--        <if test="createTime != null">-->
+<!--            AND create_time = #{createTime}-->
+<!--        </if>-->
+<!--        <if test="unReadState != null">-->
+<!--            AND un_read_state = #{unReadState}-->
+<!--        </if>-->
+<!--    </select>-->
 
     <select id="selectMsgList" resultType="com.gcc.fns.model.entity.MessageInfo">
         SELECT *  FROM t_message_info
@@ -51,46 +52,46 @@
               )
     </select>
 
-    <!--插入inset-->
-    <insert id="insertSelective">
-        insert into t_message_info
-        <trim prefix="(" suffix=")" suffixOverrides=",">
-            <if test="id != null">id,</if>
-            <if test="fromUserId != null">from_user_id,</if>
-            <if test="toUserId != null">
-                to_user_id,
-            </if>
-            <if test="content != null">
-                content,
-            </if>
-            <if test="createTime != null">
-                create_time,
-            </if>
-            <if test="unReadState != null">
-                un_read_state,
-            </if>
-        </trim>
-        <trim prefix="values (" suffix=")" suffixOverrides=",">
-            <if test="id != null">
-                #{id},
-            </if>
-            <if test="fromUserId != null">
-                #{fromUserId},
-            </if>
-            <if test="toUserId != null">
-                #{toUserId},
-            </if>
-            <if test="content != null">
-                #{content},
-            </if>
-            <if test="createTime != null">
-                #{createTime},
-            </if>
-            <if test="unReadState != null">
-                #{unReadState},
-            </if>
-        </trim>
-    </insert>
+<!--    &lt;!&ndash;插入inset&ndash;&gt;-->
+<!--    <insert id="insertSelective">-->
+<!--        insert into t_message_info-->
+<!--        <trim prefix="(" suffix=")" suffixOverrides=",">-->
+<!--            <if test="id != null">id,</if>-->
+<!--            <if test="fromUserId != null">from_user_id,</if>-->
+<!--            <if test="toUserId != null">-->
+<!--                to_user_id,-->
+<!--            </if>-->
+<!--            <if test="content != null">-->
+<!--                content,-->
+<!--            </if>-->
+<!--            <if test="createTime != null">-->
+<!--                create_time,-->
+<!--            </if>-->
+<!--            <if test="unReadState != null">-->
+<!--                un_read_state,-->
+<!--            </if>-->
+<!--        </trim>-->
+<!--        <trim prefix="values (" suffix=")" suffixOverrides=",">-->
+<!--            <if test="id != null">-->
+<!--                #{id},-->
+<!--            </if>-->
+<!--            <if test="fromUserId != null">-->
+<!--                #{fromUserId},-->
+<!--            </if>-->
+<!--            <if test="toUserId != null">-->
+<!--                #{toUserId},-->
+<!--            </if>-->
+<!--            <if test="content != null">-->
+<!--                #{content},-->
+<!--            </if>-->
+<!--            <if test="createTime != null">-->
+<!--                #{createTime},-->
+<!--            </if>-->
+<!--            <if test="unReadState != null">-->
+<!--                #{unReadState},-->
+<!--            </if>-->
+<!--        </trim>-->
+<!--    </insert>-->
 
     <insert id="insert">
         insert into t_message_info (id, from_user_id,to_user_id,content,un_read_state,create_time)
@@ -98,50 +99,49 @@
     </insert>
 
 
-    <!--修改update-->
-    <update id="updateByPrimaryKeySelective">
-        update t_message_info
-        <set>
-            <if test="fromUserId != null">
-                from_user_id = #{fromUserId},
-            </if>
-            <if test="toUserId != null">
-                to_user_id = #{toUserId},
-            </if>
-            <if test="content != null">
-                content = #{content},
-            </if>
-            <if test="createTime != null">
-                create_time = #{createTime},
-            </if>
-            <if test="unReadState != null">
-                un_read_state = #{unReadState},
-            </if>
-        </set>
-        where id = #{id}
-    </update>
+<!--    &lt;!&ndash;修改update&ndash;&gt;-->
+<!--    <update id="updateByPrimaryKeySelective">-->
+<!--        update t_message_info-->
+<!--        <set>-->
+<!--            <if test="fromUserId != null">-->
+<!--                from_user_id = #{fromUserId},-->
+<!--            </if>-->
+<!--            <if test="toUserId != null">-->
+<!--                to_user_id = #{toUserId},-->
+<!--            </if>-->
+<!--            <if test="content != null">-->
+<!--                content = #{content},-->
+<!--            </if>-->
+<!--            <if test="createTime != null">-->
+<!--                create_time = #{createTime},-->
+<!--            </if>-->
+<!--            <if test="unReadState != null">-->
+<!--                un_read_state = #{unReadState},-->
+<!--            </if>-->
+<!--        </set>-->
+<!--        where id = #{id}-->
+<!--    </update>-->
 
-    <update id="updateByPrimaryKey">
-        update t_message_info
-        set from_user_id = #{fromUserId},
-            to_user_id = #{toUserId},
-            content = #{content},
-            create_time = #{createTime},
-            un_read_state = #{unReadFlag}
-        where id = #{id}
-    </update>
+<!--    <update id="updateByPrimaryKey">-->
+<!--        update t_message_info-->
+<!--        set from_user_id = #{fromUserId},-->
+<!--            to_user_id = #{toUserId},-->
+<!--            content = #{content},-->
+<!--            create_time = #{createTime},-->
+<!--            un_read_state = #{unReadFlag}-->
+<!--        where id = #{id}-->
+<!--    </update>-->
 
 
     <update id="msgRead">
         UPDATE t_message_info SET un_read_state = 1 WHERE from_user_id = #{fromUserId} AND to_user_id = #{toUserId}
     </update>
 
-    <!--删除delete-->
-
-    <delete id="deleteByPrimaryKey">
-        delete from t_message_info
-        where id = #{id}
-    </delete>
+<!--删除delete-->
+<!--    <delete id="deleteByPrimaryKey">-->
+<!--        delete from t_message_info-->
+<!--        where id = #{id}-->
+<!--    </delete>-->
 
 
 </mapper>

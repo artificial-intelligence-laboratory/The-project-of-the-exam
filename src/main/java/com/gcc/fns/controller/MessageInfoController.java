@@ -1,6 +1,6 @@
 package com.gcc.fns.controller;
 
-import com.gcc.fns.common.utils.AjaxResult;
+import com.gcc.fns.common.utils.GraceJSONResult;
 import com.gcc.fns.mapper.MessageInfoMapper;
 import com.gcc.fns.mapper.SessionListMapper;
 import com.gcc.fns.model.entity.MessageInfo;
@@ -9,7 +9,10 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -36,10 +39,10 @@ public class MessageInfoController {
             @ApiImplicitParam(name = "sessionId",value = "会话ID",dataType = "long",required = true)
     })
     @PutMapping("/msgList")
-    public AjaxResult<?> msgList(@RequestParam Long sessionId){
+    public GraceJSONResult msgList(@RequestParam Long sessionId){
         SessionList sessionList = sessionListMapper.selectByPrimaryKey(sessionId);
         if (sessionList == null){
-            return AjaxResult.success();
+            return GraceJSONResult.ok();
         }
         Long fromUserId = sessionList.getUserId();
         Long toUserId = sessionList.getToUserId();
@@ -49,7 +52,6 @@ public class MessageInfoController {
         messageInfoMapper.msgRead(fromUserId,toUserId);
         //更新会话里面的未读消息
         sessionListMapper.updateUnReadCount(fromUserId,toUserId);
-        return AjaxResult.success(messageInfoList,messageInfoList.size());
+        return GraceJSONResult.ok(messageInfoList);
     }
-
 }

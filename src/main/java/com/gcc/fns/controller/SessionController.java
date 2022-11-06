@@ -1,6 +1,8 @@
 package com.gcc.fns.controller;
 
-import com.gcc.fns.common.utils.AjaxResult;
+import com.gcc.fns.common.enums.ResponseStatusEnum;
+import com.gcc.fns.common.exception.ThrowException;
+import com.gcc.fns.common.utils.GraceJSONResult;
 import com.gcc.fns.mapper.AppUserMapper;
 import com.gcc.fns.mapper.SessionListMapper;
 import com.gcc.fns.model.entity.AppUser;
@@ -37,9 +39,10 @@ public class SessionController {
            @ApiImplicitParam(name = "userId",value = "用户ID",dataType = "long",required = true)
    })
    @GetMapping("/alreadySessionList")
-   public AjaxResult<?> sessionListAlready(@RequestParam Long userId){
+   public GraceJSONResult sessionListAlready(@RequestParam Long userId){
        List<SessionList> sessionLists = sessionListMapper.selectByUserId(userId);
-       return AjaxResult.success(sessionLists, sessionLists.size());
+//       return AjaxResult.success(sessionLists, sessionLists.size());
+       return GraceJSONResult.ok(sessionLists);
    }
 
    @ApiOperation(value = "建立正在等待会话的用户列表",notes = "建立正在等待会话的用户列表" +
@@ -48,7 +51,7 @@ public class SessionController {
            @ApiImplicitParam(name = "userId",value = "会话发起者的ID",dataType = "long",required = true)
    )
    @GetMapping("/sessionListWait")
-   public AjaxResult<?> sessionListWait(@RequestParam Long userId){
+   public GraceJSONResult sessionListWait(@RequestParam Long userId){
        List<Long> list = sessionListMapper.selectUserIdByUserId(userId);
        list.add(userId);
        List<AppUser> cloudList = appUserMapper.getCloudList(list);
@@ -56,7 +59,8 @@ public class SessionController {
 //       cloudList.add(appUserMapper.selectById(toUserId).getAvatar());
 
 //       messageInfo.setAvatar(appUserMapper.selectById(sessionList.getUserId()).getAvatar());
-       return AjaxResult.success(cloudList,cloudList.size());
+//       return AjaxResult.success(cloudList,cloudList.size());
+       return GraceJSONResult.ok(cloudList);
    }
 
    @ApiOperation(value = "创建一个会话",notes = "创建一个未建立的会话，如果对面也没建立，这也会给对方建立" +
@@ -67,7 +71,7 @@ public class SessionController {
            @ApiImplicitParam(name = "toUserName",value = "目标用户姓名",dataType = "string",required = true)
    })
    @PostMapping("/createSession")
-   public AjaxResult<?> createSession(@RequestParam Long userId,@RequestParam Long toUserId,@RequestParam String toUserName){
+   public GraceJSONResult createSession(@RequestParam Long userId,@RequestParam Long toUserId,@RequestParam String toUserName){
 
         SessionList sessionList = new SessionList();
         sessionList.setUserId(userId);
@@ -75,10 +79,8 @@ public class SessionController {
         sessionList.setListName(toUserName);
         sessionList.setUnReadCount(0);
         //存对方的头像
-//        sessionList.setAvatar(appUserMapper.selectById(toUserId).getAvatar());
        sessionList.setAvatar(appUserMapper.selectByIdAvatar(toUserId));
 
-       log.info("dddd");
        // 判断会话存在不存在
        Long ifSession = sessionListMapper.selectIdByUser(userId,toUserId);
        Long ifToSession = sessionListMapper.selectIdByUser(toUserId,userId);
@@ -96,7 +98,7 @@ public class SessionController {
                sessionList.setAvatar(appUserMapper.selectByIdAvatar(userId));
                sessionListMapper.insert(sessionList);
            }
-           return AjaxResult.failure("会话已存在，建立失败,请直接发消息");
+           ThrowException.custom(ResponseStatusEnum.CHAR_ALREADY_EXISTS);
        }
        //判断对方和我建立会话，如果没有，也要建立
        //给对方建立会话
@@ -109,7 +111,7 @@ public class SessionController {
            sessionList.setAvatar(appUserMapper.selectByIdAvatar(userId));
            sessionListMapper.insert(sessionList);
        }
-       return AjaxResult.success();
+       return GraceJSONResult.ok();
    }
 
     // 删除会话
@@ -118,9 +120,9 @@ public class SessionController {
             @ApiImplicitParam(name = "sessionId",value = "会话id",dataType = "long",required = true)
     })
     @DeleteMapping("/delSession")
-    public AjaxResult<?> delSession(@RequestParam Long sessionId){
+    public GraceJSONResult delSession(@RequestParam Long sessionId){
         sessionListMapper.deleteByPrimaryKey(sessionId);
-        return AjaxResult.success();
+        return GraceJSONResult.ok();
     }
 
 }
