@@ -6,14 +6,14 @@
 
 
     <select id="selectByPrimaryUserKey" resultType="com.gcc.fns.model.entity.AppUser">
-        select id,`user_name`
+        select id,`username`
         from `t_app_user`
         where id = #{id}
     </select>
 
 
     <select id="getCloudList" resultType="com.gcc.fns.model.entity.AppUser">
-        SELECT id,`user_name` FROM t_app_user
+        SELECT id,`username` FROM t_app_user
         <if test="list != null">
             WHERE id not in
             <foreach collection="list" open="(" close=")" separator="," item="i">
@@ -24,7 +24,7 @@
 
 
     <select id="selectByIdAvatar" resultType="java.lang.String">
-        select `face_url`
+        select `avatar`
         from `t_app_user`
         where id = #{id}
     </select>

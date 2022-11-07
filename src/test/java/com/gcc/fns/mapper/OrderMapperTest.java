@@ -29,9 +29,9 @@ public class OrderMapperTest {
 
     @Test
     public void testInsertOrder(){
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 20; i++) {
             Order order = new Order();
-            order.setFromUserId(11L);
+            order.setFromUserId(22L);
             order.setTitle("帮拿快递");
             order.setDetails("帮拿快递");
             order.setBeCareful("易碎物，轻放");

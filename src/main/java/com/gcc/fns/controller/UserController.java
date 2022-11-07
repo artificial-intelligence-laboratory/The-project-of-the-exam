@@ -1,7 +1,13 @@
 package com.gcc.fns.controller;
 
+import cn.hutool.core.util.RandomUtil;
+import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.gcc.fns.common.utils.GraceJSONResult;
+import com.gcc.fns.common.utils.MD5Util;
+import com.gcc.fns.common.utils.UserHolder;
 import com.gcc.fns.model.dto.AppUserInfoDto;
+import com.gcc.fns.model.dto.UpdatePwdRequest;
+import com.gcc.fns.model.entity.AppUser;
 import com.gcc.fns.model.vo.AppUserInfoVo;
 import com.gcc.fns.service.AppUserService;
 import io.swagger.annotations.Api;
@@ -38,5 +44,26 @@ public class UserController {
         String token = request.getHeader("Authorization");
         AppUserInfoVo appUserInfoVo = appUserService.updateUserInfo(appUserInfoDto, token);
         return GraceJSONResult.ok(appUserInfoVo);
+    }
+
+    @ApiOperation(value = "更新用户密码", notes = "更新用户密码")
+    @PostMapping("/updatePwd")
+    public GraceJSONResult updatePwd(@RequestBody @Valid UpdatePwdRequest updatePwdRequest) {
+        String password = updatePwdRequest.getPassword();
+        // 生成随机盐
+        String salt = RandomUtil.randomString(12);
+        // 密码加密
+        password = MD5Util.encodeByMD5(salt, password);
+        AppUserInfoVo user = UserHolder.getUser();
+        Long id = user.getId();
+        UpdateWrapper<AppUser> wrapper = new UpdateWrapper<>();
+        wrapper.eq("id", id);
+        wrapper.set("salt", salt);
+        wrapper.set("password", password);
+        boolean isUpdate = appUserService.update(wrapper);
+        if (!isUpdate) {
+            return GraceJSONResult.errorMsg("更新不成功，请重新尝试");
+        }
+        return GraceJSONResult.ok();
     }
 }

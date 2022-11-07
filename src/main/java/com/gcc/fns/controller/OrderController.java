@@ -40,12 +40,18 @@ public class OrderController {
     @ApiOperation(value = "获取首页订单列表", notes = "获取首页订单列表")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "cur", value = "当前页", dataType = "int", required = true, paramType = "query"),
-            @ApiImplicitParam(name = "count", value = "单页的个数", dataType = "int", required = true, paramType = "query")
+            @ApiImplicitParam(name = "count", value = "单页的个数", dataType = "int", required = true, paramType = "query"),
+            @ApiImplicitParam(name = "type", value = "订单类型：0为全部", dataType = "int", required = true, paramType = "query")
     })
     @GetMapping("/getOrderList")
     public GraceJSONResult getOrderList(@ApiIgnore PageDto pageDto) {
+        Integer type = pageDto.getType();
         Page<Order> page = new Page<>(pageDto.getCur(), pageDto.getCount());
         QueryWrapper<Order> wrapper = new QueryWrapper<>();
+        // 不是全部类型
+        if (type != 0) {
+            wrapper.eq("type_id", type);
+        }
         wrapper.eq("status", OrderStatus.TO_BE_RECEIVED.getCode());
         wrapper.orderByDesc("create_time");
         Page<Order> pages = orderService.page(page, wrapper);
@@ -75,7 +81,7 @@ public class OrderController {
             @ApiImplicitParam(name = "cur", value = "当前页", dataType = "int", required = true, paramType = "query"),
             @ApiImplicitParam(name = "count", value = "单页的个数", dataType = "int", required = true, paramType = "query"),
             @ApiImplicitParam(name = "status", value = "订单状态", dataType = "int", required = true, paramType = "query"),
-            @ApiImplicitParam(name = "isIssue", value = "查询类型，true为接单，false为发单", dataType = "boolean", required = true, paramType = "query")
+            @ApiImplicitParam(name = "isIssue", value = "查询类型，true为发单，false为接单", dataType = "boolean", required = true, paramType = "query")
     })
     @GetMapping("/getOrderByMe")
     public GraceJSONResult getOrderByFromUser(@ApiIgnore PageDto pageDto,
@@ -103,7 +109,9 @@ public class OrderController {
             @ApiImplicitParam(name = "beCareful", value = "注意事项", dataType = "String", required = false),
             @ApiImplicitParam(name = "workPlace", value = "工作地点", dataType = "String", required = true),
             @ApiImplicitParam(name = "fee", value = "金额", dataType = "float", required = true),
-            @ApiImplicitParam(name = "typeId", value = "订单类型", dataType = "int", required = true)
+            @ApiImplicitParam(name = "typeId", value = "订单类型", dataType = "int", required = true),
+            @ApiImplicitParam(name = "startTime", value = "开始时间", dataType = "date", required = true),
+            @ApiImplicitParam(name = "endTime", value = "结束时间", dataType = "date", required = true),
     })
     @PostMapping("/createOrder")
     public GraceJSONResult createOrder(@ApiIgnore @RequestBody @Valid OrderInfoDto orderInfoDto) {

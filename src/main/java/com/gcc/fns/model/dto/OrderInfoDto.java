@@ -51,8 +51,8 @@ public class OrderInfoDto implements Serializable {
     /**
      * 订单类型
      */
-    @Min(value = 0, message = "请选择正确的订单类型")
-    @Max(value = 4, message = "请选择正确的订单类型")
+    @Min(value = 1, message = "请选择正确的订单类型")
+    @Max(value = 5, message = "请选择正确的订单类型")
     @NotNull(message = "订单类型不能为空")
     private Integer typeId;
 

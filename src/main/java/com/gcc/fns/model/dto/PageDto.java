@@ -2,6 +2,8 @@ package com.gcc.fns.model.dto;
 
 import lombok.Data;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import java.io.Serializable;
 
 /**
@@ -17,4 +19,8 @@ public class PageDto implements Serializable {
     private Integer cur;
 
     private Integer count;
+
+    @Min(value = 1, message = "选择正确的类型")
+    @Max(value = 5, message = "选择正确的类型")
+    private Integer type;
 }

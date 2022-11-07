@@ -99,6 +99,8 @@ public class WebSocket {
     public void OnMessage(String message){
         String sessionId = this.session.getRequestParameterMap().get("sessionId").get(0);
 
+        String substring = message.substring(1, message.length() - 3);
+
         if (sessionId == null){
             System.out.println("sessionId 错误");
         }
@@ -118,7 +120,7 @@ public class WebSocket {
 
         AppUser user = appUserMapper.selectByPrimaryUserKey(sessionList.getUserId());
         MessageInfo messageInfo = new MessageInfo();
-        messageInfo.setContent(message);
+        messageInfo.setContent(substring);
         messageInfo.setCreateTime(new Date());
         messageInfo.setFromUserId(sessionList.getUserId());
         messageInfo.setToUserId(sessionList.getToUserId());
@@ -128,7 +130,7 @@ public class WebSocket {
         messageInfoMapper.insert(messageInfo);
 
         //判断用户是否在线，不存在就结束
-        List<Object> list = SessionUtil.sessionPool.get(sessionList.getUserId());
+        List<Object> list = SessionUtil.sessionPool.get(sessionList.getToUserId());
         if (list == null || list.isEmpty()){
             //不存在，更新未读数和未读消息和时间
             sessionListMapper.addUnReadCount(sessionList.getToUserId(),sessionList.getUserId(),messageInfo.getContent(),messageInfo.getCreateTime());
@@ -159,7 +161,7 @@ public class WebSocket {
                 sendTextMessage(sessionList.getToUserId(),JsonUtils.objectToJson(sessionLists));
             }
         }
-        log.info("【websocket消息】收到客户端消息:"+message);
+        log.info("【websocket消息】收到客户端消息:"+substring);
     }
 
 
