@@ -5,7 +5,7 @@ import Vue from 'vue'
 import uView from '@/uni_modules/uview-ui'
 
 Vue.use(uView)
-// uni.$u.config.unit = 'rpx'   Ipad等大屏幕不能使用rpx
+//uni.$u.config.unit = 'rpx'   //Ipad等大屏幕不能使用rpx
 Vue.config.productionTip = false
 App.mpType = 'app'
 

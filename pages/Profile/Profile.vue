@@ -164,7 +164,7 @@
 				} else {
 					Pagename = "MySend"
 				}
-				let url = '/pages/Profile/SecondPages/' + Pagename // id判断进入哪个页面
+				let url = '/pages/Profile/SecondPages/' + Pagename +'?index=-1' // id判断进入哪个页面
 				uni.navigateTo({
 					url: url,
 					animationType: 'slide-in-right',
@@ -176,7 +176,7 @@
 			},
 			// 跳转到我的发布/接单 任意模块
 			goItem(index) {
-				console.log('个人')
+				console.log(index)
 				let that = this
 				let Pagename = "MySend"
 				if (this.CardName == "我的接单") {

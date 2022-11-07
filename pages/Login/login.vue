@@ -57,7 +57,7 @@
 
 
 			<view class="input-row border">
-				<u--input placeholder="请输入密码" border="surround" v-model="password"></u--input>
+				<u--input placeholder="请输入密码" password border="surround" v-model="password"></u--input>
 			</view>
 
 		</view>
@@ -222,8 +222,7 @@
 					url: url,
 					method:'POST',
 					data: {
-						// email: that.email,
-						email: "826697618@qq.com",
+						email: that.email,
 						password:that.password
 					},
 					header:{
