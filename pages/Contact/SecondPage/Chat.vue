@@ -1,64 +1,65 @@
 <template>
 	<view class="container">
-	<u-sticky offset-top="0">
+	<!-- <u-sticky offset-top="0"></u-sticky> -->
 <!-- 自定义导航 -->
 		<view class="nav">
-			<u-navbar :placeholder="true" :bgColor="bgColor" :title="CurrentChatList.username" autoBack></u-navbar>
+			<u-navbar :placeholder="true" :bgColor="bgColor" :title="CurrentChatList.listName" @leftClick="backtoChatList"></u-navbar>
 		</view>
-			</u-sticky>
+			
 		
-
-
 		<!-- 聊天内容 -->
 		<view class="chatContent">
-			<!-- 兼职卡片 -->
-		
 
-			<view class="WorkCard">
-				<view class="det_name">
-					<span >发单人:</span>
-					<u--text mode="name" :text="CurrentChatList.username"></u--text>
-				</view>
-				
-				<view class="det_name">
-				<span >完成金额:</span>
-				<u--text mode="price" text="999"></u--text>
-				</view>
-			<view class="det_name">
-				<span >需求简述:</span>
-				<view class="u-line-2">
-					关于uView的取名来由，首字母u来自于uni-app首字母关于uView的取名来由，首字母u来自于uni-app首字母关于uView的取名来由，
-					首字母u来自于uni-app首字母关于uView的取名来由，首字母u来自于uni-app首字母</u--text>
-				</view>
-				</view>
-
-			</view>
-
+			<!-- 加载图标 -->
+					<u-loading-icon :show="IsLoading" mode="circle" text="内容加载中..."></u-loading-icon>
 			        <!-- 聊天内容 -->
-			        <scroll-view class="chat" scroll-y="true" scroll-with-animation="true" :scroll-into-view="scrollToView">
+			        <scroll-view :style="'height:'+scrollHeight+'px'" class="chat" scroll-y="true" scroll-with-animation="true" :scroll-into-view="scrollToView">
+						
+						<!-- 兼职卡片 -->
+						<view class="WorkCard">
+							<view class="det_name">
+								<span >发单人:</span>
+								<u--text mode="name" :text="CurrentChatList.listName"></u--text>
+							</view>
+							
+							<view class="det_name">
+							<span >完成金额:</span>
+							<u--text mode="price" text="999"></u--text>
+							</view>
+						<view class="det_name">
+							<span >需求简述:</span>
+							<view class="u-line-2">
+								关于uView的取名来由，首字母u来自于uni-app首字母关于uView的取名来由，首字母u来自于uni-app首字母关于uView的取名来由，
+								首字母u来自于uni-app首字母关于uView的取名来由，首字母u来自于uni-app首字母</u--text>
+							</view>
+							</view>
+						
+						</view>
+						
 			            <view class="chat-main" :style="{paddingBottom:inputh+'px'}">
-			                <view class="chat-ls" v-for="(item,index) in imgMsg" :key="index" :id="'msg'+ index">
+			                <view class="chat-ls" v-for="(item,index) in CurrentMsgList" :key="index" :id="'msg'+index">
 								
 								<!-- 左边聊天内容 -->
 			                    <view class="chat-time" v-if="item.createTime != ''">{{changeTime(item.createTime)}}</view>
-			                    <view class="msg-m msg-left" v-if="item.sendName !=  CurrentChatList.username">
+			                    <view class="msg-m msg-left" v-if="item.fromUserId !=  CurrentChatList.userId">
 			                        <image class="user-img" src="../../../static/logo.png"></image>
-			                        <view class="message" v-if="item.TextType == 0">
+			                        <view class="message">
 			                            <!-- 文字 -->
-			                            <view class="msg-text">{{item.sendText}}</view>
+			                            <view class="msg-text">{{item.content}}</view>
 			                        </view>
 			                        </view>
 			                    
 								<!-- 右边聊天内容  -->
-			                    <view class="msg-m msg-right" v-if="item.sendName == CurrentChatList.username">
+			                    <view class="msg-m msg-right" v-if="item.fromUserId == CurrentChatList.userId" >
 			                        <image class="user-img" src="../../../static/logo.png"></image>
-			                        <view class="message" v-if="item.TextType == 0">
-			                            <view class="msg-text">{{item.sendText}}</view>
+			                        <view class="message">
+			                            <view class="msg-text">{{item.content}}</view>
 			                        </view>
 			                       
 			                    </view>
 			                </view>
 							</view>
+							
 			        </scroll-view>
 
 
@@ -78,96 +79,223 @@
 
 		data() {
 			return {
-				scrollheight: 200,
-				lines: 2,
+				socket:"",
+				socketOpen:false, //是否连接
+				scrollHeight:0,
 				bgColor: '#eee',
-				CurrentChatList: {
-					id: '0',
-					sessionid: '',
-					Avatarurl: 'https://vkceyugu.cdn.bspapp.com/VKCEYUGU-dc-site/460d46d0-4fcc-11eb-8ff1-d5dcf8779628.png',
-					username: '张学友',
-					time: '2020-02-02 20:20'
-				},
-
-				CurrentMsgList: [], //当前聊天信息列表
-				imgMsg: [
-					{
-					                        "sendName": "张学友",
-					                        "receviceName": "",
-					                        "createTime": "2022-01-06 12:40:12",
-					                        "updateTime": null,
-					                        "chatmState": 1,
-											"sendText":"汉堡肉多多汉堡肉多多汉堡肉多多汉堡肉多多",
-					                        "TextType": 0		// 只有文本
-					                    },
+				CurrentChatList: {},
+				CurrentMsgList: [//当前聊天信息列表
+					//{
+											// "id":"122",
+					      //                   "fromUserId": "12",
+					      //                   "toUserId": "34",
+					      //                   "createTime": "2022-01-06 12:40:12",
+											// "unReadState":"1",
+											// "content":"汉堡肉多多汉堡肉多多汉堡肉多多汉堡肉多多",
+					                        //"TextType": 0		// 类型控制(以后拓展)
+					                    //},
 										
-										{
-										                        "sendName": "汉堡肉多多1",
-										                        "receviceName": "",
-										                        "createTime": "2022-01-06 12:40:12",
-										                        "updateTime": null,
-										                        "chatmState": 1,
-																"sendText":"汉堡肉多多汉堡肉多多汉堡肉多多汉堡肉多多",
-										                        "TextType": 0
-										                    },
+										
 				],
 				scrollToView: '',
-				index: 0,
-				inputh: '60'
+				inputh: '60'			// 高度默认60
 			}
-		},
-
-
-		onShow() {
-			this.CurrentChatList = uni.getStorageSync('ChatDetail')
 		},
 
 		methods: {
 			changeTime(date) {
-				return dateTime.dateTime1(date);
+					return dateTime.dateTime1(date);
+				},
+				
+				//接受输入内容
+				inputs(e) {
+					//时间间隔处理
+					let data = {
+						"fromUserId": uni.getStorageSync('ChatDetail').userId,
+						"toUserId": uni.getStorageSync('ChatDetail').toUserId,
+						"content": e.message,
+						"createTime": new Date(),
+						// "TextType": e.type
+						// "unReadState": 1
+					};
+					// 发送给服务器消息
+					// s'f(JSON.stringify(data));
+					this.sendSocketMessage(e.message)
+					// this.heart()
+			
+					this.CurrentMsgList.push(data);
+					// 跳转到最后一条数据 与前面的id进行对照
+					this.goBottom();
+					
+					console.log(e)
+					
+				},
+				//输入框高度
+				heights(e) {
+					// console.log("高度:", e)
+					this.inputh = e;
+					this.goBottom();
+				},
+				// 滚动到底部
+				goBottom() {
+					this.$nextTick(function() {				// 完成渲染后再更新		另一种方法是延时异步
+								this.scrollToView = 'msg' + (this.CurrentMsgList.length-1)
+					})
+				},
+				
+				// 返回聊天列表
+					backtoChatList(){
+						console.log('回退聊天列表')
+						uni.switchTab({
+							url:'/pages/Contact/ContactList'
+						})
+					},
+					
+					// 加载聊天消息列表
+					LoadMessageList(){
+						let that = this
+						uni.request({
+							url: that.$baseUrl + '/message/msgList?sessionId='+uni.getStorageSync('ChatDetail').id,
+							method:"PUT",
+							header:{
+								'Content-Type': 'application/json',
+							},
+							success(res) {
+								
+								that.CurrentMsgList = res.data.data
+								// console.log(that.CurrentMsgList)
+							}
+						})
+					},
+					
+					
+					//创建websocket连接
+					sockcet(id,session_id){
+									var that = this;
+									uni.closeSocket();
+									this.socketOpen = false;
+									try{
+										//WebSocket的地址
+										var url = 'ws://120.24.226.87:8888/webSocket/'+id+'/'+session_id;
+										// 连接
+										uni.connectSocket({
+											url: url,
+										});
+										// 监听WebSocket连接已打开
+										uni.onSocketOpen(function (res) {
+										  console.log(res,'WebSocket连接已打开！');
+										  that.socketOpen = true;
+										});
+										// 监听连接失败
+										uni.onSocketError(function (err) {
+										    console.log('WebSocket连接打开失败，请检查！',err);
+											 // e.code === 1000  表示正常关闭。 无论为何目的而创建, 该链接都已成功完成任务。
+											 // e.code !== 1000  表示非正常关闭。
+											// if(err && err.code!== 1000){
+											// 	setTimeout(function() {
+											// 	  that.socketOpen = true;
+											// 	  uni.connectSocket({
+											// 			url: url,
+											// 	  });
+											// 	}, 5 * 1000)
+											// }
+										   
+										   
+										});
+										// 监听连接关闭
+										uni.onSocketClose(function (err) {
+											console.log('WebSocket连接关闭！',err);
+											// if(err && err.code!== 1000){
+											// 	setTimeout(function() {
+											// 	  that.socketOpen = true;
+											// 	  uni.connectSocket({
+											// 			url: url,
+											// 	  });
+											// 	}, 5 * 1000)
+											// }
+										});
+										// 监听收到信息
+										uni.onSocketMessage(function (res) {
+											// console.log('WebSocket监听收到信息！',res.data.content);
+											uni.hideLoading()
+											//与后端规定好返回值分别代表什么，写业务逻辑
+											// JSON.parse()
+											let serverData = JSON.parse(res.data); //这是字符串，如果要对象记得转换一下
+											console.log(serverData)
+											that.CurrentMsgList.push(serverData)			// 从服务器获取的添加到新消息
+										
+										})	
+									}catch(e){
+										console.log(e)
+									}
+								},
+				
+					
+					//向后端发送消息
+					
+					sendSocketMessage(data){
+						console.log('socket发送信息',data)
+						let that =this
+						if(this.socketOpen==false){
+							return
+						}
+						let msg = JSON.stringify(data);
+						try{
+							//通过 WebSocket 连接发送数据
+							uni.sendSocketMessage({
+								data: msg
+							});
+						}catch(e){
+							console.log(e,'断线啦')
+							uni.closeSocket();
+						}
+				},
+								
+				
+				
 			},
-			//接受输入内容
-			inputs(e) {
-				//时间间隔处理
-				let data = {
-					"sendName": "",
-					"receviceName": "",
-					"sendText": e.message,
-					"createTime": new Date(),
-					"updateTime": new Date(),
-					"chatmState": 1,
-					"TextType": e.type
-				};
-				// 发送给服务器消息
-				// s's'f(JSON.stringify(data));
+			
 
-				this.CurrentMsgList.push(data);
-				// 跳转到最后一条数据 与前面的:id进行对照
-				this.$nextTick(function() {
-					this.scrollToView = 'msg' + (this.CurrentMsgList.length - 1)
-				})
-				if (e.type == 1) {
-					this.imgMsg.push(e.message);
+		onReady() {
+			let systemInfo = uni.getSystemInfoSync();
+			this.scrollHeight = systemInfo.windowHeight *0.86; // -卡片
+		},
+			
+		onLoad() {
+			const userInfo = uni.getStorageSync('userInfo')
+			this.CurrentChatList = uni.getStorageSync('ChatDetail')
+			// this.initWebSocket(this.CurrentChatList.userId,this.CurrentChatList.id)
+			this.sockcet(this.CurrentChatList.userId,this.CurrentChatList.id)
+			this.LoadMessageList()
+			this.goBottom() 
+		
+		},
+		onShow() {
+				this.goBottom()       
+		},
+		onUnload(){
+			console.log('退出页面')
+			if(this.socketOpen==true){
+				uni.closeSocket();
+			}
+		},	
+
+
+		computed:{
+			IsLoading(){
+				if(this.CurrentMsgList.length==0){
+
+					return true
 				}
-				console.log(e)
-			},
-			//输入框高度
-			heights(e) {
-				console.log("高度:", e)
-				this.inputh = e;
-				this.goBottom();
-			},
-			// 滚动到底部
-			goBottom() {
-				this.scrollToView = '';
-				this.$nextTick(function() {
-					this.scrollToView = 'msg' + (this.CurrentMsgList.length - 1)
-				})
+				else{
+
+					return false
+				}
 			}
 		},
 		components: {
 			submit,
-		},
+		}
 
 	}
 </script>
@@ -180,19 +308,18 @@
 	.WorkCard{
 		background: white;
 		width: 85%;
-		height: 300rpx;
+		height: 325rpx;
 		border-radius: 20rpx;
 		margin: 0 auto;
 		padding: 20rpx;
 	}
 	
 	.chat {
-	           height: 100%;
 	           .chat-main {
 	               padding-left: 32rpx;
 	               padding-right: 32rpx;
 	               padding-top: 20rpx;
-	               padding-bottom: 120rpx;  //获取动态高度
+	               padding-bottom: 120rpx;  
 	               display: flex;
 	               flex-direction: column;
 	           }

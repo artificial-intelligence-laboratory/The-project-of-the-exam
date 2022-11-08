@@ -19,5 +19,6 @@ export default {
 #app {
 	display: flex;
 	justify-content: center;
+	
 }
 </style>

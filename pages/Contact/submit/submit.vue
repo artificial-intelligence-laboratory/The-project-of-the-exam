@@ -78,7 +78,6 @@
                 voicebg: false,
                 pageY: 0,
                 msg: "",
-                // 直接引用地址可能出不来，需要用require
                 toc: 'voci',
                 timer: '', //计时器
                 vlength: 0
@@ -130,14 +129,8 @@
             //文字发送
             inputs(e) {
                 var chatm = e.detail.value;
-                var pos = chatm.indexOf('\n');
+                var pos = chatm.indexOf('\n');		// 获取到换行符就发送
                 // 检索字符串没有数据，返回-1
-                // if (pos != -1 && chatm.length > 1) {
-                // this.$emit('inputs', this.msg);
-                // setTimeout(() => {
-                //  this.msg = '';
-                // }, 0)
-                // }
  
                 if (pos != -1 && chatm.length > 1) {
                     // 0为表情和文字
@@ -200,7 +193,6 @@
                     }
                 });
             },
-            //音频处理
             //开始录音
             touchstart(e) {
                 console.log("开始录音")
@@ -230,10 +222,8 @@
             },
             // 结束录音
             touchend() {
-                console.log("结束录音")
                 clearInterval(this.timer);
                 recorderManager.stop();
-                // recorderManager.onStop(function(res) {
                 recorderManager.onStop((res) => {
                     let data = {
                         voice: res.tempFilePath,
@@ -253,12 +243,12 @@
             send(msg, type) {
                 let Msgdata = {
                     message: msg,
-                    type: type
+                    // type: type			
                 }
                 this.$emit('inputs', Msgdata);
-                setTimeout(() => {
+                setTimeout(() => {		// 延迟清除，以免
                     this.msg = '';
-                }, 0)
+                }, 1)
             }
         },
 	components:{
