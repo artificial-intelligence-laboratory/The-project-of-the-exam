@@ -42,7 +42,7 @@
 								<!-- 左边聊天内容 -->
 			                    <view class="chat-time" v-if="item.createTime != ''">{{changeTime(item.createTime)}}</view>
 			                    <view class="msg-m msg-left" v-if="item.fromUserId !=  CurrentChatList.userId">
-			                        <image class="user-img" src="../../../static/logo.png"></image>
+			                        <image class="user-img" :src="receiverAvatar"></image>
 			                        <view class="message">
 			                            <!-- 文字 -->
 			                            <view class="msg-text">{{item.content}}</view>
@@ -51,7 +51,7 @@
 			                    
 								<!-- 右边聊天内容  -->
 			                    <view class="msg-m msg-right" v-if="item.fromUserId == CurrentChatList.userId" >
-			                        <image class="user-img" src="../../../static/logo.png"></image>
+			                        <image class="user-img" :src="senderAvatar"></image>
 			                        <view class="message">
 			                            <view class="msg-text">{{item.content}}</view>
 			                        </view>
@@ -79,6 +79,8 @@
 
 		data() {
 			return {
+				senderAvatar:'',
+				receiverAvatar:'',
 				socket:"",
 				socketOpen:false, //是否连接
 				scrollHeight:0,
@@ -263,7 +265,9 @@
 			
 		onLoad() {
 			const userInfo = uni.getStorageSync('userInfo')
+			this.senderAvatar = userInfo.avatar
 			this.CurrentChatList = uni.getStorageSync('ChatDetail')
+			this.receiverAvatar = this.CurrentChatList.avatar
 			// this.initWebSocket(this.CurrentChatList.userId,this.CurrentChatList.id)
 			this.sockcet(this.CurrentChatList.userId,this.CurrentChatList.id)
 			this.LoadMessageList()
