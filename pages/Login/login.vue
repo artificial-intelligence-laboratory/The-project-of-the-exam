@@ -130,6 +130,7 @@
 							},
 							success(res) {
 								console.log(res)
+								
 							}
 						})
 					
@@ -171,7 +172,7 @@
 					url: that.$baseUrl + "/passport/codeLogin",
 					method:'POST',
 					data: {
-						email: that.email,
+						email: that.email	,
 						code:that.code
 						// email: "826697618@qq.com",
 						// code:"655810"

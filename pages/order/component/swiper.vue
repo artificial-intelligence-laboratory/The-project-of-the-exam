@@ -15,6 +15,7 @@
 	</view>
 </template>
 <script>
+import loginVue from '../../Login/login.vue';
 	export default {
 		data() {
 			return {
@@ -39,7 +40,11 @@
 		//生命周期
 		created() {
 			this.banner()
+			console.log("abc",this.$store)
 		},
+		// onShow() {
+		// 	console.log("abd",this)
+		// }
 	}
 </script>
 

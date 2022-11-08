@@ -8,60 +8,157 @@
 				</view>
 				<view>
 					<view v-if="tabContentId == 0">
+						<view v-for="(item,index) in carddata" :key="item.id">
 						<view class="KP">
 							<view class="cu-item">
 								<view class="content">
 									<view class=" flex  margin-top-sm  ">
-										<text class="text-black text-bold text-xl ">快递代拿</text>
+										<text class="text-black text-bold text-xl ">{{item.title}}</text>
 										<view class="text" style="margin-left: 140px;"><text
-												class="text-bold text-xxl text-price text-red  ">5.00/件</text>
+												class="text-bold text-xxl text-price text-red  ">{{item.fee}}</text>
 										</view>
 									</view>
-									<view class="text-gray text-content text-df">
-										广州市▪黄埔区
+									<view class="text-black text-content text-df">
+										{{item.workPlace}}
 									</view>
 									<view class=" flex justify-between">
-										<view class="text-gray  text-content text-df margin-top-sm">
-											2022-05-21至2023-05-21
+										<view class="text-black  text-content text-df margin-top-sm">
+											{{item.startTime}}至{{item.endTime}}
 										</view>
-										<view class="cu-tag bg-grey light  round " @click="goTotask">领取任务
-										</view>
+									<view>
+										<button class="cu-btn round lg bg-red" @click="goTodetails(item.id)">领取任务</button>
 									</view>
-									<view class="solid-top"></view>
-									<view class=" flex justify-between">
-										<text class="text-black">广州大学</text>
-										<view class="text-black text-df">2022年10月22日</view>
 									</view>
 								</view>
 							</view>
 						</view>
-					</view>
+					</view>	
+					<u-loadmore :status="status" v-show="status != 'nomore'" :load-text="loadText"/>  
+				</view>
+				
 				</view>
 				<view>
+					
 					<view v-if="tabContentId == 1">
-						222
+						<view v-for="(item,index) in carddata" :key="item.id">
+							<view class="KP">
+								<view class="cu-item">
+									<view class="content">
+										<view class=" flex  margin-top-sm  ">
+											<text class="text-black text-bold text-xl ">{{item.title}}</text>
+											<view class="text" style="margin-left: 140px;"><text
+													class="text-bold text-xxl text-price text-red  ">{{item.fee}}</text>
+											</view>
+										</view>
+										<view class="text-black text-content text-df">
+											{{item.workPlace}}
+										</view>
+										<view class=" flex justify-between">
+											<view class="text-black  text-content text-df margin-top-sm">
+												{{item.startTime}}至{{item.endTime}}
+											</view>
+										<view>
+											<button class="cu-btn round lg bg-red" @click="goTodetails(item.id)">领取任务</button>
+										</view>
+										</view>
+									</view>
+								</view>
+							</view>
+						</view>	
+						<u-loadmore :status="status" v-show="status != 'nomore'" :load-text="loadText"/>
 					</view>
 				</view>
 				<view>
 					<view v-if="tabContentId == 2">
-						333
+					<view v-for="(item,index) in carddata" :key="item.id">
+						<view class="KP">
+							<view class="cu-item">
+								<view class="content">
+									<view class=" flex  margin-top-sm  ">
+										<text class="text-black text-bold text-xl ">{{item.title}}</text>
+										<view class="text" style="margin-left: 140px;"><text
+												class="text-bold text-xxl text-price text-red  ">{{item.fee}}</text>
+										</view>
+									</view>
+									<view class="text-black text-content text-df">
+										{{item.workPlace}}
+									</view>
+									<view class=" flex justify-between">
+										<view class="text-black  text-content text-df margin-top-sm">
+											{{item.startTime}}至{{item.endTime}}
+										</view>
+									<view>
+										<button class="cu-btn round lg bg-red" @click="goTodetails(item.id)">领取任务</button>
+									</view>
+									</view>
+								</view>
+							</view>
+						</view>
+					</view>	
+					<u-loadmore :status="status" v-show="status != 'nomore'" :load-text="loadText"/>
 					</view>
 				</view>
 				<view>
 					<view v-if="tabContentId == 3">
-						444
+						<view v-for="(item,index) in carddata" :key="item.id">
+							<view class="KP">
+								<view class="cu-item">
+									<view class="content">
+										<view class=" flex  margin-top-sm  ">
+											<text class="text-black text-bold text-xl ">{{item.title}}</text>
+											<view class="text" style="margin-left: 140px;"><text
+													class="text-bold text-xxl text-price text-red  ">{{item.fee}}</text>
+											</view>
+										</view>
+										<view class="text-black text-content text-df">
+											{{item.workPlace}}
+										</view>
+										<view class=" flex justify-between">
+											<view class="text-black  text-content text-df margin-top-sm">
+												{{item.startTime}}至{{item.endTime}}
+											</view>
+										<view>
+											<button class="cu-btn round lg bg-red" @click="goTodetails(item.id)">领取任务</button>
+										</view>
+										</view>
+									</view>
+								</view>
+							</view>
+						</view>	
+						<u-loadmore :status="status" v-show="status != 'nomore'" :load-text="loadText"/>
 					</view>
 				</view>
 				<view>
 					<view v-if="tabContentId == 4">
-						555
+					<view v-for="(item,index) in carddata" :key="item.id">
+						<view class="KP">
+							<view class="cu-item">
+								<view class="content">
+									<view class=" flex  margin-top-sm  ">
+										<text class="text-black text-bold text-xl ">{{item.title}}</text>
+										<view class="text" style="margin-left: 140px;"><text
+												class="text-bold text-xxl text-price text-red  ">{{item.fee}}</text>
+										</view>
+									</view>
+									<view class="text-black text-content text-df">
+										{{item.workPlace}}
+									</view>
+									<view class=" flex justify-between">
+										<view class="text-black  text-content text-df margin-top-sm">
+											{{item.startTime}}至{{item.endTime}}
+										</view>
+									<view>
+										<button class="cu-btn round lg bg-red" @click="goTodetails(item.id)">领取任务</button>
+									</view>
+									</view>
+								</view>
+							</view>
+						</view>
+					</view>	
+					<u-loadmore :status="status" v-show="status != 'nomore'" :load-text="loadText"/>
 					</view>
 				</view>
-				<view>
-					<view v-if="tabContentId == 5">
-						111
-					</view>
-				</view>
+				
 			</scroll-view>
 		</view>
 	</view>
@@ -71,6 +168,18 @@
 	export default {
 		data() {
 			return {
+				carddata:[],
+				status: 'more',
+				loadText: {  
+					loadmore: '',
+					loading: '',
+					nomore: ''
+				},
+				cur:1,
+				count:10,
+				id:'',
+				type:0,
+				
 				keyword: '',
 				TabCur: 0,
 				scrollLeft: 0,
@@ -94,15 +203,55 @@
 				isCard: false
 			}
 		},
-		onShow() {
-			uni.request({
-				url: 'https://www.gcc-fns.com',
-				success: (res) => {
-					console.log(res.data);
-				}
-			});
-		},
 		methods: {
+			getOrderList() {
+				let that = this
+				console.log(that);
+				uni.request({
+					url: that.$baseUrl + "/order/getOrderList?cur="+that.cur+"&count="+that.count+"&type="+that.type,
+					method: 'GET',
+					header: {
+						'Authorization': that.$store.state.token
+					},
+					success: (res) => {
+						console.log(res.data);
+						that.carddata=res.data.data
+					},
+					fail: (err) => {
+						console.error(err);
+					},
+				});
+			},
+			getMessage(){
+				uni.showLoading({
+					title: "加载中……"
+				});
+				const mess = {
+					name:this.keyword,
+					cur:this.cur,
+					count:this.count
+				}
+				getLegalWorker(mess).then(response => {
+					uni.hideLoading();
+					if(response.data.code == 200){
+						if(response.data.data.length < this.count){  
+							this.status = "nomore";
+						}
+						this.cellData.push(...response.data.data) 
+					} 
+				})
+			},
+			//上拉刷新事件  //重要代码
+			onReachBottom() {
+				console.log('onReachBottom');
+				if(this.status == 'nomore'){
+					return
+				}
+				this.status = 'loading'
+				this.count++;
+				this.getMessage();
+				this.status = 'more'
+			},
 			change(list) {
 				// console.log(list1)
 			},
@@ -115,16 +264,28 @@
 				//改变内容
 				console.log(e)
 				this.tabContentId = e.currentTarget.dataset.id
+				console.log("type"+this.tabContentId);
+				this.type = this.tabContentId
+				this.getOrderList()
 			},
 			IsCard(e) {
 				this.isCard = e.detail.value
 			},
-			goTotask() {
+			
+			goTodetails(id) {
+				console.log('ok');
+				console.log(id);
 				uni.navigateTo({
-					url: '../order/task'
+					url: '../order/details?id='  + id
 				})
 			},
-		}
+		},
+		//生命周期
+		created() {
+			// this.banner()
+			this.getOrderList()
+			// console.log("abc",this.$store)
+		},
 
 	}
 </script>
@@ -152,5 +313,11 @@
 
 	.bg-grey.light {
 		bottom: 15px;
+	}
+	.cu-btn.lg {
+		
+		margin-left: 10px;
+		margin-bottom: 20px;
+		
 	}
 </style>

@@ -5,7 +5,7 @@
 		<!-- 轮播 -->
 		<Swipers></Swipers>
 		<!-- 卡片 -->
-		<Cards></Cards>
+		<Cards ></Cards>
 	</view>
 </template>
 <script>
@@ -17,11 +17,21 @@
 	import Cards from './component/card.vue'
 	export default {
 		//注册父组件
-		components: {Search,Swipers,Cards}
+		components: {Search,Swipers,Cards},
+		data(){
+			return{
+				title:''
+			}
+		},
+		methods:{
+			//
+		}
 	}
+	
 </script>
 
 <style lang="scss">
 	@import url("../../colorui/main.css");
 	@import url("../../colorui/icon.css");
+
 </style>
